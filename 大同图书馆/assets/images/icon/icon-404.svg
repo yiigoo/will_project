@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="262" height="262" viewBox="0 0 262 262">
+    <defs>
+        <circle id="a" cx="131" cy="131" r="131"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#FFF" xlink:href="#a"/>
+        <path fill="#FFFBF5" stroke="#82766A" stroke-width="3" d="M136 203.5H88l12-56 36 8" mask="url(#b)"/>
+        <path fill="#FFF" stroke="#82766A" stroke-width="3" d="M120.5 204l27-87.5 76 23-19 64.5" mask="url(#b)"/>
+        <path stroke="#82766A" stroke-linecap="square" d="M152.5 132.5l45 13M149.5 144.5l45 13M146.5 155.5l45 13M107.5 159.5l21 4M104.5 169.5l21 4" mask="url(#b)"/>
+        <text fill="#82766A" font-family="GillSans, Gill Sans" font-size="48" mask="url(#b)">
+            <tspan x="35" y="98">404</tspan>
+        </text>
+        <text fill="#82766A" font-family="PingFangSC-Regular, PingFang SC" font-size="14" mask="url(#b)">
+            <tspan x="118" y="97">找不到页面了！</tspan>
+        </text>
+        <path fill="#F0E5D4" d="M-4 199h269v66H-4z" mask="url(#b)"/>
+        <rect width="36" height="4" x="91" y="207" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="36" height="4" x="141" y="237" fill="#FFF" mask="url(#b)" rx="2"/>
+        <path fill="#FFF" d="M123 245h29a2 2 0 0 1 0 4h-29a2 2 0 0 0 0-4zM132 241a2 2 0 0 0 0 4h-28a2 2 0 0 1 0-4h28z" mask="url(#b)"/>
+        <rect width="64" height="4" x="68" y="230" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="13" height="4" x="136" y="230" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="11" height="4" x="184" y="237" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="25" height="4" x="110" y="237" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="13" height="4" x="131" y="207" fill="#FFF" mask="url(#b)" rx="2"/>
+        <rect width="36" height="8" x="147" y="214" fill="#FFF" mask="url(#b)" rx="4"/>
+        <path fill="#FFF" d="M127 222a4 4 0 1 0 0 8h-6a4 4 0 1 1 0-8h6z" mask="url(#b)"/>
+        <path fill="#FFF" d="M74 222h45a4 4 0 1 1 0 8H74a4 4 0 1 0 0-8z" mask="url(#b)"/>
+        <rect width="13" height="8" x="190" y="214" fill="#FFF" mask="url(#b)" rx="4"/>
+        <rect width="91" height="8" x="45" y="214" fill="#FFF" mask="url(#b)" rx="4"/>
+        <circle cx="172" cy="49" r="3" fill="#FFFBF5" stroke="#82766A" stroke-width="2"/>
+        <circle cx="227.5" cy="112.5" r="2.5" fill="#FFFBF5" stroke="#82766A" stroke-width="2"/>
+        <circle cx="67.5" cy="158.5" r="2.5" fill="#FFFBF5" stroke="#82766A" stroke-width="2"/>
+        <path fill="#82766A" d="M80 119v-2h2v2h2v2h-2v2h-2v-2h-2v-2h2zM23 106v-2h2v2h2v2h-2v2h-2v-2h-2v-2h2zM200 183v-2h2v2h2v2h-2v2h-2v-2h-2v-2h2zM245 143v-4h2v4h4v2h-4v4h-2v-4h-4v-2h4zM92 40v-4h2v4h4v2h-4v4h-2v-4h-4v-2h4z"/>
+    </g>
+</svg>

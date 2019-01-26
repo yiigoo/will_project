@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>吉林图书馆</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<script src="assets/lib/jquery.min.js"></script>
+<script src="assets/lib/base.js"></script>
+</head>
+<body>
+	首页导航
+	<header class="header">
+		<div class="logo">
+			<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+		</div>
+		<nav class="menu">
+			<ul class="fl">
+				<li>
+					<a href="index.html">
+						<span>首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<span>吉图概况</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="news.html">
+						<span>资讯动态</span>
+					</a>
+				</li>
+				<li>
+					<a href="resource.html">
+						<span>馆藏资源</span>
+					</a>
+				</li>
+				<li>
+					<a href="donate.html">
+						<span>图书捐赠</span>
+					</a>
+				</li>
+				<li>
+					<a href="guide.html">
+						<span>服务指南</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="fr">
+				<!-- bar -->
+				<li class="bar">
+					<a href="my.html"><i class="icon icon-my"></i> 我的图书馆</a>
+				</li>
+				<li class="bar search">
+					<a href="javascript:;"><i class="icon icon-search-bar"></i>站内搜索</a>
+					<div class="header-search">
+						<form>
+							<input type="text" placeholder="请输入关键词搜索" class="form-control form-control-ms" />
+							<button type="submit" class="btn btn-primary btn-primary-ms">搜索</button>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	内页导航
+	<header class="header">
+		<div class="logo">
+			<a href="index.html"><img src="assets/images/logo-mini.png" alt="" /></a>
+		</div>
+		<nav class="menu">
+			<ul class="fl">
+				<li class="active">
+					<a href="index.html">
+						<span>首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<span>吉图概况</span>
+					</a>
+				</li>
+				<li>
+					<a href="news.html">
+						<span>资讯动态</span>
+					</a>
+				</li>
+				<li>
+					<a href="resource.html">
+						<span>馆藏资源</span>
+					</a>
+				</li>
+				<li>
+					<a href="donate.html">
+						<span>图书捐赠</span>
+					</a>
+				</li>
+				<li>
+					<a href="guide.html">
+						<span>服务指南</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="fr">
+				<!-- bar -->
+				<li class="bar">
+					<a href="my.html"><i class="icon icon-my"></i> 我的图书馆</a>
+				</li>
+				<li class="bar search">
+					<a href="javascript:;" id="show-search-bar"><i class="icon icon-search-bar"></i>站内搜索</a>
+					<div class="header-search" id="search-bar">
+						<form>
+							<input type="text" placeholder="请输入关键词搜索" class="form-control form-control-ms" />
+							<button type="submit" class="btn btn-primary btn-primary-ms">搜索</button>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<script>
+		$(document).ready(function(){
+			$("#show-search-bar").click(function(){
+				$("#search-bar").toggle()
+			})
+		})
+	</script>
+
+
+</body>
+</html>

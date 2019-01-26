@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>附近商店</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="shops">
+        <header class="header-fixed">
+            <div class="header-search-bar">
+                <div class="weui-flex">
+                    <div class="weui-flex__item text-center active">
+                        <span id="search-city">深圳市</span>
+                        <i class="icon icon-arrow"></i>
+                    </div>
+                    <div class="weui-flex__item text-center">
+                        <span id="search-area">南山区</span>
+                        <i class="icon icon-arrow"></i>
+                    </div>
+                    <div class="search-md">
+                        <div class="line"></div>
+                        <i class="icon icon-search"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="modal-picker">
+            <div class="bg"></div>
+            <div class="wrap">
+                <ul class="side-nav search-nav">
+                    <li class="active">
+                        深圳市
+                        <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span>
+                    </li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                    <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-fixed-gap"></div>
+        <!-- <div class="search-tips text-center">
+            搜索“葡萄”共13间相关店铺
+        </div> -->
+        <div class="weui-re-list">
+            <div class="weui-panel">
+                <div class="weui-panel__bd" id="goods">
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                    <a href="goods.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd scale-1px">
+                            <img class="weui-media-box__thumb" src="images/shop.png"
+                                alt="">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">葡萄盒子24小时自助超市</h4>
+                            <p class="color-primary">距离您50M</p>
+                            <p class="color-sub font12">南山区南山大道幸福里公寓7栋（大学 地铁站旁边）</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+             <!-- 无限加载 -->
+             <div class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">加载中…</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var loading = false;  //状态标记
+        $(document.body).infinite().on("infinite", function() {
+            if(loading) return;
+            loading = true;
+            setTimeout(function() {
+                var loadHtml = '<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">' + 
+                $("#goods .weui-media-box").eq(0).html() + '</a>';
+                $("#goods").append(loadHtml);
+                loading = false;
+            }, 1000);   //模拟延迟
+        });
+        $("#search-city").on("click",function(){
+            $(".modal-picker").show();
+        })
+        $(".modal-picker li").on("click",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            $("#search-city").html($(this).find("span").html()) 
+            $(".modal-picker").hide();
+        })
+    </script>
+</body>
+</html>

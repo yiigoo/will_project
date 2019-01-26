@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>大同图书馆</title>
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/site.css" />
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/stickUp.min.js"></script><!--固定div js,内页导航栏用到-->
+<script src="assets/js/base.js"></script>
+<!--[if lt IE 9]>
+	// ie 9 以下跳转浏览器下载
+	<script>window.location.href='browser.html'</script>
+<![endif]-->
+
+<!-- icheck -->
+<link href="assets/js/icheck/skins/all.css" rel="stylesheet">
+<script src="assets/js/icheck/icheck.min.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="page-wrap">
+		<div class="header" id="header">
+			<div class="logo pull-left">
+				<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+			</div>
+			<div class="menu pull-left">
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">本馆概况</a>
+					</li>
+					<li>
+						<a href="news.html">资讯动态</a>
+					</li>
+					<li>
+						<a href="resource.html">数字资源</a>
+					</li>
+					<li>
+						<a href="service.html">读者服务</a>
+					</li>
+					<li class="active">
+						<a href="contact.html">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<div class="bar pull-right">
+				<div class="menu">
+					<ul>
+						<li id="search-md">
+							<div class="header-search">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="输入关键词搜索">
+									<span class="input-group-btn">
+										<button type="submit"><i class="icon icon-search"></i></button>
+									</span>
+								</div>
+							</div>
+						</li>
+						<li class="li-bar" id="search-toggle">
+							<a href="javascript:;"><i class="icon icon-search"></i> 站内搜索</a>
+						</li>
+						<li class="li-bar">
+							<a href="search.html"><i class="icon icon-my"></i> 我的图书馆</a>
+						</li>
+						<li>
+							<a href="#">EN</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 内页显示 -->
+	<div class="full-page">
+		<div class="page-wrap">
+			<div class="page-title">
+				<div class="title font-24"><strong>咨询建议</strong></div>
+				您的位置：<a href="index.html">首页</a> / 联系我们 / 咨询建议
+			</div>
+			<div class="full-content">
+				<div class="side-nav pull-right">
+					<div class="title">
+						<div class="decoration pull-left"></div>
+						<div class="decoration pull-right"></div>
+						<strong class="font-16">联系我们</strong>
+					</div>
+					<ul>
+						<li><a href="contact.html">联络大图</a></li>
+						<li class="active"><a href="feedback-list.html">咨询建议</a></li>
+					</ul>
+				</div>
+				<div class="page-content">
+					<div class="feekback-view">
+						<div class="feekback-tips font-16">
+							<i class="icon icon-tips"></i>
+							您可以就图书馆馆藏服务、资源利用、信息检索等方面的问题向我们提问，超出上述范围的问题恕不回答。<br />
+							我们不提供财经投、医药健康等方面咨询及考试、作业辅导，提供的内容仅供参考。<br />
+							对于一般性问题，我们致力于2至3个工作日内给予答复，对于较深入的问题，我们将在5个工作日内给予答复。<br />
+							我们承诺严格遵守知识产权相关规定，尊重并保护用户隐私权。
+						</div>
+					</div>
+					<form class="feedback-form form mt30">
+						<div class="item-label">
+							<div class="label font-20">
+								咨询类型
+							</div>
+							<div class="control mt5">
+								<label><input type="radio" class="type" name="type"> &nbsp; <span class="mr50">一般咨询</span></label>
+								<label><input type="radio" class="type" name="type" checked> &nbsp; 其他</label>
+							</div>
+						</div>
+						<div class="item-label mt20">
+							<div class="label font-20">
+								标题
+							</div>
+							<div class="row mt5">
+								<div class="col-md-6">
+									<input type="text" placeholder="请输入问题标题" class="form-control input-lg" />
+								</div>
+							</div>
+						</div>
+						<div class="item-label mt20">
+							<div class="label font-20">
+								问题描述
+							</div>
+							<div class="control mt5">
+								<textarea rows="5" placeholder="请描述您的问题" class="form-control input-lg"></textarea>
+							</div>
+						</div>
+						<div class="item-label mt20">
+							<div class="label font-20">
+								E-mail
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" placeholder="请如实填写，否则无法收到答案" class="form-control input-lg" />
+								</div>
+							</div>
+						</div>
+						<div class="item-label mt20">
+							<div class="label font-20">
+								验证码
+							</div>
+							<div class="row mt5">
+								<div class="col-md-3">
+									<input type="text" placeholder="" class="form-control input-lg" />
+								</div>
+								<div class="col-md-3">
+									<img src="images/code.jpg" class="code" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="item-label mt30">
+							<div class="control">
+								<button type="submit" class="btn btn-primary btn-lg">提交</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 底部footer -->
+	<div class="footer">
+		<div class="page-wrap">
+			<div class="foot-qr pull-right">
+				<img src="images/qr.png" alt="" />
+			</div>
+			<div class="foot-nav mb10 mt10">
+				<a href="sitemap.html">网站地图</a> | 
+				<a href="question.html">常见问题</a> | 
+				<a href="feedback.html">意见建议</a> | 
+				<a href="contact.html">联系我们</a> 
+			</div>
+			<p>地址：山西省大同市城区帅府街36号 邮编：037000 电话：0352-2832746</p>
+			<div class="clearfix">
+				<div class="links pull-left">
+					<a class="block" href="javascript:;"><i class="icon icon-arrow-up fr"></i>常用链接 </a>
+					<div class="modal-show" style="display: none;">
+						<div class="clearfix">
+							<div class="col-4">
+								<div class="t">国内图书馆</div>
+								<ul>
+									<li><a href="#">中国国家图书馆</a></li>
+									<li><a href="#">上海图书馆</a></li>
+									<li><a href="#">深圳图书馆</a></li>
+									<li><a href="#">天津图书馆</a></li>
+									<li><a href="#">首都图书馆</a></li>
+									<li><a href="#">重庆图书馆</a></li>
+									<li><a href="#">金陵图书馆</a></li>
+								</ul>
+							</div>
+							<div class="col-4">
+								<div class="t">省内图书馆/信息机构</div>
+								<ul>
+									<li><a href="#">吉林省图书馆</a></li>
+									<li><a href="#">长春图书馆</a></li>
+									<li><a href="#">吉林市图书馆</a></li>
+									<li><a href="#">吉林大学图书馆</a></li>
+									<li><a href="#">东北师范大学图书馆</a></li>
+									<li><a href="#">长春大学图书馆</a></li>
+									<li><a href="#">吉林农业大学图书馆</a></li>
+								</ul>
+							</div>
+							<div class="col-4">
+								<div class="t">省内媒体</div>
+								<ul>
+									<li><a href="#">吉林日报</a></li>
+									<li><a href="#">吉林电视台</a></li>
+									<li><a href="#">吉林人民出版社</a></li>
+									<li><a href="#">吉林人民广播电台</a></li>
+									<li><a href="#">吉林教育出版社</a></li>
+									<li><a href="#">长春出版社</a></li>
+									<li><a href="#">吉林文史出版社</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('.type').iCheck({
+				checkboxClass: 'icheckbox_flat-yellow',
+				radioClass: 'iradio_flat-yellow',
+				increaseArea: '20%'
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>用户管理</title>
+<script type="text/javascript" src="assets/jquery.min.js" ></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- icheck -->
+<script type="text/javascript" src="assets/icheck/icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/orange.css" />
+
+<!-- bootstrap select -->
+<script type="text/javascript" src="assets/select/select.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+
+<!-- bootstrap data time range picker -->
+<script type="text/javascript" src="assets/daterangepicker/moment.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/daterangepicker/daterangepicker.css" />
+<script type="text/javascript" src="assets/daterangepicker/daterangepicker.js" ></script>
+
+<!-- theme green -->
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-green.css" />
+<script type="text/javascript" src="assets/base.js" ></script>
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="\assets/html5.js" ></script>
+	<script type="text/javascript" src="js/ie.js" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="global-header">
+	<div class="clearfix">
+		<div class="pull-left">
+			<div class="title">
+				<span class="logo"></span>
+				<div class="txt">
+					广西葡萄物联网科技有限公司
+					<div class="version">后台管理系统 v 1.0</div>
+				</div>
+			</div>
+		</div>
+		<div class="pull-right">
+			<ul class="nav navbar-nav">
+				<li class="margin-right-10"><i class="bar-icon bar-icon-user"></i> 管理员 Mike</li>
+				<li class="margin-left-10"><a href="#"><i class="bar-icon bar-icon-message"></i></a> </li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="global-nav" id="side-nav">
+		<dl class="active">
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-user-set"></i>
+					用户管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li class="active"><a href="user.html">操作员管理</a></li>
+					<li><a href="role.html">权限管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="customer.html">
+					<i class="nav-icon icon-users"></i>
+					顾客管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-site"></i>
+					站点管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="site.html">站点列表</a></li>
+					<li><a href="site-discount.html">销售折扣设置</a></li>
+					<li><a href="site-sale.html">站点销售设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-goods"></i>
+					商品管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="goods.html">商品列表</a></li>
+					<li><a href="good-directory.html">分类设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="stock.html">
+					<i class="nav-icon icon-stock"></i>
+					库存管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="check.html">
+					<i class="nav-icon icon-pie"></i>
+					盘点管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="finance.html">
+					<i class="nav-icon icon-chart"></i>
+					财经管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="#">
+					<i class="nav-icon icon-shopping"></i>
+					采购单管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="#">
+					<i class="nav-icon icon-set"></i>
+					系统设置
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="#">
+					<i class="nav-icon icon-message"></i>
+					消息管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="#">
+					<i class="nav-icon icon-supply"></i>
+					供应商管理
+				</a>
+			</dt>
+		</dl>
+	</div>
+	<div class="main">
+		<div class="bread">
+			<a href="#">首页</a> &gt; <a href="#">用户管理</a> &gt; 操作员管理
+		</div>
+		<div class="main-container">
+			<div class="page-bar clearfix">
+				<div class="pull-left">
+					<div class="page-title">
+						<span class="line"></span>
+						操作员管理
+					</div>
+				</div>
+				<div class="pull-right">
+					 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user-modal"><i class="btn-icon btn-icon-add"></i>  添加操作员</button>
+				</div>
+			</div>
+			<div class="global-table margin-top-gap">
+				<div id="main-table">
+					<div class="table-responsive">
+					    <table class="table table-bordered table-striped table-global">
+						    <thead>
+						        <tr>								
+						        	<th>编号</th>
+									<th>用户名</th>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>手机</th>
+									<th>用户类型</th>
+									<th>所属站点</th>
+									<th>权限组</th>
+									<th>账户状态</th>
+									<th>操作</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-disabled"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-disabled"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						        <tr>
+						        	<td>01</td>
+						        	<td>mike cao</td>
+						        	<td>曹先生</td>
+						        	<td>男</td>
+						        	<td>12345678911</td>
+						        	<td>超级管理员</td>
+						        	<td>深圳市南山区浅海贸易自贸区商务楼D栋无人超市</td>
+						        	<td>站点管理员</td>
+						        	<td>正常 <span class="ico-status ico-status-success"></span></td>
+									<td><a href="javascript:;" data-toggle="modal" data-target="#user-modal">修改账户</a></td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="pager-md clearfix margin-top-gap">
+				<div class="pull-left">
+					<div class="select-size">
+						<span class="text margin-right-5">显示</span>
+						<select class="selectpicker">
+							<option>12</option>
+							<option>24</option>
+							<option>36</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="pull-right">
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li class="more"><a href="javascript:;">...</a></li>
+						<li><a href="#">80</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 弹出添加操作员框框-->
+<div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">添加操作员</h4>
+            </div>
+            <div class="modal-body">
+            	<form class="form-horizontal" id="form-user">
+            		<div class="form-group">
+					    <label for="userName" class="col-md-3 control-label">用户名</label>
+					    <div class="col-md-8">
+					    	<input type="text" class="form-control" name="userName" id="userName" />
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">状态</label>
+						<div class="col-md-8">
+							<div class="icheck-list">
+								<label>
+									<input type="radio" class="icheck" name="state" checked />
+									<span class="text">启用</span>
+								</label>
+								<label>
+									<input type="radio" class="icheck" name="state" />
+									<span class="text">禁用</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="name" class="col-md-3 control-label">姓名</label>
+					    <div class="col-md-8">
+					    	<input type="text" class="form-control" name="name" id="name" />
+						</div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">性别</label>
+						<div class="col-md-8">
+							<div class="icheck-list">
+								<label>
+									<input type="radio" class="icheck" name="gender" checked />
+									<span class="text">男</span>
+								</label>
+								<label>
+									<input type="radio" class="icheck" name="gender" />
+									<span class="text">女</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="mobile" class="col-md-3 control-label">手机号码</label>
+					    <div class="col-md-8">
+					    	<input type="text" class="form-control" name="mobile" id="mobile" />
+						</div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">所属站点</label>
+					    <div class="col-md-8">
+					    	<select class="selectpicker">
+								<option>南方科技园</option>
+								<option>生态科技园</option>
+								<option>莫名其妙名字长的测试科技园</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">权限组</label>
+					    <div class="col-md-8">
+							<select class="selectpicker">
+								<option>管理组</option>
+								<option>超级管理员</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label"> </label>
+					    <div class="col-md-8">
+							<button type="submit" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+	$("#form-user").submit(function(){
+		$.success_layer("操作员添加成功")
+		$("#user-modal").modal("hide");
+	})
+});
+</script>
+</body>
+</html>

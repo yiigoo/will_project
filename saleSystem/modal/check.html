@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>盘点管理</title>
+	<script type="text/javascript" src="../assets/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css" />
+
+	<!-- icheck -->
+	<script type="text/javascript" src="../assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/icheck/minimal/orange.css" />
+
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="../assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/select/select.min.css" />
+
+	<!-- bootstrap data time range picker -->
+	<script type="text/javascript" src="../assets/daterangepicker/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/daterangepicker/daterangepicker.css" />
+	<script type="text/javascript" src="../assets/daterangepicker/daterangepicker.js"></script>
+
+	<!-- theme green -->
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap-green.css" />
+	<script type="text/javascript" src="../assets/base.js"></script>
+
+</head>
+
+<body class="layer-body">
+	<!-- 弹出顾客框框-->
+	<div class="layer-show">
+		<div class="clearfix">
+			<ul class="bar-count-list">
+				<li>盘点号：20170062101</li>
+				<li>盘点时间：2017-06-21 10:00</li>
+				<li>盘点站点：葡萄24小时无人超市04</li>
+				<li>操作人：周晗</li>
+			</ul>
+		</div>
+		<form class="form-inline margin-top-gap">
+			<select class="selectpicker margin-right-5" data-width="200" title="请选择类型">
+				<option>类型1</option>
+				<option>类型2</option>
+				<option>类型3</option>
+			</select>
+			<input type="text" class="form-control bar-form-control margin-right-5" placeholder="请输入关键字" />
+			<button type="button" class="btn btn-primary">查询</button>
+		</form>
+		<ul class="nav nav-tabs margin-top-gap">
+			<li class="active">
+				<a href="#view_data" data-toggle="tab">详细数据</a>
+			</li>
+			<li>
+				<a href="#chart_analysis" role="tab" data-toggle="tab">图表分析</a>
+			</li>
+		</ul>
+		<div class="tab-content margin-top-gap">
+			<div class="tab-pane active" role="tabpanel" id="view_data">
+				<div class="margin-top-gap">
+					<div class="global-table">
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped table-global">
+								<thead>
+									<tr>
+										<th width="160">条码号</th>
+										<th>商品名</th>
+										<th>类型</th>
+										<th>盘点前数</th>
+										<th>盘点后数</th>
+										<th>异常数</th>
+										<th>售出数</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+									<tr>
+										<td>015333333</td>
+										<td>卫龙辣条</td>
+										<td>零食</td>
+										<td>1000</td>
+										<td>900</td>
+										<td>0</td>
+										<td>100</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pager-md clearfix margin-top-gap">
+						<div class="pull-left">
+							<div class="select-size">
+								<span class="text margin-right-5">显示</span>
+								<select class="selectpicker">
+									<option>12</option>
+									<option>24</option>
+									<option>36</option>
+								</select>
+							</div>
+						</div>
+						<div class="pull-right">
+							<ul class="pagination">
+								<li>
+									<a href="#">&laquo;</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li class="more">
+									<a href="javascript:;">...</a>
+								</li>
+								<li>
+									<a href="#">80</a>
+								</li>
+								<li>
+									<a href="#">&raquo;</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" role="tabpanel" id="chart_analysis">
+				coming soon...
+			</div>
+		</div>
+	</div>
+	<script src="../assets/echart/echarts.common.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".show-detail").on("click", function () {
+				layer.open({
+					type: 2,
+					area: ['700px', '450px'],
+					fixed: false, //不固定
+					maxmin: true,
+					content: 'modal/customer.html'
+				});
+			})
+			var lineChart = echarts.init(document.getElementById('line-chart'));
+			option = {
+				title: {
+					text: ''
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				grid: {
+					left: '5%',
+					right: '5%',
+					top: "-10",
+					borderColor: "#ddd"
+				},
+				toolbox: {
+					feature: {
+						saveAsImage: {
+							show: false
+						}
+					}
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,
+					axisLine: {
+						show: false
+					},
+					data: ['2017/01/01', '2017/01/02', '2017/01/03', '2017/01/04', '2017/01/05', '2017/01/06', '2017/01/07']
+				},
+				yAxis: {
+					type: 'value',
+					axisLine: {
+						show: false
+					},
+				},
+				series: [
+					{
+						name: '单日消费',
+						type: 'line',
+						data: [120, 132, 101, 134, 90, 230, 210]
+					}
+				]
+			};
+			lineChart.setOption(option);
+
+			$("#daterangepicker").daterangepicker({
+				"startDate": "2017-01-01",
+				"endDate": "2017-01-07",
+				"applyClass": "btn-danger",
+				"timePicker24Hour": true,
+				"timePickerIncrement": 15,
+				"locale": $.data_picker_locale,
+			},
+				function (start, end, label) {
+					//
+					console.log(start);
+					console.log(end);
+				}
+			);
+		})
+	</script>
+</body>
+
+</html>

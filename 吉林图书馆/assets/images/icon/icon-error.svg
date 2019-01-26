@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="144" viewBox="0 0 160 144">
+    <defs>
+        <path id="a" d="M120.574 21.057l22.165 22.165v90.489H49.793V21.057h70.781z"/>
+        <rect id="b" width="19.465" height="29.82" x="24.331" rx="9.733"/>
+        <rect id="c" width="9.295" height="40.423" x="13.757" y="48.043" rx="4.647"/>
+        <rect id="d" width="9.295" height="13.649" x="23.527" y="51.644" rx="4.647"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(-2 2)">
+            <use fill="#EAF5FF" xlink:href="#a"/>
+            <path stroke="#204B73" stroke-width="1.992" d="M120.162 22.053H50.788v110.662h90.955V43.634l-21.581-21.58z"/>
+        </g>
+        <path fill="#A6C6E4" stroke="#204B73" stroke-width="1.992" d="M116.838 24.383v22.173h22.573"/>
+        <path fill="#204B73" d="M75.731 93.473h.095v20.805h3.45l.026 3.988h-3.476v4.68h-4.519v-4.68H57.751L71.307 93.3h4.519l-.095.173zm-4.424 8.091l-6.952 12.714h6.952v-12.714zM120.57 93.473h.095v20.805h3.451l.025 3.988h-3.476v4.68h-4.519v-4.68H102.59L116.146 93.3h4.52l-.096.173zm-4.424 8.091l-6.951 12.714h6.951v-12.714z"/>
+        <g transform="translate(57.751 93.3)">
+            <use fill="#E3F2FF" xlink:href="#b"/>
+            <rect width="13.904" height="24.259" x="27.112" y="2.781" stroke="#204B73" stroke-width="5.561" rx="6.952"/>
+        </g>
+        <path stroke="#204B73" stroke-linecap="square" stroke-width="1.992" d="M89.174 54.534h13.43M77.199 67.787h47.941M63.33 80.378h35.257"/>
+        <path stroke="#204B73" stroke-width="1.992" d="M61.734 142.343h85.654V62.817"/>
+        <g transform="translate(-2 2)">
+            <g transform="rotate(45 18.404 68.255)">
+                <use fill="#D0E0EF" xlink:href="#c"/>
+                <rect width="7.303" height="38.431" x="14.753" y="49.039" stroke="#204B73" stroke-width="1.992" rx="3.651"/>
+            </g>
+            <g transform="rotate(45 28.174 58.468)">
+                <use fill="#F2F2F2" xlink:href="#d"/>
+                <rect width="7.303" height="11.657" x="24.522" y="52.64" stroke="#204B73" stroke-width="1.992" rx="3.651"/>
+            </g>
+            <ellipse cx="54.244" cy="34.127" fill="#FFF" stroke="#204B73" stroke-width="2.656" rx="34.191" ry="34.127"/>
+            <path fill="#F2F2F2" stroke="#204B73" stroke-linecap="round" stroke-width="2.656" d="M40.279 13.552c-6.597 4.47-10.931 12.017-10.931 20.575"/>
+        </g>
+        <path stroke="#204B73" stroke-linecap="round" stroke-width="3.32" d="M49.393 62.542V24.373h27.22"/>
+        <path stroke="#204B73" stroke-linecap="round" stroke-width="2.656" d="M141.402 22.576l9.295-8.133"/>
+        <path stroke="#5CC185" stroke-linecap="round" stroke-width="2.656" d="M132.108 16.43l1.992-4.638M148.041 32.997l5.976-2.65"/>
+        <path stroke="#204B73" stroke-linecap="round" stroke-width="2.656" d="M150.033 44.925L158 47.576M120.158 11.792V3.177"/>
+    </g>
+</svg>

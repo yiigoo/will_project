@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>库存管理</title>
+<script type="text/javascript" src="assets/jquery.min.js" ></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- icheck -->
+<script type="text/javascript" src="assets/icheck/icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/orange.css" />
+
+<!-- bootstrap select -->
+<script type="text/javascript" src="assets/select/select.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+
+<!-- bootstrap data time range picker -->
+<script type="text/javascript" src="assets/daterangepicker/moment.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/daterangepicker/daterangepicker.css" />
+<script type="text/javascript" src="assets/daterangepicker/daterangepicker.js" ></script>
+
+<!-- layer -->
+<script type="text/javascript" src="assets/layer/layer.js" ></script>
+
+<!-- theme green -->
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-green.css" />
+<script type="text/javascript" src="assets/base.js" ></script>
+
+
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="\assets/html5.js" ></script>
+	<script type="text/javascript" src="js/ie.js" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="global-header">
+	<div class="clearfix">
+		<div class="pull-left">
+			<div class="title">
+				<span class="logo"></span>
+				<span class="version">v 1.0</span>
+			</div>
+		</div>
+		<div class="pull-right">
+			<ul class="nav navbar-nav">
+				<li class="margin-right-10"><i class="bar-icon bar-icon-user"></i> 管理员 Mike</li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="global-nav" id="side-nav">
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-user-set"></i>
+					用户管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="user.html">操作员管理</a></li>
+					<li><a href="role.html">权限管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="customer.html">
+					<i class="nav-icon icon-users"></i>
+					顾客管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-site"></i>
+					站点管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="site.html">站点列表</a></li>
+					<li><a href="site-discount.html">销售折扣设置</a></li>
+					<li><a href="site-sale.html">站点销售设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-goods"></i>
+					商品管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="goods.html">商品列表</a></li>
+					<li><a href="good-directory.html">分类设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl class="active">
+			<dt>
+				<a href="stock.html">
+					<i class="nav-icon icon-stock"></i>
+					库存管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="check.html">
+					<i class="nav-icon icon-pie"></i>
+					盘点管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="finance.html">
+					<i class="nav-icon icon-chart"></i>
+					财经管理
+				</a>
+			</dt>
+		</dl>
+	</div>
+	<div class="main">
+		<div class="bread">
+			<a href="#">首页</a> &gt; 库存管理
+		</div>
+		<div class="main-container">
+			<div class="page-bar clearfix">
+				<div class="pull-left">
+					<div class="page-title">
+						<span class="line"></span>
+						库存管理
+					</div>
+				</div>
+				<div class="pull-right">
+					<form class="form-inline">
+						<input type="text" class="form-control bar-form-control margin-right-5" placeholder="请输入关键词" />
+						<button type="button" class="btn btn-primary">查询</button>
+					</form>
+				</div>
+			</div>
+			<div class="global-table margin-top-gap">
+				<div id="main-table">
+					<div class="table-responsive">
+					    <table class="table table-bordered table-striped table-global">
+						    <thead>
+						        <tr>								
+									<th>商品条码</th>
+									<th>商品名称</th>
+									<th>类型</th>
+									<th>所属站点</th>
+									<th>库存</th>
+									<th>报警阀值</th>
+									<th>状态</th>
+									<th width="300">操作</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+									<td>12548474541</td>
+									<td>湘芝颂香辣毛豆</td>
+									<td>零食</td>
+									<td>葡萄24小时无人超市02</td>
+									<td>25</td>
+									<td>10</td>
+									<td>销售中 <span class="ico-status ico-status-success"></span></td>
+									<td>
+										<a href="javascript:;" data-toggle="modal" data-target="#add-stock-modal" class="margin-right-10">添加库存</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#turn-stock-modal" class="margin-right-10">转仓</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#set-range-modal" class="margin-right-10">设置报警阀值</a>
+										<a href="javascript:;">暂停销售</a>
+									</td>
+								</tr>
+								<tr>
+									<td>12548474541</td>
+									<td>湘芝颂香辣毛豆</td>
+									<td>零食</td>
+									<td>葡萄24小时无人超市02</td>
+									<td>25</td>
+									<td>10</td>
+									<td>已下架 <span class="ico-status ico-status-disabled"></span></td>
+									<td>
+										<a href="javascript:;" data-toggle="modal" data-target="#add-stock-modal" class="margin-right-10">添加库存</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#turn-stock-modal" class="margin-right-10">转仓</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#set-range-modal" class="margin-right-10">设置报警阀值</a>
+										<a href="javascript:;">开始销售</a>
+									</td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="pager-md clearfix margin-top-gap">
+				<div class="pull-left">
+					<div class="select-size">
+						<span class="text margin-right-5">显示</span>
+						<select class="selectpicker">
+							<option>12</option>
+							<option>24</option>
+							<option>36</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="pull-right">
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li class="more"><a href="javascript:;">...</a></li>
+						<li><a href="#">80</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 弹出添加添加框框-->
+<div class="modal fade" id="add-stock-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">添加库存</h4>
+            </div>
+            <div class="modal-body">
+            	<form class="form-horizontal" id="form-user">
+            		<div class="form-group">
+					    <label class="col-md-3 control-label">商品名称</label>
+					    <div class="col-md-8">
+							<p class="form-control-static">卫龙辣条</p>
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">商品条码</label>
+					    <div class="col-md-8">
+							<p class="form-control-static">4535345</p>
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">入库站点</label>
+					    <div class="col-md-8">
+							<p class="form-control-static">葡萄24小时无人超市02</p>
+					    </div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="orderTime">订单批次</label>
+					    <div class="col-md-5">
+							<input type="text" class="form-control" name="orderTime" id="orderTime" />
+							<div class="tips margin-top-5 font-danger">
+								该批次剩余商品数：50
+							</div>
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label"  for="AddCount">添加数量</label>
+					    <div class="col-md-5">
+							<input type="text" class="form-control" name="AddCount" id="AddCount" />
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label"> </label>
+					    <div class="col-md-8">
+							<button type="submit" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 弹出转仓框框-->
+<div class="modal fade" id="turn-stock-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">转仓</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" id="form-user">
+					<div class="form-group">
+						<label class="col-md-3 control-label">商品名称</label>
+						<div class="col-md-8">
+							<p class="form-control-static">卫龙辣条</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">商品条码</label>
+						<div class="col-md-8">
+							<p class="form-control-static">4535345</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">入库站点</label>
+						<div class="col-md-6">
+							<select class="selectpicker">
+								<option>南方科技园24小时无人超市</option>
+								<option>南方科技园24小时无人超市</option>
+								<option>南方科技园24小时无人超市2</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="orderTime">当前库存</label>
+						<div class="col-md-5">
+							<p class="form-control-static">20</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label"  for="AddCount">添加数量</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" name="AddCount" id="AddCount" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label"> </label>
+						<div class="col-md-8">
+							<button type="submit" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 弹出赋值框框-->
+<div class="modal fade" id="set-range-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">设置报警阀值</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" id="form-user">
+					<div class="form-group">
+						<label class="col-md-3 control-label">商品名称</label>
+						<div class="col-md-8">
+							<p class="form-control-static">卫龙辣条</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">商品条码</label>
+						<div class="col-md-8">
+							<p class="form-control-static">4535345</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">当前库存</label>
+						<div class="col-md-8">
+							<p class="form-control-static">15</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">入库站点</label>
+						<div class="col-md-8">
+							<p class="form-control-static">葡萄24小时无人超市02</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label"  for="rangeDanger">报警阀值</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" placeholder="不输入阀值默认为10" name="rangeDanger" id="rangeDanger" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label"> </label>
+						<div class="col-md-8">
+							<button type="submit" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

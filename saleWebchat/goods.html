@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>商店详情</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="shops-goods">
+        <div class="banner banner-shop">
+            <img src="images/banner.png" class="wimg" alt="" />
+            <div class="shop-txt">
+                <div class="color-primary">葡萄盒子24小时自助超市</div>
+                <div class="color-info">南山区南山大道幸福里公寓1175号</div>
+            </div> 
+            
+        </div>
+        <div class="dir-nav md-bg">
+            <div class="header-search-bar">
+                <div class="weui-flex">
+                    <div class="weui-flex__item text-center">
+                        <div class="dir-list">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide active"><a href="javascript:;">全部</a></div>
+                                    <div class="swiper-slide"><a href="javascript:;">零食</a></div>
+                                    <div class="swiper-slide"><a href="javascript:;">日用品</a></div>
+                                    <div class="swiper-slide">小吃</div>
+                                    <div class="swiper-slide">衣着</div>
+                                    <div class="swiper-slide">其他</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-md">
+                        <div class="line"></div>
+                        <i class="icon icon-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-grids goods-list">
+            <a href="goods-detail.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <i class="icon icon-sale-off"></i>
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+        </div>
+    </div>
+    <div class="footer-leave-btn">
+        <span class="round"></span><span class="round"></span><span class="round"></span>
+    </div>
+    <div class="modal-leave-fixed">
+        <div class="bg"></div>
+        <div class="wrap">
+            <form class="modal-form">
+                <div class="title text-center">商店留言</div>
+                <div class="row">
+                    <select name="" id="" class="select">
+                        <option value="">我要留言</option>
+                        <option value="">我要催货</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <textarea class="textarea" placeholder="请输入您要反馈的内容" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type='text/javascript' src='assets/weui/js/swiper.min.js'></script>
+    <script>
+
+        $(".dir-list").width( $(window).width() - $(".search-md").width() - 10)
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            spaceBetween: 30,
+            freeMode: true
+        });
+        $(".footer-leave-btn").on("click",function(){
+            $.modalLeave("show")
+            // 隐藏 $.modalLeave("hide")
+        })
+        var fiexdHeight = $(".banner").height();
+        document.querySelector('.goods-list').addEventListener('touchmove', function(){
+            console.log($("body").scrollTop())
+            if($("body").scrollTop() > fiexdHeight){
+                $(".dir-nav").addClass("dir-nav-fixed");
+            }else{
+                $(".dir-nav").removeClass("dir-nav-fixed");
+            }
+        })
+    </script>
+</body>
+</html>

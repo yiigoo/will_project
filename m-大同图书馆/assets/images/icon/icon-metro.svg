@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="82" viewBox="0 0 82 82">
+    <defs>
+        <path id="a" d="M0 0h82v82H0z"/>
+        <path id="b" d="M57.657 50h-32L23 47.343V21.971L25.97 19h32.373L61 21.657v25L57.657 50z"/>
+        <path id="c" d="M27 25h30v8H27z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#FFF" xlink:href="#a"/>
+        <path stroke="#F0E5D4" d="M.5.5h81v81H.5z"/>
+        <g stroke="#413122" stroke-width="2">
+            <path stroke-linecap="round" d="M20.377 64l13.956-25H49.44L63 64"/>
+            <path d="M30.935 44.882H52.82M30.18 46.353h23.393M26.41 54.706h30.934M27.164 53.235H56.59"/>
+        </g>
+        <use fill="#F5F2EF" xlink:href="#b"/>
+        <path stroke="#413122" d="M57.45 49.5l3.05-3.05V21.864L58.136 19.5H26.178L23.5 22.178v24.958l2.364 2.364H57.45z"/>
+        <circle cx="27.5" cy="45.5" r="1.5" fill="#FFF" stroke="#413122"/>
+        <circle cx="56.5" cy="45.5" r="1.5" fill="#FFF" stroke="#413122"/>
+        <use fill="#F5F2EF" xlink:href="#c"/>
+        <path stroke="#413122" d="M27.5 25.5h29v7h-29z"/>
+        <path stroke="#413122" stroke-linecap="square" d="M39.5 22.5h6"/>
+        <path stroke="#413122" d="M42 36v9"/>
+    </g>
+</svg>

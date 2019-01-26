@@ -1,0 +1,3 @@
+1. 返回bar 没做，应该微信自带
+2. 框架   weui  http://jqweui.com/components
+3. 附近商店 有 搜索后的div，注释了

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>同步上传</title>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<!-- icheck -->
+	<script type="text/javascript" src="assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/aero.css" />
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+	<!-- bootstrap data time range picker -->
+	<!-- theme light-blue -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-light-blue.css" />
+	<script type="text/javascript" src="assets/base.js"></script>
+</head>
+
+<body>
+	
+	<button class="modal-button">加载</button>
+</body>
+<script>
+	$(document).ready(function () {
+		$(".modal-button").on("click",function(){
+			$.showLoading()
+			setTimeout(function(){
+				$.hideLoading()
+			},2000)
+		})
+		
+	})
+</script>
+
+</html>

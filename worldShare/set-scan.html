@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>扫描设备设置</title>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<!-- icheck -->
+	<script type="text/javascript" src="assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/aero.css" />
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+	<!-- bootstrap data time range picker -->
+	<!-- theme light-blue -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-light-blue.css" />
+	<script type="text/javascript" src="assets/base.js"></script>
+</head>
+
+<body>
+	<div class="upload global-md">
+		<div class="global-table">
+
+			<div class="title">
+				<a href="guide.html">
+					<i class="icon icon-back"></i>
+					扫描设备设置
+				</a>
+			</div>
+			<div class="main-form">
+				<div class="clearfix margin-top-gap">
+					<div class="pull-left">
+						<div class="side-nav">
+							<ul>
+								<li><a href="set.html">数据库设置</a></li>
+								<li><a href="set-sip2.html">SIP2设置</a></li>
+								<li class="active"><a href="set-scan.html">扫描设备设置</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="content">
+							<div class="form-title">
+								<span class="line"></span>
+								扫描设备设置
+								<div class="form-title-bar pull-right">
+									设备类型: <input type="radio" name="devicetype" class="iRadio" checked /> 高频&nbsp; &nbsp; &nbsp; <input type="radio" name="devicetype"  class="iRadio" /> 超高频
+								</div>
+							</div>
+							<form class="form-horizontal form-padding">
+								<div class="scan-md clearfix">
+									<div class="pull-left scan-md-left">
+										<div class="form-md-title">
+											设备连接
+										</div>
+										<div class="form-group">
+											<label for="port" class="col-md-5 control-label">RS232端口:</label>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="port" placeholder="" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="baudrate" class="col-md-5 control-label">波特率:</label>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="baudrate" placeholder="" />
+											</div>
+										</div>
+										<div class="form-md-title margin-top-30">
+											图书编码
+										</div>
+										<div class="form-group">
+											<label for="" class="col-md-6 control-label">块起始编号地址:</label>
+											<div class="col-md-6">
+												<select class="selectpicker w100">
+													<option>COM3</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-md-title margin-top-30">
+											图书标签
+										</div>
+										<div class="form-group">
+											<label for="filteradderss" class="col-md-5 control-label">过滤位地址:</label>
+											<div class="col-md-7">
+												<select class="selectpicker w100">
+													<option>00</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="filterstring" class="col-md-5 control-label">过滤字符:</label>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="filterstring" placeholder="请输入16进制字符" />
+											</div>
+										</div>
+									</div>
+									<div class="pull-right scan-md-right">
+										<div class="form-md-title">
+											编码
+										</div>
+										<div class="form-group">
+											<label for="numbertype" class="col-md-5 control-label">编号编码类型:</label>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="numbertype" placeholder="" />
+											</div>
+										</div>
+										<div class="form-md-title margin-top-30" style="margin-top:195px">
+											层架标签
+										</div>
+										<div class="form-group">
+											<label for="filteradderss2" class="col-md-5 control-label">过滤位地址:</label>
+											<div class="col-md-7">
+												<select class="selectpicker w100">
+													<option>00</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="filterstring2" class="col-md-5 control-label">过滤字符:</label>
+											<div class="col-md-7">
+												<input type="text" class="form-control" id="filterstring2" placeholder="请输入16进制字符" />
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-group form-group-action">
+									<div class="col-md-12">
+										<div class="text-center"> 
+											<button class="modal-button mr5">测试连接</button>
+											<button class="modal-button mr5">设为默认读卡器</button>
+											<button class="modal-button modal-button-cancel">保存</button>
+										</div>
+									</div>
+								</div>
+							</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function () {
+		$('.iRadio').iCheck({
+			radioClass: 'iradio_minimal-aero'
+		});
+	})
+</script>
+
+</html>

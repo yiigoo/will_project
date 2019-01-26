@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>首页</title>
+    <script src="assets/js/flexible.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script src="assets/js/base.js"></script>
+    <link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <a href="book-commend.html" class="back link-focus">
+            <i class="icon icon-back"></i>
+        </a>
+        <div class="bar"></div>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="" />
+        </div>
+    </div>
+    <div class="nav" id="global-nav">
+        <div class="bg hidden"></div>
+        <div class="wrap hidden">
+            <ul>
+                <li><a href="index.html"><span>首页</span></a></li>
+                <li><a href="about.html"><span>本馆概况</span></a></li>
+                <li class="active">
+                    <a href="javascript:;">
+                        <i class="icon icon-plus pull-right"></i>
+                        <span>资讯动态</span>
+                    </a>
+                    <div class="sub">
+                        <div class="item">
+                            <a href="news.html">馆内动态</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">新闻公告</a>
+                        </div>
+                        <div class="item">
+                            <a href="book-commend.html">新书推荐</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">活动专题</a>
+                        </div>
+                        <div class="item active">
+                            <a href="news-talk.html">魏都大讲堂</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="resource.html"><span>数字资源</span></a></li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-plus pull-right"></i>
+                        <span>读者服务</span>
+                    </a>
+                    <div class="sub">
+                        <div class="item"><a href="#">开馆时间</a></div>
+                        <div class="item"><a href="#">办证指南</a></div>
+                        <div class="item"><a href="#">入馆须知</a></div>
+                        <div class="item"><a href="#">借阅须知</a></div>
+                        <div class="item"><a href="service-address.html">交通指南</a></div>
+                        <div class="item"><a href="#">常见问题</a></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-plus pull-right"></i>
+                        <span>联系我们</span>
+                    </a>
+                    <div class="sub">
+                        <div class="item"><a href="#">联络大图</a></div>
+                        <div class="item"><a href="#">咨询建议</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-height"></div>
+
+    <div class="page">
+        <div class="page-title text-primary">
+            <div class="wrap">
+                激荡十年，水大鱼大 吴晓波
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="content">
+                <div class="book-commend-header">
+                    <div class="img">
+                        <img src="images/book.png" alt="" />
+                    </div>
+                    <div class="info">
+                        <div class="item">
+                            作者: 吴晓波 著
+                        </div>
+                        <div class="item">
+                            出版时间: 2017-11
+                        </div>
+                        <div class="item">
+                            出版社: 中信出版社
+                        </div>
+                        <div class="item">
+                            索书号: 002115458712
+                        </div>
+                    </div>
+                </div>
+                <div class="book-commend-detail" id="detail-ellipsis">
+                    知名财经作者吴晓波新作，畅销十年、销量超过两百万册的《激荡三十年》续篇，至此完成改革开放四十年企业史完整记录。<br />
+                    作为时代记录者，吴晓波有意识地从1978年，中国改革开放伊始，记录中国翻天覆地的变化和对我们影响至深的人物与事件，串成一部我们每个人的时代激荡史。而*的这十年，无疑更壮观，也更扑朔迷离。<br />
+                    很多事情，在当时并未有很深很透的感受，回过头来再看，可能命运的轨迹就在那一刻无意中形成。这也是我们之所以应该回望历史的原因。 
+                </div>
+                <div class="fixed-bottom">
+                    <a href="javascirpt:;" class="btn btn-primary link-focus btn-lg">借阅</a>
+                </div>
+                <div class="fixed-bottom-height"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var status = true ;  // 切换状态
+            var text= $("#detail-ellipsis").html();  // 获取原来显示的文本
+            var tempText = $("#detail-ellipsis").text().replace(/ /g, "")// 获取截取后的文本
+            if(tempText.length > 100){
+                tempText = tempText.substring(0,90) + '...'
+                $("#detail-ellipsis").html(tempText)
+                $("#detail-more").on("click" , function(){ // 切换函数
+                    if(status){
+                        $("#detail-ellipsis").html(text).addClass("auto")
+                    }else{
+                        $("#detail-ellipsis").html(tempText).removeClass("auto")
+                    }
+                    status = !status;
+                })
+            }else{
+                $("#detail-more").hide()
+            }
+        })
+    </script>
+</body>
+</html>

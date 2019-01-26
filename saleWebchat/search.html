@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>微信超市</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="search-page md-bg">
+        <div class="header-search">
+            <div class="wrap">
+                <i class="icon icon-search"></i>
+                <input type="text" placeholder="请输入关键词搜索" id="keyword" />
+                <button type="submit" class="button">搜索</button>
+            </div>
+        </div>
+        <div class="header-search-bar">
+            <div class="weui-flex">
+                <div class="weui-flex__item text-center active">
+                    <span id="search-city">深圳市</span>
+                    <i class="icon icon-arrow"></i>
+                </div>
+                <div class="line-y"></div>
+                <div class="weui-flex__item text-center">
+                    <span id="search-area">罗湖区</span>
+                    <i class="icon icon-arrow"></i>
+                </div>
+            </div>
+        </div>
+        <ul class="side-nav search-nav">
+            <li class="active">
+                <span>深圳市</span>
+                <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span>
+            </li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+            <li><span>广州市</span> <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></li>
+        </ul>
+    </div>
+    <script>
+        $("#keyword").on("focus",function(){
+            $(".button").addClass("button-active")
+        })
+        $("#keyword").on("blur",function(){
+            if(!$("#keyword").val()){
+                $(".button").removeClass("button-active")
+            }
+        })
+        $(".side-nav li").on("click",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            $("#search-city").html($(this).find("span").html()) 
+            $(".modal-picker").hide();
+        })
+    </script>
+</body>
+</html>

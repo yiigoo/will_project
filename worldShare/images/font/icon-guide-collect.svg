@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 95 95">
+    <defs>
+        <filter id="a" width="115.9%" height="119.7%" x="-8%" y="-7%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.121568627 0 0 0 0 0.607843137 0 0 0 0 0.941176471 0 0 0 1 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(4 10)">
+        <g transform="translate(0 4)">
+            <rect width="22" height="67" fill="#FDA55D" rx="4"/>
+            <path fill="#F0F0F1" d="M3 7h16v22H3z"/>
+            <circle cx="11" cy="54" r="5" fill="#E89654"/>
+        </g>
+        <g transform="translate(22 4)">
+            <rect width="22" height="67" fill="#43CDBD" rx="4"/>
+            <path fill="#F0F0F1" d="M3 7h16v22H3z"/>
+            <circle cx="11" cy="54" r="5" fill="#35B5A6"/>
+        </g>
+        <g transform="rotate(-20 44.171 -121.46)">
+            <rect width="22" height="67" fill="#4C6175" rx="4"/>
+            <path fill="#F0F0F1" d="M3 5h16v22H3z"/>
+            <circle cx="11" cy="52" r="5" fill="#F8D952"/>
+        </g>
+    </g>
+</svg>

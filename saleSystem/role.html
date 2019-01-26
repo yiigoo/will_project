@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>权限管理</title>
+<script type="text/javascript" src="assets/jquery.min.js" ></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- icheck -->
+<script type="text/javascript" src="assets/icheck/icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/orange.css" />
+
+<!-- bootstrap select -->
+<script type="text/javascript" src="assets/select/select.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+
+<!-- bootstrap data time range picker -->
+<script type="text/javascript" src="assets/daterangepicker/moment.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/daterangepicker/daterangepicker.css" />
+<script type="text/javascript" src="assets/daterangepicker/daterangepicker.js" ></script>
+
+<!-- theme green -->
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-green.css" />
+<script type="text/javascript" src="assets/base.js" ></script>
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="\assets/html5.js" ></script>
+	<script type="text/javascript" src="js/ie.js" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="global-header">
+	<div class="clearfix">
+		<div class="pull-left">
+			<div class="title">
+				<span class="logo"></span>
+				<div class="txt">
+					广西葡萄物联网科技有限公司
+					<div class="version">后台管理系统 v 1.0</div>
+				</div>
+			</div>
+		</div>
+		<div class="pull-right">
+			<ul class="nav navbar-nav">
+				<li class="margin-right-10"><i class="bar-icon bar-icon-user"></i> 管理员 Mike</li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="global-nav" id="side-nav">
+		<dl class="active">
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-user-set"></i>
+					用户管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="user.html">操作员管理</a></li>
+					<li class="active"><a href="role.html">权限管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="customer.html">
+					<i class="nav-icon icon-users"></i>
+					顾客管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-site"></i>
+					站点管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="site.html">站点列表</a></li>
+					<li><a href="site-discount.html">销售折扣设置</a></li>
+					<li><a href="site-sale.html">站点销售设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-goods"></i>
+					商品管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="goods.html">商品列表</a></li>
+					<li><a href="good-directory.html">分类设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="stock.html">
+					<i class="nav-icon icon-stock"></i>
+					库存管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="check.html">
+					<i class="nav-icon icon-pie"></i>
+					盘点管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="finance.html">
+					<i class="nav-icon icon-chart"></i>
+					财经管理
+				</a>
+			</dt>
+		</dl>
+	</div>
+	<div class="main">
+		<div class="bread">
+			<a href="#">首页</a> &gt; <a href="#">用户管理</a> &gt; 权限管理
+		</div>
+		<div class="main-container">
+			<div class="page-bar clearfix">
+				<div class="pull-left">
+					<div class="page-title">
+						<span class="line"></span>
+						权限管理
+					</div>
+				</div>
+				<div class="pull-right">
+					 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#role-modal">
+					 	<i class="btn-icon btn-icon-add"></i>  新增权限
+					 </button>
+				</div>
+			</div>
+			<div class="global-table margin-top-gap">
+				<div id="main-table">
+					<div class="table-responsive">
+					    <table class="table table-bordered table-striped table-global">
+						    <thead>
+						        <tr>								
+						        	<th>权限</th>
+									<th>概述</th>
+									<th width="170">操作</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						        	<td>站点权限组</td>
+						        	<td>操作员管理，权限管理，盘点管理，订单管理</td>
+									<td>
+										<a href="javascript:;" class="margin-right-10" data-toggle="modal" data-target="#role-modal">修改账户</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#modal-delete">删除</a>
+									</td>
+						        </tr>
+						         <tr>
+						        	<td>库存管理员</td>
+						        	<td>盘点管理，订单管理</td>
+									<td>
+										<a href="javascript:;" class="margin-right-10" data-toggle="modal" data-target="#role-modal">修改账户</a>
+										<a href="javascript:;" data-toggle="modal" data-target="#modal-delete">删除</a>
+									</td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="pager-md clearfix margin-top-gap">
+				<div class="pull-left">
+					<div class="select-size">
+						<span class="text margin-right-5">显示</span>
+						<select class="selectpicker">
+							<option>12</option>
+							<option>24</option>
+							<option>36</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="pull-right">
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li class="more"><a href="javascript:;">...</a></li>
+						<li><a href="#">80</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 弹出添加权限框框-->
+<div class="modal fade" id="role-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">新增权限</h4>
+            </div>
+            <div class="modal-body">
+            	<form class="form-horizontal" id="form-user">
+            		<div class="form-group">
+					    <label for="roleName" class="col-md-3 control-label">权限名</label>
+					    <div class="col-md-8">
+					    	<input type="text" class="form-control" name="roleName" id="roleName" />
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label">设置权限</label>
+						<div class="col-md-8">
+							<div id="set-role-list" class="btns-list">
+							</div>
+							<div class="checkbox-list-scroll">
+								<ul>
+									<li>
+										<label>
+											<input data-id="1" data-text="操作员管理1" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理1</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="2" data-text="操作员管理2" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理2</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="3" data-text="操作员管理3" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理3</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="4" data-text="操作员管理4" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理4</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="5" data-text="操作员管理5" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理5</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="6" data-text="操作员管理6" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理6</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="7" data-text="操作员管理7" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理7</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="8" data-text="操作员管理8" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理8</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="9" data-text="操作员管理9" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理9</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="10" data-text="操作员管理10" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理10</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="11" data-text="操作员管理11" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理11</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input data-id="12" data-text="操作员管理12" type="checkbox" class="icheck" name="roleType" /> <span class="text">操作员管理12</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label class="col-md-3 control-label"> </label>
+					    <div class="col-md-8">
+							<button type="submit" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 弹出删除框框-->
+<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" style="width:400px;">
+        <div class="modal-content">
+            <div class="modal-body">
+            	<div class="model-delete-tips text-center">
+            		<div class="tips"><i class="icon-tips"></i> 是否确定删除该条数据？</div>
+            		<div class="btns">
+            			<button type="button" class="btn btn-danger margin-right-10" id="btn-delete">
+						 	删除
+						 </button>
+						 <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
+						 	取消
+						 </button>
+            		</div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+	$("#btn-delete").on("click" , function(){
+		$("#modal-delete").modal("hide");
+		debugger
+		$.success_layer("删除成功！")
+	})
+	function rend_set_list(roleTypes){
+		$("#set-role-list").empty();
+		var btns ="";
+		for (var i = 0; i < roleTypes.length; i++) {
+			var btn = 
+				'<button type="button" class="btn btn-danger margin-right-10">' 
+				+ roleTypes[i].text 
+				+ '<span class="glyphicon glyphicon-remove" data-id="' + roleTypes[i].id + '"></span>'+
+				'</button>';
+			btns += btn;
+			// $("input[name='roleType']").each(function(){
+			// 	if(roleTypes[i].id == $(this).data("id")){
+			// 		$(this).iCheck('check');
+			// 	}
+			// })
+		}
+		$("#set-role-list").html(btns);
+	}
+	var roleTypes = [
+		{ id : 1, text : "操作员管理1" },
+		{ id : 2, text : "操作员管理2" },
+		{ id : 3, text : "操作员管理3" },
+		{ id : 4, text : "操作员管理4" },
+		{ id : 5, text : "操作员管理5" }
+	];
+	rend_set_list(roleTypes)
+	$("input[name='roleType']").each(function(){
+		for (var i = 0; i < roleTypes.length; i++) {
+			if(roleTypes[i].id == $(this).data("id")){
+				$(this).iCheck('check');
+			}
+		}
+	})
+
+	$("#set-role-list").on("click",".glyphicon-remove",function(){
+		var id = $(this).data("id");
+		var tmp_id ;
+		for (var i = 0; i < roleTypes.length; i++) {
+			if(roleTypes[i].id == id){
+				tmp_id = i;
+			}
+		}
+		roleTypes.splice(tmp_id,1);
+		rend_set_list(roleTypes);
+		$("input[name='roleType']").each(function(){
+			if($(this).data("id") == id){
+				$(this).iCheck('uncheck');
+			}
+		})
+	})
+	
+	
+	$("input[name='roleType']").on("ifChecked",function(event){
+		var id = $(this).data("id");
+		var text = $(this).data("text");
+		roleTypes.push({id : id , text : text});
+		rend_set_list(roleTypes)
+	})
+	$("input[name='roleType']").on("ifUnchecked",function(event){
+		var id = $(this).data("id");
+		var text = $(this).data("text");
+
+		var tmp_id ;
+		for (var i = 0; i < roleTypes.length; i++) {
+			if(roleTypes[i].id == id){
+				tmp_id = i;
+			}
+		}
+		if(tmp_id){
+			roleTypes.splice(tmp_id,1);
+		}
+		
+		rend_set_list(roleTypes)
+	})
+});
+</script>
+</body>
+</html>

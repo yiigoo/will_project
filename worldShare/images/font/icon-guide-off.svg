@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+        <filter id="a" width="119.4%" height="120.3%" x="-9.7%" y="-7.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.121568627 0 0 0 0 0.607843137 0 0 0 0 0.941176471 0 0 0 0.4 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <circle id="c" cx="21" cy="21" r="21"/>
+        <filter id="b" width="133.3%" height="133.3%" x="-16.7%" y="-11.9%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.121568627 0 0 0 0 0.607843137 0 0 0 0 0.941176471 0 0 0 0.4 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g filter="url(#a)" transform="translate(25 10)">
+            <rect width="69" height="7" x="3" y="62" fill="#E7975C" rx="3.5"/>
+            <rect width="22" height="44.349" y="18" fill="#D55458" rx="4"/>
+            <path fill="#FEA153" d="M0 26h22v4H0zM0 46h22v4H0z"/>
+            <rect width="22" height="46" x="46" y="16" fill="#E6E6E6" rx="4"/>
+            <path fill="#FFF" d="M46 26h22v4H46zM46 48h22v4H46z"/>
+            <rect width="24" height="62" x="22" fill="#4C6175" rx="4"/>
+            <path fill="#53BEA6" d="M22 9h24v4H22zM22 48h24v4H22z"/>
+        </g>
+        <g transform="translate(5 52)">
+            <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+            <use fill="#FFF" xlink:href="#c"/>
+        </g>
+        <path fill="#43CDBD" d="M20.13 72.002h-3.422a2 2 0 0 0-1.415 3.415l9.836 9.836a2 2 0 0 0 2.888-.062l9.035-9.836a2 2 0 0 0-1.473-3.353H31.7V62.46a2 2 0 0 0-2-2h-7.57a2 2 0 0 0-2 2v9.542z"/>
+    </g>
+</svg>

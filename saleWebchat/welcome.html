@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>欢迎光临</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="welcome">
+        <div class="welcome-title">
+            欢迎光临
+            <div class="sub">葡萄盒子24小时自助超市</div>
+        </div>
+        <div class="btns">
+            <a href="javascript:;" class="btn-open" id="step-1"> <i class="icon icon-open"></i></a>
+            <a href="index.html" class="btn-in" style="display:none"  id="step-3"> <i class="icon icon-in"></i></a>
+            
+        </div>
+        <div class="modal-leave-fixed" id="step-2">
+            <div class="bg"></div>
+            <div class="box-validate">
+                <div class="t font-18 row">请填写手机短信</div>
+                <div class="sub font-14 row">已发送到手机：133********532</div>
+                <div class="input row">
+                    <input type="text" class="input-text" placeholder="请填写短信验证码" />
+                </div>
+                <div class="color-info font-14 row">53秒后可重发</div>
+                <div class="btns row clearfix">
+                    <a href="javascript:;" class="weui-btn weui-btn_primary" id="validate">提交</a><a href="javascript:;" class="weui-btn weui-btn_default">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        $("#step-1").on("click",function(){
+            $("#step-1").hide();
+            $("#step-2").show();
+            $("#step-3").hide();
+        })
+        $("#validate").on("click",function(){
+            $("#step-1").hide();
+            $("#step-2").hide();
+            $("#step-3").show();
+        })
+    </script>
+</body>
+</html>

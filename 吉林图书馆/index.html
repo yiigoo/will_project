@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>吉林图书馆 | 首页</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<script src="assets/lib/jquery.min.js"></script>
+<script src="assets/lib/base.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+		</div>
+		<nav class="menu">
+			<ul>
+				<li class="active"><a href="index.html"><span>首页</span></a></li>
+				<li><a href="about.html"><span>吉图概况</span></a></li>
+				<li><a href="news.html"><span>资讯动态</span></a></li>
+				<li><a href="resource.html"><span>馆藏资源</span></a></li>
+				<li><a href="donate.html"><span>图书捐赠</span></a></li>
+				<li><a href="guide.html"><span>服务指南</span></a></li>
+				<!-- bar -->
+				<li class="bar"><a href="my.html"><i class="icon icon-my"></i> 我的图书馆</a></li>
+				<li class="bar"><a href="search.html"><i class="icon icon-search-bar"></i>站内搜索</a></li>
+				<li class="bar"><a href="#">EN</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- 修改 -->
+	<div class="swiper-container swiper-container-banner">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="home-banner" style="background-image: url('assets/images/banner1.jpg')"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="home-banner" style="background-image: url('assets/images/banner2.jpg')"></div>
+			</div>
+		</div>
+		<div class="swiper-pagination-banner"></div>
+	</div>
+	<script>
+		$(document).ready(function(){
+		var swiper = new Swiper('.swiper-container-banner', {
+			pagination: '.swiper-pagination-banner',
+			autoplay : 3000,
+			paginationClickable :true
+		});
+		})
+	</script>
+	<!-- 修改 -->
+	<div class="search-container">
+		<div class="home-search">
+			<ul class="bar" id="tab-panel">
+				<li class="active"><a href="#tabs-1">馆藏书刊<i class="icon icon-arrow-down"></i></a></li>
+				<li><a href="#tabs-2">知识发现<i class="icon icon-arrow-down"></i></a></li>
+				<li><a href="#tabs-3">推广工程<i class="icon icon-arrow-down"></i></a></li>
+				<li><a href="#tabs-4">电子资源<i class="icon icon-arrow-down"></i></a></li>
+			</ul>
+			<div class="tab-panel-wrap">
+				<div id="tabs-1" class="panel">
+					<div class="search-md">
+						<i class="icon icon-search"></i>
+						<input type="text" placeholder="请搜索书籍关键字" />
+						<button type="submit">搜索</button>
+					</div>
+				</div>
+				<div id="tabs-2" class="panel hidden">
+					<div class="search-md">
+						<i class="icon icon-search"></i>
+						<input type="text" placeholder="请搜索知识关键字" />
+						<button type="submit">搜索</button>
+					</div>
+				</div>
+				<div id="tabs-3" class="panel hidden">
+					<div class="search-md">
+						<i class="icon icon-search"></i>
+						<input type="text" placeholder="请搜索工程关键字" />
+						<button type="submit">搜索</button>
+					</div>
+				</div>
+				<div id="tabs-4" class="panel hidden">
+					<div class="search-md">
+						<i class="icon icon-search"></i>
+						<input type="text" placeholder="请搜索资源关键字" />
+						<button type="submit">搜索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 修改 -->
+
+
+	<div class="index-md clearfix">
+		<div class="news-index">
+			<div class="title-md">
+				<div class="more">
+					<a href="news.html">+ 更多</a>
+				</div>
+				<h3>新闻公告</h3>
+			</div>
+			<div class="wrap">
+				<div class="img-side">
+					<div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="news.html"><img src="images/p1.png" alt="" class="wimg" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="news.html"><img src="images/p1.png" alt="" class="wimg" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="news.html"><img src="images/p1.png" alt="" class="wimg" /></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+				</div>
+				<div class="content">
+					<div class="t text-ellipsis">
+						<a href="news-show.html">吉林省图书馆吉林省图书馆2018年新年音乐会魅力来袭吉林省图书馆2018年新年音乐会魅力来袭2018年新年音乐会魅力来袭</a>
+					</div>
+					<div class="view">
+						吉林图书馆公共文化服务改革“福田样本”惠及百姓国家公共文化服务<a href="" class="text-primary">[查看详情]</a>
+					</div>
+					<div class="list">
+						<ul>
+							<li class="text-ellipsis"><span class="date">2017-11-18</span> <a href="news-show.html">红色征途上的塞北江南”——崔酣山水画展在省图展出</a></li>
+							<li class="text-ellipsis"><span class="date">2017-11-18</span> <a href="news-show.html">纸 韵”东北民俗剪纸创作展在省图举行</a></li>
+							<li class="text-ellipsis"><span class="date">2017-11-18</span> <a href="news-show.html">省图“作家进校园”活动走进长春市朝阳学校</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actives-index">
+			<div class="title-md">
+				<div class="more">
+					<a href="news.html">+ 更多</a>
+				</div>
+				<h3>活动推介</h3>
+			</div>
+			<div class="wrap">
+				<div class="content">
+					<div class="img-side">
+						<a href="news-show.html"><img src="images/p2.png" alt="" width="100" height="100" /></a>
+					</div>
+					<div class="t text-ellipsis"><a href="news-show.html">戌神送福 黄耳通灵</a></div> 
+					<div class="views">
+						主讲人：施立学 吉林省民俗学会理事长 <br />
+						时   间：1月28日13:30 <br />
+						地   点：多功能厅（东南侧负一层）
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<ul class="clearfix">
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">翰墨飘香迎新春</a></li>
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">《重返狼群》</a></li>
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">松花江文化讲坛</a></li>
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">2017年文化热点透视</a></li>
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">传奇张爱玲-读《张爱玲的前世今生》</a></li>
+					<li class="text-ellipsis"><span class="tag">活动</span> <a href="news-show.html">“健康生活 悦动吉林”</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="service-index">
+			<div class="title-md">
+				<div class="more">
+					<a href="news.html">+ 更多</a>
+				</div>
+				<h3>读者服务</h3>
+			</div>
+			<div class="wrap">
+				<div class="content">
+					<ul class="cleafix list">
+						<li><a href="#"><i class="icon icon-rule"></i> 借阅规则</a></li>
+						<li><a href="#"><i class="icon icon-call"></i> 服务窗口</a></li>
+						<li><a href="#"><i class="icon icon-card"></i> 办证须知</a></li>
+						<li><a href="#"><i class="icon icon-traffic"></i> 交通指南</a></li>
+						<li><a href="#"><i class="icon icon-time"></i> 开馆时间</a></li>
+						<li><a href="#"><i class="icon icon-question"></i> 常见问题</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<footer class="footer clearfix">
+		<div class="qr">
+			<img src="images/qr.png" alt="" width="50" height="50" />
+			<br />
+			扫一扫 关注吉图
+		</div>
+		<div class="bszs">
+			<a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=06874D3E5D54175AE053022819AC5CBD">
+				<img src="images/bszs.png" alt="" />
+			</a>
+		</div>
+		<div class="wrap">
+			<div class="guide-list">
+				<a href="">网站地图</a>  |  
+				<a href="">常见问题</a>  |  
+				<a href="">意见建议</a>  |  
+				<a href="">联系我们</a>
+			</div>
+			<div class="copyright">
+				Copyright © 2014 深圳大学城图书馆版权所有　　粤ICP备10008844号
+			</div>
+		</div>
+		<div class="links">
+			<a class="block" href="javascript:;"><i class="icon icon-arrow-up fr"></i>常用链接 </a>
+			<div class="show">
+				<div class="clearfix">
+						<div class="col-4">
+							<div class="t">国内图书馆</div>
+							<ul>
+								<li><a href="#">中国国家图书馆</a></li>
+								<li><a href="#">上海图书馆</a></li>
+								<li><a href="#">深圳图书馆</a></li>
+								<li><a href="#">天津图书馆</a></li>
+								<li><a href="#">首都图书馆</a></li>
+								<li><a href="#">重庆图书馆</a></li>
+								<li><a href="#">金陵图书馆</a></li>
+							</ul>
+						</div>
+						<div class="col-4">
+							<div class="t">省内图书馆/信息机构</div>
+							<ul>
+								<li><a href="#">吉林省图书馆</a></li>
+								<li><a href="#">长春图书馆</a></li>
+								<li><a href="#">吉林市图书馆</a></li>
+								<li><a href="#">吉林大学图书馆</a></li>
+								<li><a href="#">东北师范大学图书馆</a></li>
+								<li><a href="#">长春大学图书馆</a></li>
+								<li><a href="#">吉林农业大学图书馆</a></li>
+							</ul>
+						</div>
+						<div class="col-4">
+							<div class="t">省内媒体</div>
+							<ul>
+								<li><a href="#">吉林日报</a></li>
+								<li><a href="#">吉林电视台</a></li>
+								<li><a href="#">吉林人民出版社</a></li>
+								<li><a href="#">吉林人民广播电台</a></li>
+								<li><a href="#">吉林教育出版社</a></li>
+								<li><a href="#">长春出版社</a></li>
+								<li><a href="#">吉林文史出版社</a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/lib/swiper.min.js"></script>
+    <link rel="stylesheet" href="assets/lib/swiper.min.css">
+	<script>
+		$(document).ready(function(){
+			$("#tab-panel li").on("click",function(){
+				$(this).addClass("active").siblings().removeClass("active")
+				var target = $(this).find("a").attr("href")
+				$(".tab-panel-wrap .panel").hide();
+				$(target).show()
+			})
+			var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+				autoplay : 3000
+            });
+
+			$(".links").hover(function(){
+				$(".links .show").show();
+			},function(){
+				$(".links .show").hide();
+			})
+		})
+	</script>
+</body>
+</html>

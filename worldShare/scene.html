@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>场景管理</title>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<!-- icheck -->
+	<script type="text/javascript" src="assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/aero.css" />
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+	<!-- bootstrap data time range picker -->
+	<!-- theme light-blue -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-light-blue.css" />
+	<script type="text/javascript" src="assets/base.js"></script>
+</head>
+
+<body>
+	<div class="upload global-md">
+		<div class="global-table">
+			<div class="title">
+				<a href="guide.html">
+					<i class="icon icon-back"></i>
+					场景管理
+				</a>
+			</div>
+			<div class="main-table">
+				<div class="clearfix margin-top-gap">
+					<div class="pull-left">
+						<select class="selectpicker mr5">
+							<option>场景ID</option>
+						</select>
+						<div class="search-group">
+							<input type="text" class="form-control" placeholder="请输入搜索关键词" />
+							<i class="icon icon-search"></i>
+						</div>
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-primary" id="add">新增</button>
+					</div>
+				</div>
+				<div class="table-responsive margin-top-gap">
+					<table class="table table-bordered table-striped table-global">
+						<thead>
+							<tr>
+								<th>选择</th>
+								<th>序号</th>
+								<th>场景ID</th>
+								<th>场景名称</th>
+								<th>备注</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>1</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>2</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>3</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>4</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>5</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>6</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>7</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>8</td>
+								<td>20170232123</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>9</td>
+								<td>西方美学与东方美学</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" class="icheck" />
+								</td>
+								<td>10</td>
+								<td>西方美学与东方美学</td>
+								<td>图书馆一楼3号书架</td>
+								<td></td>
+								<td>
+									<a href="#"><i class="icon-edit"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="clearfix page">
+					<div class="pull-left">
+						<button class="btn btn-primary mr5">删除</button>
+						<div class="form-text">共选中 <span class="text-primary">5</span> 个场景</div>
+					</div>
+					<div class="pull-right">
+						<div class="pager">
+							<a href="#" class="prev"> <i class="icon-arrow-left"></i> </a> 
+							<span class="text">1/5</span>
+							<a href="#" class="next"> <i class="icon-arrow-right"></i> </a> 
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="modal-right" class="modal-show">
+		<div class="model-closed" id="closed">
+			<i class="icon-closed"></i>
+		</div>
+		<div class="bg-shadow"></div>
+		<div class="content">
+			<div class="form-title">
+				<span class="line"></span>
+				新增场景
+			</div>
+			<div class="form-horizontal main-form">
+				<div class="clearfix form-gap">
+					<div class="form-group">
+						<label for="sceneid" class="col-md-2 control-label">场景ID:</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="sceneid" placeholder="" />
+						</div>
+						<label for="scenename" class="col-md-2 control-label">场景名称:</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="scenename" placeholder="" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="memo" class="col-md-2 control-label">备注:</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="memo" placeholder="" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sceneid" class="col-md-2 control-label">场景地图:</label>
+						<div class="col-md-4">
+							<div class="input-file">
+								<input type="file" class="form-control" id="map" placeholder="" />
+								<div class="file-tips">请点击上传地图</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="text-info form-control-static">地图文件支持：JPG\PNG\PDF格式文件</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-2">
+							<div class="map-uplaod-md">
+								<i class="icon-map"></i>
+								<div class="t">场景地图预览</div> 
+								<p>	暂无预览图片，请上传</p>
+							</div>
+						</div>
+					</div>
+					<div class="form-group form-group-action">
+						<div class="col-md-12">
+							<div class="text-center"> 
+								<button class="modal-button mr5">测试连接</button>
+								<button class="modal-button mr5">停止</button>
+								<button class="modal-button modal-button-cancel">保存设置</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function () {
+		$('input').iCheck({
+			checkboxClass: 'icheckbox_minimal-aero'
+		});
+	})
+	$("#add").on("click",function(){
+		$("#modal-right").show()
+	})
+	$("#closed").on("click",function(){
+		$("#modal-right").hide()
+	})
+</script>
+
+</html>

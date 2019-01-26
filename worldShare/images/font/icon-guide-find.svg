@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+    <defs>
+        <filter id="a" width="227.3%" height="138.9%" x="-63.6%" y="-13.9%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.121568627 0 0 0 0 0.607843137 0 0 0 0 0.941176471 0 0 0 0.4 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <circle id="c" cx="28.293" cy="28.293" r="28.293"/>
+        <filter id="b" width="131.8%" height="131.8%" x="-15.9%" y="-12.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="2" result="shadowInner"/>
+            <feOffset dy="2" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.121568627 0 0 0 0 0.607843137 0 0 0 0 0.941176471 0 0 0 0.4 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(11 10)">
+        <g filter="url(#a)" transform="rotate(-45 84.786 -29.28)">
+            <path fill="#D8D8D8" d="M1.804 0h7.215v8.172H1.804z"/>
+            <path fill="#4C6175" d="M0 8.172h10.823v22.375a5.411 5.411 0 1 1-10.823 0V8.172z"/>
+        </g>
+        <circle cx="28.293" cy="28.293" r="28.293" fill="#F7F7F7" fill-opacity=".2"/>
+        <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+        <use stroke="#FFF" stroke-width="4" xlink:href="#c"/>
+    </g>
+</svg>

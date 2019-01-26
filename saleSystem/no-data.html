@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>暂无数据</title>
+<script type="text/javascript" src="assets/jquery.min.js" ></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- icheck -->
+<script type="text/javascript" src="assets/icheck/icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/orange.css" />
+
+<!-- bootstrap select -->
+<script type="text/javascript" src="assets/select/select.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+
+<!-- bootstrap data time range picker -->
+<script type="text/javascript" src="assets/daterangepicker/moment.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/daterangepicker/daterangepicker.css" />
+<script type="text/javascript" src="assets/daterangepicker/daterangepicker.js" ></script>
+
+<!-- theme green -->
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-green.css" />
+<script type="text/javascript" src="assets/base.js" ></script>
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="\assets/html5.js" ></script>
+	<script type="text/javascript" src="js/ie.js" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="global-header">
+	<div class="clearfix">
+		<div class="pull-left">
+			<div class="title">
+				<span class="logo"></span>
+				<div class="txt">
+					广西葡萄物联网科技有限公司
+					<div class="version">后台管理系统 v 1.0</div>
+				</div>
+			</div>
+		</div>
+		<div class="pull-right">
+			<ul class="nav navbar-nav">
+				<li class="margin-right-10"><i class="bar-icon bar-icon-user"></i> 管理员 Mike</li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="global-nav" id="side-nav">
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-user-set"></i>
+					用户管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="user.html">操作员管理</a></li>
+					<li><a href="role.html">权限管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="customer.html">
+					<i class="nav-icon icon-users"></i>
+					顾客管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-site"></i>
+					站点管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="site.html">站点列表</a></li>
+					<li><a href="site-discount.html">销售折扣设置</a></li>
+					<li><a href="site-sale.html">站点销售设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-goods"></i>
+					商品管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li><a href="goods.html">商品列表</a></li>
+					<li><a href="good-directory.html">分类设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="stock.html">
+					<i class="nav-icon icon-stock"></i>
+					库存管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="check.html">
+					<i class="nav-icon icon-pie"></i>
+					盘点管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="finance.html">
+					<i class="nav-icon icon-chart"></i>
+					财经管理
+				</a>
+			</dt>
+		</dl>
+	</div>
+	<div class="main">
+		<div class="bread">
+			<a href="#">首页</a> &gt; <a href="#">用户管理</a> &gt; 操作员管理
+		</div>
+		<div class="main-container">
+			<div class="page-bar clearfix">
+				<div class="pull-left">
+					<div class="page-title">
+						<span class="line"></span>
+						操作员管理
+					</div>
+				</div>
+				<div class="pull-right">
+					 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user-modal"><i class="btn-icon btn-icon-add"></i>  添加操作员</button>
+				</div>
+			</div>
+			<div class="global-table margin-top-gap">
+				<div id="main-table">
+					<div class="table-responsive">
+					    <table class="table table-bordered table-striped table-global">
+						    <thead>
+						        <tr>								
+						        	<th>编号</th>
+									<th>用户名</th>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>手机</th>
+									<th>用户类型</th>
+									<th>所属站点</th>
+									<th>权限组</th>
+									<th>账户状态</th>
+									<th>操作</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						        	<td  colspan="10">
+						        		<div class="empty text-center">
+						        			<div class="tips">暂无数据，请添加</div>
+						        			<i class="icon-empty margin-top-gap"></i>
+						        		</div>
+						        	</td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+</body>
+</html>

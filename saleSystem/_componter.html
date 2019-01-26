@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 oldie"><![endif]-->
+<!--[if IE 9]><html class="ie9 oldie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<title>功能引导</title>
+<script type="text/javascript" src="assets/jquery.min.js" ></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="assets/icheck/icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/orange.css" />
+<script type="text/javascript" src="assets/select/select.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/modal/bootstrap-modal.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-green.css" />
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="\assets/html5.js" ></script>
+	<script type="text/javascript" src="js/ie.js" ></script>
+<![endif]-->
+</head>
+<body>
+<div class="global-header">
+	<div class="clearfix">
+		<div class="pull-left">
+			<div class="title">
+				<span class="logo"></span>
+				<span class="version">v 1.0</span>
+			</div>
+		</div>
+		<div class="pull-right">
+			<ul class="nav navbar-nav">
+				<li class="margin-right-10"><i class="bar-icon bar-icon-user"></i> 管理员 Mike</li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+	<div class="global-nav">
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-user-set"></i>
+					用户管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li class="active"><a href="user.html">操作员管理</a></li>
+					<li><a href="role.html">权限管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="customer.html">
+					<i class="nav-icon icon-users"></i>
+					顾客管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-site"></i>
+					站点管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li class="active"><a href="site.html">站点列表</a></li>
+					<li><a href="site-discount.html">销售折扣设置</a></li>
+					<li><a href="site-sale.html">站点销售设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="javascript:;">
+					<i class="nav-icon icon-goods"></i>
+					商品管理
+					<span class="caret"></span>
+				</a>
+			</dt>
+			<dd>
+				<ul>
+					<li class="active"><a href="goods.html">商品列表</a></li>
+					<li><a href="good-directory.html">分类设置</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<a href="stock.html">
+					<i class="nav-icon icon-stock"></i>
+					库存管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="check.html">
+					<i class="nav-icon icon-pie"></i>
+					盘点管理
+				</a>
+			</dt>
+		</dl>
+		<dl>
+			<dt>
+				<a href="finance.html">
+					<i class="nav-icon icon-chart"></i>
+					财经管理
+				</a>
+			</dt>
+		</dl>
+	</div>
+	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">提交</button>
+	 <button type="button" class="btn btn-danger">删除</button>
+	 <input type="text" class="form-control" placeholder="Search" style="width :300px;display: inline-block;" />
+
+	 <div class="btn-group" role="group" aria-label="...">
+		<button type="button" class="btn btn-default btn-primary">表格</button>
+		<button type="button" class="btn btn-default">柱状图</button>
+		<button type="button" class="btn btn-default">折线图</button>
+		<button type="button" class="btn btn-default">趋势图</button>
+	</div>
+	<ul class="main-guide">
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-user"></i>操作员管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-user-set"></i>顾客管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-site"></i>站点管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-goods"></i>商品管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-stock"></i>库存管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-pie"></i>盘点管理</a>
+		</li>
+		<li>
+			<a href="#"><i class="guide-icon guide-icon-chart"></i>财经管理</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+	</ul>
+	<div class="global-table">
+		<div class="table-responsive">
+		    <table class="table table-bordered table-striped table-global">
+			    <thead>
+			        <tr>
+						<th>Class</th>
+						<th>描述</th>
+						<th>描述</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+						<td>
+			            	鼠标悬停在行或单元格上时所设置的颜色
+						</td>
+						<td>鼠标悬停在行或单元格上时所设置的颜色</td>
+						<td><a href="#">连接</a></td>
+			        </tr>
+			        <tr>
+						<td>
+			            	鼠标悬停在行或单元格上时所设置的颜色
+						</td>
+						<td>鼠标悬停在行或单元格上时所设置的颜色</td>
+						<td><a href="#">连接</a></td>
+			        </tr>
+			        <tr>
+						<td>
+			            	鼠标悬停在行或单元格上时所设置的颜色
+						</td>
+						<td>鼠标悬停在行或单元格上时所设置的颜色</td>
+						<td><a href="#">连接</a></td>
+			        </tr>
+			        <tr>
+						<td>
+			            	鼠标悬停在行或单元格上时所设置的颜色
+						</td>
+						<td>鼠标悬停在行或单元格上时所设置的颜色</td>
+						<td><a href="#">查看详情</a></td>
+			        </tr>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="pager-md clearfix">
+	<div class="pull-left">
+		<div class="select-size">
+			<span class="text margin-right-5">显示</span>
+			<select class="selectpicker">
+				<option>12</option>
+				<option>24</option>
+				<option>36</option>
+			</select>
+		</div>
+		
+	</div>
+	<div class="pull-right">
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li class="more"><a href="javascript:;">...</a></li>
+			<li><a href="#">80</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+            </div>
+            <div class="modal-body">在这里添加一些文本</div>
+            
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>

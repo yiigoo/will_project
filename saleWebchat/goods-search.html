@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>商品查询</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="shops-goods">
+        <header class="header-fixed">
+            <div class="header-search-bar">
+                <div class="weui-flex">
+                    <div class="weui-flex__item text-center active">
+                        <span id="search-city">综合</span>
+                        <i class="icon icon-arrow"></i>
+                    </div>
+                    <div class="weui-flex__item text-center">
+                        <span id="search-area">销量</span>
+                    </div>
+                    <div class="weui-flex__item text-center">
+                        <span id="search-area">价格</span>
+                        <span class="price-icons">
+                            <i class="icon icon-arrow up"></i>
+                            <i class="icon icon-arrow down"></i>
+                        </span>
+                    </div>
+                    <div class="weui-flex__item text-center" id="search-filter">
+                        <span>筛选</span>
+                        <i class="icon icon-filter"></i>
+                    </div>
+                    <div class="search-md">
+                        <div class="line"></div>
+                        <i class="icon icon-search"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header-fixed-gap"></div>
+        <div class="weui-grids goods-list">
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good-off-find.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+            <a href="goods-detail-discount.html" class="weui-grid js_grid">
+                <div class="goods-img">
+                    <img src="images/good140.png" alt="">
+                </div>
+                <div class="title">甜猫（Sweet cat）印尼进口花生味威化饼干180g</div>
+                <div class="color-highlight">￥200.00</div>
+            </a>
+        </div>
+    </div>
+    <div class="side-search-fixed">
+        <div class="bg"></div>
+        <div class="wrap">
+            <dl class="side-nav">
+                <dt><i class="icon icon-shop"></i> 商店 <i class="icon icon-arrow"></i> </dt>
+                <dd>
+                    <ul>
+                        <li>商店 1 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span> </li>
+                        <li>商店 2 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                        <li>商店 3 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="side-nav">
+                <dt><i class="icon icon-dir"></i> 分类 <i class="icon icon-arrow"></i></dt>
+                <dd>
+                    <ul>
+                        <li>分类 1 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                        <li>分类 2 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                        <li>分类 3 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="side-nav">
+                <dt><i class="icon icon-price"></i> 价格 <i class="icon icon-arrow"></i></dt>
+                <dd>
+                    <ul>
+                        <li>0 ~ 50元 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                        <li>50 ~ 100元 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                        <li>150元以上 <span class="weui-cells_checkbox"><i class="weui-icon-checked"></i></span></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="text-center">
+                <a href="javascript:;" class="weui-btn weui-btn_primary" id="submit-filter">提交</a>
+                <a href="javascript:;" class="weui-btn weui-btn_default" id="reset-filter">重置</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#search-filter").on("click",function(){
+            $.modalFilter("show")
+        })
+        $(".side-nav dt").on("click",function(){
+            $(".side-nav dd").hide();
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+               
+            }else{
+                $(".side-nav dt").removeClass("active");
+                $(this).addClass("active");
+                $(this).next().show();
+            }
+        })
+        $(".side-nav li").on("click",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+        $("#submit-filter").on("click",function(){
+            $.modalFilter("hide")
+        })
+        $("#reset-filter").on("click",function(){
+            $(".side-nav li").removeClass("active");
+        })
+    </script>
+</body>
+</html>

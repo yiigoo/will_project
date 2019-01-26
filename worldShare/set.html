@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>参数设置</title>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<!-- icheck -->
+	<script type="text/javascript" src="assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/aero.css" />
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+	<!-- bootstrap data time range picker -->
+	<!-- theme light-blue -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-light-blue.css" />
+	<script type="text/javascript" src="assets/base.js"></script>
+</head>
+
+<body>
+	<div class="upload global-md">
+		<div class="global-table">
+
+			<div class="title">
+				<a href="guide.html">
+					<i class="icon icon-back"></i>
+					参数设置
+				</a>
+			</div>
+			<div class="main-form">
+				<div class="clearfix margin-top-gap">
+					<div class="pull-left">
+						<div class="side-nav">
+							<ul>
+								<li class="active"><a href="set.html">数据库设置</a></li>
+								<li><a href="set-sip2.html">SIP2设置</a></li>
+								<li><a href="set-scan.html">扫描设备设置</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="content">
+							<div class="form-title">
+								<span class="line"></span>
+								数据库设置
+							</div>
+							<form class="form-horizontal padding-top-15">
+								<div class="form-group">
+									<label for="host" class="col-md-2 control-label">主机地址:</label>
+									<div class="col-md-7">
+										<input type="text" class="form-control" id="host" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="post" class="col-md-2 control-label">端口号:</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" id="post" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="sql" class="col-md-2 control-label">数据库:</label>
+									<div class="col-md-7">
+										<input type="text" class="form-control" id="sql" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="username" class="col-md-2 control-label">用户名:</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" id="username" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-md-2 control-label">密码:</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" id="password" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="address" class="col-md-2 control-label">服务器地址:</label>
+									<div class="col-md-7">
+										<input type="text" class="form-control" id="address" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="deviceid" class="col-md-2 control-label">设备ID:</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" id="deviceid" />
+									</div>
+								</div>
+								<div class="form-group form-group-action">
+									<div class="col-md-12">
+											<div class="text-center"> 
+												<button class="modal-button mr5">测试连接</button>
+												<button class="modal-button modal-button-cancel">保存设置</button>
+											</div>
+									</div>
+								</div>
+							</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function () {
+		$('input').iCheck({
+			checkboxClass: 'icheckbox_minimal-aero'
+		});
+	})
+</script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>参数设置</title>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<!-- icheck -->
+	<script type="text/javascript" src="assets/icheck/icheck.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/icheck/minimal/aero.css" />
+	<!-- bootstrap select -->
+	<script type="text/javascript" src="assets/select/select.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/select/select.min.css" />
+	<!-- bootstrap data time range picker -->
+	<!-- theme light-blue -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-light-blue.css" />
+	<script type="text/javascript" src="assets/base.js"></script>
+</head>
+
+<body>
+	<div class="upload global-md">
+		<div class="global-table">
+
+			<div class="title">
+				<a href="guide.html">
+					<i class="icon icon-back"></i>
+					参数设置
+				</a>
+			</div>
+			<div class="main-form">
+				<div class="clearfix margin-top-gap">
+					<div class="pull-left">
+						<div class="side-nav">
+							<ul>
+								<li><a href="set.html">数据库设置</a></li>
+								<li class="active"><a href="set-sip2.html">SIP2设置</a></li>
+								<li><a href="set-scan.html">扫描设备设置</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="content">
+							<div class="form-title">
+								<span class="line"></span>
+								SIP2设置
+							</div>
+							<div class="form-horizontal">
+								<div class="clearfix sip2-md">
+									<div class="pull-left set-md">
+										<div class="form-md-title">
+											ACS服务连接
+										</div>
+										<div class="form-group">
+											<label for="ip" class="col-md-3 control-label">服务IP地址:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" id="ip" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="post" class="col-md-3 control-label">端口号:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" id="post" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="timeout" class="col-md-3 control-label">超时时间:</label>
+											<div class="col-md-3">
+												<input type="text" class="form-control" id="timeout" />
+											</div>
+											<div class="col-md-6">
+												<p class="form-control-static">毫秒 <span class="text-info">（需小于8000）</span></p>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="format" class="col-md-3 control-label">编码格式:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" id="format" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="endblock" class="col-md-3 control-label">结束符:</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control" id="endblock" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="type" class="col-md-3 control-label">连接方式:</label>
+											<div class="col-md-9">
+												<div class="form-control-static">
+													<input type="radio" name="contect" class="iRadio" checked /> 长连接 &nbsp; &nbsp; &nbsp;	<input type="radio"  name="contect" class="iRadio" /> 短连接
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="times" class="col-md-3 control-label">重连次数:</label>
+											<div class="col-md-3">
+												<input type="text" class="form-control" id="times" />
+											</div>
+											<div class="col-md-6">
+												<p class="form-control-static"><span class="text-info">（≤5，建议值为0）</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="pull-right">
+										<div class="side-login">
+											<div class="t text-center">ACS登录</div>
+											<div class="wrap">
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="text" class="form-control" id="username" placeholder="请输入登入账户" />
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="text" class="form-control" id="username" placeholder="请输入密码" />
+													</div>
+												</div>
+												<div class="form-group form-group-action">
+													<div class="col-md-12">
+														<button class="modal-button modal-button-cancel mr5">登录</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group form-group-action">
+									<div class="col-md-12">
+											<div class="text-center"> 
+												<button class="modal-button mr5" id="text">测试连接</button>
+												<button class="modal-button mr5">停止</button>
+												<button class="modal-button modal-button-cancel">保存设置</button>
+											</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="global-message global-message-fail">
+		<div class="bg-shadow"></div>
+		<div class="text">连接失败，请检查配置参数</div>
+	</div>
+	<div class="global-message global-message-fail">
+		<div class="bg-shadow"></div>
+		<div class="text">登录失败，请检查您账户或密码</div>
+	</div>
+	<div class="global-message ">
+		<div class="bg-shadow"></div>
+		<div class="text">登录成功</div>
+	</div>
+	<div class="global-message ">
+		<div class="bg-shadow"></div>
+		<div class="text">保存成功</div>
+	</div>
+	<div class="global-message ">
+		<div class="bg-shadow"></div>
+		<div class="text">已停止ACS服务连接</div>
+	</div>
+	<!-- <div class="global-message global-message-fail">
+		<div class="bg-shadow"></div>
+		<div class="text">连接失败，请检查配置参数</div>
+	</div> -->
+</body>
+<script>
+	$(document).ready(function () {
+		$('.iRadio').iCheck({
+			radioClass: 'iradio_minimal-aero'
+		});
+		$("#text").on("click",function(){
+			$(".global-message").eq(0).show();
+			setTimeout(function(){
+				$(".global-message").eq(0).hide();
+			},2000)
+		})
+	})
+</script>
+
+</html>

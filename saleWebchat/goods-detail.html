@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="goods-detail">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/good-detail.png" alt="" class="wimg" /></div>
+                <div class="swiper-slide"><img src="images/good-detail.png" alt="" class="wimg" /></div>
+                <div class="swiper-slide"><img src="images/good-detail.png" alt="" class="wimg" /></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="goods-show goods-md">
+            <div class="title">
+                <label class="label">无货</label>   
+                Apple Watch Series 3智能手表
+            </div>
+            <div class="good-price text-center color-highlight font18">￥2588.0</div>
+            <div class="weui-btn-area">
+                <a class="weui-btn weui-btn_primary" href="javascript:" id="showLeave">我要催货</a>
+            </div>
+        </div>
+        <div class="goods-md">
+            <div class="goods-md-title">
+                <div class="line"></div>
+                <div class="title scale-1px">产品参数</div>
+            </div>
+            <div class="goods-param">
+                <table width="100%">
+                    <tr>
+                        <td class="color-info">保修期:</td>
+                        <td><strong>12个月</strong> </td>
+                    </tr>
+                    <tr>
+                        <td class="color-info">品牌:</td>
+                        <td><strong>Apple/苹果</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="color-info">型号:</td>
+                        <td><strong>Apple Watch Series 3</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="color-info">表壳尺寸:</td>
+                        <td><strong>38mm 42mm</strong></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="goods-md">
+            <div class="goods-md-title">
+                <div class="line"></div>
+                <div class="title scale-1px">商品详情</div>
+            </div>
+            <div class="editor">
+                <img src="images/good-show.png" alt="" class="wimg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-leave-fixed">
+        <div class="bg"></div>
+        <div class="wrap">
+            <form class="modal-form">
+                <div class="title text-center">我要催货</div>
+                <div class="row">
+                    <select name="" id="" class="select">
+                        <option value="">我要留言</option>
+                        <option value="">我要催货</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <textarea class="textarea" placeholder="请输入您要反馈的内容" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type='text/javascript' src='assets/weui/js/swiper.min.js'></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        });
+        $("#showLeave").on("click",function(){
+            $.modalLeave("show")
+            // 隐藏 $.modalLeave("hide")
+        })
+    </script>
+</body>
+</html>

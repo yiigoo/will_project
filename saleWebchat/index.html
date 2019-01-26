@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="assets/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="assets/base.css">
+    <script src="assets/weui/lib/zepto.js"></script>
+    <script src="assets/weui/lib/fastclick.js"></script>
+    <script src="assets/weui/js/jquery-weui.min.js"></script>
+    <script src="assets/base.js"></script>
+</head>
+<body>
+    <div class="home">
+        <div class="clearfix home-top">
+            <div class="pull-left">
+                葡萄盒子24小时自助超市
+            </div>
+            <div class="pull-right font12">
+                张海涛 <i class="icon icon-user"></i>
+            </div>
+        </div>
+        <div class="home-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/home-banner-1.png" alt="" /></div>
+                    <div class="swiper-slide"><img src="images/home-banner-1.png" alt="" /></div>
+                    <div class="swiper-slide"><img src="images/home-banner-1.png" alt="" /></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="home-nav">
+            <div class="line-xy"></div>
+            <ul class="clearfix">
+                <li><a href="shop.html"><i class="icon icon-home-near"></i>附近商店</a></li>
+                <li><a href="goods-search.html"><i class="icon icon-home-search"></i>商品查询</a></li>
+                <li><a href="record.html"><i class="icon icon-home-record"></i>购买记录</a></li>
+                <li><a href="leave.html"><i class="icon icon-home-leave"></i>留言记录</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type='text/javascript' src='assets/weui/js/swiper.min.js'></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        });
+    </script>
+</body>
+</html>

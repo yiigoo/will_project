@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>楼层分布</title>
+    <script src="assets/lib/flexible.min.js"></script>
+    <script src="assets/lib/jquery.min.js"></script>
+    <script src="assets/lib/fastclick.js"></script>
+    <script src="assets/js/base.js"></script>
+    <link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="" />
+        </div>
+        <div class="bar">
+            <div id="global-header-dir"><i class="icon icon-dir"></i></div>
+            <div id="global-header-closed" class="hidden"><i class="icon icon-closed-primary hidden"></i></div>
+        </div>
+    </div>
+    <div class="nav" id="global-nav">
+        <div class="bg hidden"></div>
+        <div class="wrap hidden">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="active"><a href="about.html">吉图概况</a></li>
+                <li><a href="news.html">资讯动态</a></li>
+                <li><a href="#">馆藏资源</a></li>
+                <li><a href="#">图书捐赠</a></li>
+                <li><a href="#">服务指南</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-height"></div>
+    
+    <div class="sub-nav" id="global-sub-nav">
+        <div class="angle"></div>
+        <div class="t">
+            吉图概况<br />
+            <span class="en">About</span>
+        </div>
+        <div class="wrap hidden">
+            <ul>
+                <li>
+                    <a href="about.html">吉图介绍 <span class="active-line"></span></a>
+                </li>
+                <li class="active">
+                    <a href="about-floor.html">楼层分布 <span class="active-line"></span></a>
+                </li>
+                <li>
+                    <a href="about-org.html">机构设置 <span class="active-line"></span></a>
+                </li>
+                <li>
+                    <a href="about-leader.html">馆领导集体 <span class="active-line"></span></a>
+                </li>
+                <li>
+                    <a href="about-ethics.html">职业道德规范 <span class="active-line"></span></a>
+                </li>
+                <li>
+                    <a href="about-report.html">吉图年报 <span class="active-line"></span></a>
+                </li>
+                <li>
+                    <a href="about-plan.html">“十三五”规划 <span class="active-line"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="more">
+            <a href="#"><i class="icon icon-toggle"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-md">
+            楼层分布
+            <div class="line"></div>
+        </div>
+        <div class="building-view">
+            <div class="page-nav nav-5 mb20">
+                <ul>
+                    <li class="active"><a href="#">一层</a></li>
+                    <li><a href="#">二层</a></li>
+                    <li><a href="#">三层</a></li>
+                    <li><a href="#">四层</a></li>
+                    <li><a href="#">五层</a></li>
+                </ul>
+            </div>
+            <div class="map">
+                <img src="images/map.png" alt="" class="wimg" />
+                <i class="icon icon-view"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
