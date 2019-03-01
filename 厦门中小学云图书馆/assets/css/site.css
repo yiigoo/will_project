@@ -885,3 +885,16 @@ fieldset[disabled] .btn-primary.focus {
 .read-sleep-list .clearfix:last-child{
     margin-bottom: 0;
 }
+
+.read-sleep-list li .img{
+    width: 182px;
+    height: 182px;
+    text-align: center;
+    line-height: 160px;
+}
+.read-sleep-list li .img img{
+    max-width: 160px;
+    max-height: 160px;
+}
+
+/** 3月1号 **/
