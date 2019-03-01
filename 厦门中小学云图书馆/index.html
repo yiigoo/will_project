@@ -18,22 +18,26 @@
 <div class="header">
 	<!-- 菜单 -->
 	<div class="menu">
-		<ul>
+		<d>
 			<li class="active"><a href="index.html">首页</a></li>
 			<li class="lock"><a href="#">电子资源</a></li>
 			<li><a href="#">阅读活动</a></li>
 			<li class="lock"><a href="#">统一检索</a></li>
-			<!-- <li id="login"><a href="javascript:;">立即登录</a></li> -->
+			<li id="login"><a href="javascript:;">立即登录</a></li>
 			<li id="nav-user">
-				<div class="nav-user-container">
-					<button class="btn logout pull-right">
-						退出登录
-					</button>
-					<i class="icon icon-nav-user"></i>
-					<div class="name">0012451321</div> 
-					
+				<div class="selected-dropdown dropdown nav-user-container">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon icon-nav-user"></i>
+						王老师
+					</a>
+					<b class="caret"></b>
+					<div class="dropdown-menu">
+						<div><a href="#">修改密码</a></div>
+						<div><a href="#">查看资料</a></div>
+					</div>
 				</div>
 			</li>
+			<li id="loginout"><a href="javascript:;">退出</a></li>
 		</ul>
 	</div>
 </div>
@@ -66,6 +70,22 @@
 						<i class="icon icon-decoration ml10"></i>
 					</div>
 					<div class="login-body">
+						<div class="item text-center item-type">
+							<span class="mr20">登录方式</span>
+							<label class="mr20">
+								<input name="type" type="radio" checked  />
+								&nbsp;读者证
+							</label>
+							<label class="mr20">
+								<input name="type" type="radio"  />
+								&nbsp;邮箱地址
+							</label>
+							<label>
+								<input name="type" type="radio"  />
+								&nbsp;手机号
+							</label>
+							
+						</div>
 						<div class="item">
 							<div class="input-wrap">
 								<input type="text" placeholder="请输入用户名" class="input-login" />
@@ -78,6 +98,19 @@
 								<input type="password" placeholder="请输入密码" class="input-login" />
 								<i class="icon icon-pswd"></i>
 							</div>
+						</div>
+						<div class="item">
+							<div class="input-wrap">
+								<input type="text" placeholder="请输入验证码" class="input-login" />
+								<i class="icon icon-code"></i>
+								<img src="assets/images/logo.png" alt="" height="30" class="code">
+							</div>
+						</div>
+						<div class="item item-forget text-right">
+							<a href="#">忘记密码？</a>
+						</div>
+						<div class="item item-error text-center">
+							xxxxxx
 						</div>
 						<div class="item">
 							<button class="btn btn-primary btn-login">登录</button>

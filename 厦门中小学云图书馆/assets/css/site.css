@@ -328,7 +328,6 @@ body{
     background-color: #1f6f9c;
     height: 40px;
     line-height: 40px;
-    padding-left : 19px;
     width : auto;
 }
 #nav-user .logout{
@@ -350,6 +349,47 @@ body{
     margin-right: 20px;
     max-width: 150px;
     overflow: hidden;
+}
+#nav-user .dropdown-toggle{
+    display: inline-block;
+    background:none;
+    padding : 0 15px;
+}
+#nav-user .dropdown-toggle:hover{
+    background:none;
+}
+.nav-user-container{
+    padding-right: 15px;
+}
+.nav-user-container.selected-dropdown .caret{
+    color: #fff;
+}
+#nav-user .dropdown-menu{
+    min-width: 145px;
+}
+#nav-user .dropdown-menu a{
+    background-color: #fff;
+    color:#333;
+    border-radius:  0;
+}
+#nav-user .dropdown-menu div:hover a{
+    background-color: #efefef;
+}
+#nav-user .dropdown-menu div:first-child::after{
+    border-bottom : 1px solid #ddd;
+    height: 1px;
+    overflow: hidden;
+    margin: 0 10px;
+    content: ' ';
+    display: block;
+}
+#loginout{
+    width: auto;
+    margin-left: 0;
+}
+#loginout a{
+    width: auto;
+    padding : 0 20px;
 }
 .header{
     height: 65px;
@@ -475,6 +515,11 @@ body{
 }
 .icon-pswd{
     background: url('../images/icon/icon-pswd.svg') no-repeat center top;
+    width: 24px;
+    height: 28px;
+}
+.icon-code{
+    background: url('../images/icon/icon-code.svg') no-repeat center top;
     width: 24px;
     height: 28px;
 }
@@ -718,13 +763,24 @@ body{
     padding : 0 40px 20px;
 }
 .login-body .item{
-    margin-top: 50px;
+    margin-top: 40px;
+}
+.login-body .item.item-forget{
+    margin-top: 15px;
+}
+.login-body .item.item-error{
+    margin-top: 20px;
 }
 .login-body .item:first-child{
     margin-top: 30px;
 }
 .input-wrap{
     position: relative;
+}
+.input-wrap .code{
+    position: absolute;
+    right : 5px;
+    top : 5px;
 }
 .input-wrap .icon{
     position: absolute;
