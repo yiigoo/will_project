@@ -18,12 +18,14 @@
 <div class="header">
 	<!-- 菜单 -->
 	<div class="menu">
-		<d>
+		<ul>
 			<li class="active"><a href="index.html">首页</a></li>
 			<li class="lock"><a href="#">电子资源</a></li>
 			<li><a href="#">阅读活动</a></li>
 			<li class="lock"><a href="#">统一检索</a></li>
-			<li id="login"><a href="javascript:;">立即登录</a></li>
+			<!-- <li id="login"><a href="javascript:;">立即登录</a></li> -->
+		</ul>
+		<ul class="pull-right mr15">
 			<li id="nav-user">
 				<div class="selected-dropdown dropdown nav-user-container">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
@@ -90,8 +92,9 @@
 							<div class="input-wrap">
 								<input type="text" placeholder="请输入用户名" class="input-login" />
 								<i class="icon icon-user"></i>
+								<!-- <i class="icon icon-card"></i> -->
+								<!-- card 读者证 icon -->
 							</div>
-							
 						</div>
 						<div class="item">
 							<div class="input-wrap">
@@ -103,16 +106,16 @@
 							<div class="input-wrap">
 								<input type="text" placeholder="请输入验证码" class="input-login" />
 								<i class="icon icon-code"></i>
-								<img src="assets/images/logo.png" alt="" height="30" class="code">
+								<img src="assets/images/logo.png" alt="" height="40" width="100" class="code">
 							</div>
 						</div>
 						<div class="item item-forget text-right">
 							<a href="#">忘记密码？</a>
 						</div>
 						<div class="item item-error text-center">
-							xxxxxx
+							您的账号或密码错误，请重新输入！
 						</div>
-						<div class="item">
+						<div class="item item-btn">
 							<button class="btn btn-primary btn-login">登录</button>
 						</div>
 					</div>

@@ -523,6 +523,12 @@ body{
     width: 24px;
     height: 28px;
 }
+.icon-card{
+    background: url('../images/icon/icon-card.svg') no-repeat center top;
+    width: 25px;
+    height: 19px;
+    margin-top: 3px;
+}
 .icon-tips{
     background: url('../images/icon/icon-tips.svg') no-repeat center top;
     width: 24px;
@@ -765,22 +771,36 @@ body{
 .login-body .item{
     margin-top: 40px;
 }
+.login-body .item.item-type{
+    font-size : 14px;
+}
+.login-body .item.item-type label{
+    font-weight: normal;
+}
 .login-body .item.item-forget{
     margin-top: 15px;
+    font-size : 14px;
 }
 .login-body .item.item-error{
     margin-top: 20px;
+    font-size : 14px;
+    color: #d0021b;
 }
 .login-body .item:first-child{
     margin-top: 30px;
+}
+.login-body .item.item-btn{
+    margin-top: 20px;
 }
 .input-wrap{
     position: relative;
 }
 .input-wrap .code{
     position: absolute;
-    right : 5px;
-    top : 5px;
+    right : 0px;
+    top : 3px;
+    border-radius: 4px;
+    border: solid 1px #dddddd;
 }
 .input-wrap .icon{
     position: absolute;
