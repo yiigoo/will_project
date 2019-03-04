@@ -488,6 +488,14 @@ body{
     top:125px;
     padding-top: 98px;
 }
+.home-guide li.bg7 a{
+    background: url('../images/nav-7.png') no-repeat center top;
+    width: 104px;
+    height: 104px;
+    left: 600px;
+    top: 270px;
+    padding-top: 68px;
+}
 .icon{
     display: inline-block;
     margin-right: 8px;
