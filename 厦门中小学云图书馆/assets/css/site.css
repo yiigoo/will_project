@@ -981,4 +981,19 @@ fieldset[disabled] .btn-primary.focus {
     max-height: 160px;
 }
 
-/** 3月1号 **/
+.copyright{
+    margin-top: -42px;
+    position: relative;
+    text-align: center;
+}
+.copyright span{
+    display: inline-block;
+    height: 24px;
+    line-height: 25px;
+    padding : 0 16px;
+    border-radius: 12px;
+    font-size : 12px;
+    color: #fff;
+    background: #ccc;
+    background: rgba(0,0,0,0.1);
+}
