@@ -98,10 +98,25 @@
 					<div class="video-view">
 						<div class="video-header clearfix">
 							<div class="img">
-								<a target="_blank" href="video-show.html"><img src="images/home-banner-1.png" alt="" width="730" height="300" /></a>
-								<a target="_blank" href="video-show.html"><i class="icon icon-start"></i></a>
-							</div>
-							<div class="list">
+								<div class="swiper-container video-gallery-top">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a target="_blank" href="video-show.html"><img src="images/book.png" alt="" width="730" height="300" /></a>
+											<a target="_blank" href="video-show.html"><i class="icon icon-start"></i></a>
+										</div>
+										<div class="swiper-slide">
+											<a target="_blank" href="video-show.html"><img src="images/home-banner.jpg" alt="" width="730" height="300" /></a>
+											<a target="_blank" href="video-show.html"><i class="icon icon-start"></i></a>
+										</div>
+										<div class="swiper-slide">
+											<a target="_blank" href="video-show.html"><img src="images/home-banner-1.png" alt="" width="730" height="300" /></a>
+											<a target="_blank" href="video-show.html"><i class="icon icon-start"></i></a>
+										</div>
+									</div>
+								</div>	
+							</div>									
+							
+							<div class="list" id="video-thumbs">
 								<div class="item active">
 									<div class="t font-16">独唱《E-mail飞出山沟沟》</div>
 									<div class="info mt10">表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表...</div>
@@ -115,6 +130,35 @@
 									<div class="info mt10">表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表表演描述描述表演描述描述表演描述描述表演描述描述表演描述描述表...</div>
 								</div>
 							</div>
+							<div id="swiper-container3"></div>
+							<!-- js 部分 -->
+							<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+							<script src="assets/js/swiper.min.js"></script>
+							<script>
+								$(document).ready(function(){
+									var swiper = new Swiper('.video-gallery-top',{
+										autoplay : true ,
+										effect : 'fade' ,
+										loop : true ,
+										on:{
+											autoplay : function(){
+												$("#video-thumbs .item").removeClass("active")
+												$("#video-thumbs .item").eq(swiper.realIndex).addClass("active")
+											},
+										}
+									});
+									$("#video-thumbs .item").on("click", function(){
+										if( !$(this).hasClass("active") ){
+											swiper.slideTo( $(this).index() + 1 , 300, false);
+											swiper.autoplay.start()
+											swiper.realIndex = $(this).index()
+											$("#video-thumbs .item").removeClass("active")
+											$(this).addClass("active")
+										}
+									})
+								})
+							</script>
+
 						</div>
 						<div class="video-title mt20 clearfix">
 							<div class="pull-left font-18">
@@ -170,14 +214,20 @@
 						</div>
 						<div class="video-title mt20 clearfix">
 							<div class="pull-left font-18">
-								<strong>分类</strong>	
+								<div class="video-dir" id="video-dir">
+									<ul>
+										<li data-target="video-dir-1">晚会表演</li>
+										<li data-target="video-dir-2">讲座演讲</li>
+										<li data-target="video-dir-3">活动回顾</li>
+									</ul>
+								</div>
 							</div>
 							<div class="pull-right">
 								<a href="#">更多</a>
 							</div>
 						</div>
-						<div class="video-list mt10">
-							<ul class="clearfix">
+						<div class="video-list mt10" id="video-list">
+							<ul class="clearfix video-dir-pane" id="video-dir-1">
 								<li>
 									<div class="img">
 										<a target="_blank" href="video-show.html" class="shodow"></a>
@@ -185,9 +235,11 @@
 										<a target="_blank" href="video-show.html"><i class="icon icon-start-min"></i></a>
 									</div>
 									<div class="t mt10 font-18">
-										视频测试
+										视频测试1
 									</div>
 								</li>
+							</ul>
+							<ul class="clearfix video-dir-pane" id="video-dir-2">
 								<li>
 									<div class="img">
 										<a target="_blank" href="video-show.html" class="shodow"></a>
@@ -195,9 +247,11 @@
 										<a target="_blank" href="video-show.html"><i class="icon icon-start-min"></i></a>
 									</div>
 									<div class="t mt10 font-18">
-										视频测试
+										视频测试2
 									</div>
 								</li>
+							</ul>
+							<ul class="clearfix video-dir-pane" id="video-dir-3">
 								<li>
 									<div class="img">
 										<a target="_blank" href="video-show.html" class="shodow"></a>
@@ -205,21 +259,24 @@
 										<a target="_blank" href="video-show.html"><i class="icon icon-start-min"></i></a>
 									</div>
 									<div class="t mt10 font-18">
-										视频测试
-									</div>
-								</li>
-								<li>
-									<div class="img">
-										<a target="_blank" href="video-show.html" class="shodow"></a>
-										<a target="_blank" href="video-show.html"><img src="images/home-banner-1.png" alt="" width="260" height="150" /></a>
-										<a target="_blank" href="video-show.html"><i class="icon icon-start-min"></i></a>
-									</div>
-									<div class="t mt10 font-18">
-										视频测试
+										视频测试3
 									</div>
 								</li>
 							</ul>
 						</div>
+						<script>
+							$(document).ready(function(){
+								$("#video-dir li").eq(0).addClass("active")
+								$("#video-list .video-dir-pane").eq(0).show()
+								$("#video-dir li").on("click",function(){
+									$("#video-dir li").removeClass("active")
+									$(this).addClass("active")
+									var target = $(this).data("target")
+									$("#video-list .video-dir-pane").hide()
+									$("#"+target).show()
+								})
+							})
+						</script>
 					</div>
 				</div>
 			</div>
