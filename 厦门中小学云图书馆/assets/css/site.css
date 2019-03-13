@@ -364,18 +364,21 @@ body{
 .nav-user-container.selected-dropdown .caret{
     color: #fff;
 }
-#nav-user .dropdown-menu{
+.menu li .dropdown-menu{
     min-width: 145px;
 }
-#nav-user .dropdown-menu a{
+.menu li .selected-dropdown{
+    width: 100%;
+}
+.menu li .dropdown-menu a{
     background-color: #fff;
     color:#333;
     border-radius:  0;
 }
-#nav-user .dropdown-menu div:hover a{
+.menu li .dropdown-menu div:hover a{
     background-color: #efefef;
 }
-#nav-user .dropdown-menu div:first-child::after{
+.menu li .dropdown-menu div:first-child::after{
     border-bottom : 1px solid #ddd;
     height: 1px;
     overflow: hidden;
@@ -996,4 +999,15 @@ fieldset[disabled] .btn-primary.focus {
     color: #fff;
     background: #ccc;
     background: rgba(0,0,0,0.1);
+}
+
+/* 2019 03 11 */
+.register-body .input-login{
+    padding-left: 0;
+}
+.register-body .item{
+    margin-top: 20px;
+}
+.text-primary {
+    color: #00ace8;
 }
