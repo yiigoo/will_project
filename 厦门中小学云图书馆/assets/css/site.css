@@ -1049,4 +1049,5 @@ fieldset[disabled] .btn-primary.focus {
 }
 .text-required{
     color: #fd5f72;
+    font-size : 14px;
 }
