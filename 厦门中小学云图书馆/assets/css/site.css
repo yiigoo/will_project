@@ -1051,3 +1051,6 @@ fieldset[disabled] .btn-primary.focus {
     color: #fd5f72;
     font-size : 14px;
 }
+.form-control-static{
+    font-size : 14px;
+}
