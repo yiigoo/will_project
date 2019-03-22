@@ -1796,7 +1796,8 @@ body{
     box-shadow: 1px 1px 7px #ccc;
 }
 .book-commend-list-summary .img img {
-    width: 138px;
+    max-width: 138px;
+    max-height : 150px;
 }
 .book-commend-list-summary li .info{
     overflow: hidden;
@@ -1816,4 +1817,13 @@ body{
 }
 .book-commend-list-summary li .t strong{
     font-size: 16px;
+}
+.news-body ul,.news-body li{
+    list-style: inherit;
+}
+.news-body ul li{
+    margin-left: 20px;
+}
+.news-body ol li{
+    margin-left: 0;
 }
