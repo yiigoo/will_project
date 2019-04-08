@@ -1,0 +1,270 @@
+body{
+
+}
+
+.text-muted {
+    color: #777777;
+  }
+  .text-primary {
+    color: #337ab7;
+  }
+  a.text-primary:hover,
+  a.text-primary:focus {
+    color: #286090;
+  }
+  .text-success {
+    color: #3c763d;
+  }
+  a.text-success:hover,
+  a.text-success:focus {
+    color: #2b542c;
+  }
+  .text-info {
+    color: #31708f;
+  }
+  a.text-info:hover,
+  a.text-info:focus {
+    color: #245269;
+  }
+  .text-warning {
+    color: #8a6d3b;
+  }
+  a.text-warning:hover,
+  a.text-warning:focus {
+    color: #66512c;
+  }
+  .text-danger {
+    color: #a94442;
+  }
+  a.text-danger:hover,
+  a.text-danger:focus {
+    color: #843534;
+  }
+  .bg-primary {
+    color: #fff;
+    background-color: #337ab7;
+  }
+  a.bg-primary:hover,
+  a.bg-primary:focus {
+    background-color: #286090;
+  }
+  .bg-success {
+    background-color: #dff0d8;
+  }
+  a.bg-success:hover,
+  a.bg-success:focus {
+    background-color: #c1e2b3;
+  }
+  .bg-info {
+    background-color: #d9edf7;
+  }
+  a.bg-info:hover,
+  a.bg-info:focus {
+    background-color: #afd9ee;
+  }
+  .bg-warning {
+    background-color: #fcf8e3;
+  }
+  a.bg-warning:hover,
+  a.bg-warning:focus {
+    background-color: #f7ecb5;
+  }
+  .bg-danger {
+    background-color: #f2dede;
+  }
+  a.bg-danger:hover,
+  a.bg-danger:focus {
+    background-color: #e4b9b9;
+  }
+
+.mr5{
+    margin-right: 5px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mr15{
+    margin-right: 15px;
+}
+.mr20{
+    margin-right: 20px;
+}
+.mr25{
+    margin-right: 25px;
+}
+.mr30{
+    margin-right: 30px;
+}
+
+.mt5{
+    margin-top: 5px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt25{
+    margin-top: 25px;
+}
+.mt30{
+    margin-top: 30px;
+}
+
+.mb5{
+    margin-bottom: 5px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb25{
+    margin-bottom: 25px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+
+.ml5{
+    margin-left: 5px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.ml15{
+    margin-left: 15px;
+}
+.ml20{
+    margin-left: 20px;
+}
+.ml25{
+    margin-left: 25px;
+}
+.ml30{
+    margin-left: 30px;
+}
+
+
+.pdr5{
+    padding-right: 5px;
+}
+.pdr10{
+    padding-right: 10px;
+}
+.pdr15{
+    padding-right: 15px;
+}
+.pdr20{
+    padding-right: 20px;
+}
+.pdr25{
+    padding-right: 25px;
+}
+.pdr30{
+    padding-right: 30px;
+}
+
+.pdt5{
+    padding-top: 5px;
+}
+.pdt10{
+    padding-top: 10px;
+}
+.pdt15{
+    padding-top: 15px;
+}
+.pdt20{
+    padding-top: 20px;
+}
+.pdt25{
+    padding-top: 25px;
+}
+.pdt30{
+    padding-top: 30px;
+}
+
+.pdb5{
+    padding-bottom: 5px;
+}
+.pdb10{
+    padding-bottom: 10px;
+}
+.pdb15{
+    padding-bottom: 15px;
+}
+.pdb20{
+    padding-bottom: 20px;
+}
+.pdb25{
+    padding-bottom: 25px;
+}
+.pdb30{
+    padding-bottom: 30px;
+}
+
+.pdl5{
+    padding-left: 5px;
+}
+.pdl10{
+    padding-left: 10px;
+}
+.pdl15{
+    padding-left: 15px;
+}
+.pdl20{
+    padding-left: 20px;
+}
+.pdl25{
+    padding-left: 25px;
+}
+.pdl30{
+    padding-left: 30px;
+}
+
+/*** 字体自适应 ***/
+.font-18 {
+    font-size:18px;
+}
+.font-20 {
+    font-size:20px;
+}
+.font-24 {
+    font-size:24px;
+}
+.font-28 {
+    font-size:28px;
+}
+
+
+/***浏览器识别***/
+
+.browser-header{
+    height: 100px;
+    padding-top: 25px;
+    background: #fff;
+}
+.browser-body{
+    color: #fff;
+    line-height: 200%;
+}
+.browser-body .mt100{
+    margin-top: 100px;
+}
+.browser-list a{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 10px;
+}
+.browser-list img{
+    margin-bottom: 10px;
+}
