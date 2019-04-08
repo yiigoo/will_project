@@ -243,7 +243,11 @@ body{
 .font-28 {
     font-size:28px;
 }
-
+li,ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 /***浏览器识别***/
 
@@ -299,8 +303,79 @@ body{
     text-align: center;
     border-radius:4px;
     color: #000;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
 }
-.menu li.active a{
+.menu li.active a,.menu li a:hover{
     background-color: #0967D9;
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-container{
+    margin: 0 auto;
+    width: 1336px;
+}
+
+.page-banner{
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+.page-banner img{
+    position: absolute;
+    left : 50%;
+    margin-left: -960px;
+}
+.aside{
+    width: 226px;
+    
+    float: left;
+    min-height: 500px;
+    background : url('../images/bg-aside.png') no-repeat left bottom;
+    background-color: #134683;
+}
+.aside .title{
+    background : url('../images/bg-aside-title.png') no-repeat left top;
+    width: 249px;
+    height: 112px;
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
+    line-height:31px;
+    padding: 38px 0 0 28px;
+    margin-top: -80px;
+    position: relative;
+    z-index : 1;
+    margin-bottom: 20px;
+}
+.aside .nav a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    padding-left: 30px;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.aside .nav a:hover{
+    background-color: #113E75;
+    text-decoration: none;
+}
+.aside .nav .active a{
+    background-color: #0967D9;
+    cursor: default;
+}
+
+.footer{
+    background-color: #022651;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    padding : 0 30px;
+}
+.footer a{
     color: #fff;
 }
