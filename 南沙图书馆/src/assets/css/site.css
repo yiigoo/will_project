@@ -384,6 +384,12 @@ body{
 .footer a{
     color: #fff;
 }
+.footer .gap-1{
+    margin-right: 60px;
+}
+.footer .gap-2{
+    margin-right: 30px;
+}
 .main{
     background-color: #fff;
 }
