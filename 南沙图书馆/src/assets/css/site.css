@@ -1,5 +1,5 @@
-body{
-
+a{
+    color:#333;
 }
 
 .text-muted {
@@ -20,11 +20,11 @@ body{
     color: #2b542c;
   }
   .text-info {
-    color: #31708f;
+    color: #999;
   }
   a.text-info:hover,
   a.text-info:focus {
-    color: #245269;
+    color: #999;
   }
   .text-warning {
     color: #8a6d3b;
@@ -415,4 +415,73 @@ body{
 }
 .bread-crumb .gap{
     margin: 0 5px;
+}
+.content-container{
+    padding : 20px 0;
+}
+
+.news-list a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+}
+.news-list .t{
+    font-size : 16px;
+}
+.news-list a:hover {
+    padding : 0 15px;
+    text-decoration: none;
+    background-color: #fafafa;
+}
+.news-list .text-info{
+    padding-left: 20px;
+}
+.news-list a:hover .t{
+    color:#1069D5;
+}
+.pagination>li>a, .pagination>li>span{
+    margin-right: 8px;
+    border-radius: 2px ;
+    padding : 4px 10px;
+    border-color: #eee;
+    color: #333;
+}
+.pagination>li .total{
+    float: left;
+    position: relative;
+    margin-right: 16px;
+    margin-left: 8px;
+}
+.pagination>li .total input{
+    width:30px;
+    height:30px;
+    background:rgba(255,255,255,1);
+    border-radius:2px;
+    border:1px solid rgba(238,238,238,1);
+    text-align: center;
+}
+.pagination>li a:hover{
+    border : 1px solid #0967D9;
+    color: #0967D9;
+    background-color: #fff;
+}
+.pagination>li.disabled a{
+    color: #999;
+}
+.pagination>li.active a{
+    color: #fff;
+    background-color: #0967D9;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span{
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
 }
