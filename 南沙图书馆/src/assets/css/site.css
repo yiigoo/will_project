@@ -330,7 +330,7 @@ body{
 }
 .aside{
     width: 226px;
-    
+    padding-bottom: 50px;
     float: left;
     min-height: 500px;
     background : url('../images/bg-aside.png') no-repeat left bottom;
@@ -378,4 +378,41 @@ body{
 }
 .footer a{
     color: #fff;
+}
+.main{
+    background-color: #fff;
+}
+.content{
+    float: right;
+    width: 1110px;
+    padding : 0 20px 0 45px;
+}
+.content-title {
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+.content-title .text{
+    font-size:24px;
+    font-weight:bold;
+    color:#333;
+    position: relative;
+    margin-right: 50%;
+}
+.content-title .line{
+    position: absolute;
+    width:44px;
+    height:4px;
+    background:#CC0807;
+    bottom : 1px;
+    left : 0;
+}
+.bread-crumb{
+    color: #000;
+}
+.bread-crumb a , .bread-crumb span{
+    color: #999;
+}
+.bread-crumb .gap{
+    margin: 0 5px;
 }
