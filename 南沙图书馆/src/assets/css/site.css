@@ -1,7 +1,12 @@
 a{
     color:#333;
 }
-
+a:active{
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
+}
 .text-muted {
     color: #777777;
   }
@@ -502,4 +507,123 @@ body{
 }
 .editor ol li{
     margin-left: 0;
+}
+.leader-list{
+    margin-left: -40px;
+}
+.leader-list li{
+    width: 230px;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+.leader-list .img{
+    line-height: 300px;
+    text-align: center;
+}
+.leader-list .img img{
+    max-width: 230px;
+    max-height: 300px;
+}
+.leader-list .name{
+    margin: 15px 0 10px;
+    width:54px;
+    height:24px;
+    font-size:18px;
+    font-weight:bold;
+}
+.leader-list .info{
+    height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.year-plan-list {
+    margin-left: -44px;
+}
+.year-plan-list li{
+    width:230px;
+    height:280px;
+    float: left;
+    margin-left: 42px;
+    margin-bottom: 30px;
+}
+.year-plan-list li a{
+    display: block;
+    height:278px;
+    width: 228px;
+    background:rgba(255,255,255,1);
+    border:1px solid #ddd;
+    float: left;
+    text-align: center;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.year-plan-list li span{
+    display: block;
+}
+.year-plan-list .year{
+    margin-top: 50px;
+    font-size:24px;
+}
+.year-plan-list .sub{
+    margin-bottom: 120px;
+}
+.year-plan-list li a:hover{
+    margin-top: -5px;
+    text-decoration: none;
+    border-color:#bbb;
+    box-shadow: 1px 1px 5px #ccc;
+    margin-bottom: 35px;
+}
+.year-plan-list li:hover a{
+    text-decoration: none;
+}
+.history-list li{
+    position: relative;
+    min-height: 150px;
+}
+.history-list li .info{
+    width: 50%;
+    text-align: right;
+}
+.history-list li .wrap{
+    padding-right: 27px;
+}
+.history-list li .line{
+    width:2px;
+    background-color: #134683;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    bottom :0;
+    top : 0 ;
+}
+.history-list li .pic{
+    position: absolute;
+    left : 50%;
+    top : 0;
+}
+.history-list li .pic img{
+    margin-left: 27px;
+    max-width: 300px;
+    max-height: 140px;
+}
+.history-list li .text{
+    color: #999;
+}
+.history-list li:nth-child(even) .info{
+    margin-left: 50%;
+    width: 50%;
+    text-align: left;
+}
+.history-list li:nth-child(even) .wrap{
+    padding-left: 27px;
+}
+.history-list li:nth-child(even) .pic{
+    right : 50%;
+    left : auto;
+}
+.history-list li:nth-child(even) .pic img{
+    margin-right: 27px;
 }
