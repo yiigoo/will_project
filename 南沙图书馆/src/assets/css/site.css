@@ -727,3 +727,43 @@ body{
 .history-list .end{
     position: relative;
 }
+.about-img-view .views img{
+    max-width: 100%;
+    max-height: 382px;
+}
+.about-img-view .views{
+    height: 382px;
+    line-height: 382px;
+    text-align: center;
+}
+.about-img-view .thumbs{
+    margin: 10px 0 30px;
+    font-size:0;
+}
+.about-img-view .thumbs a{
+    display: inline-block;
+    margin-right: 10px;
+    font-size : 0;
+}
+.about-img-view .thumbs img{
+    max-width:96px;
+    max-height:54px;
+    opacity: .7;
+}
+.about-img-view .thumbs .active img{
+    opacity: 1;
+}
+.honor-list{
+    margin-left: -12px;
+}
+.honor-list .item{
+    float: left;
+    width: 516px;
+    margin-left: 12px;
+}
+.honor-list .title{
+    padding : 20px;
+    text-align: center;
+    background-color: #F3F3F3;
+    text-align: center;
+}
