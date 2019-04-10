@@ -324,9 +324,9 @@ body{
     text-align: center;
     border-radius:4px;
     color: #000;
-    -webkit-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: background-color 0.5s ease 0s;
+    -o-transition: background-color 0.5s ease 0s;
+    transition: background-color 0.5s ease 0s;
 }
 .menu li.active a,.menu li a:hover{
     background-color: #0967D9;
@@ -573,6 +573,7 @@ body{
     display: block;
     height:278px;
     width: 228px;
+    padding : 0 30px;
     background:rgba(255,255,255,1);
     border:1px solid #ddd;
     float: left;
@@ -589,7 +590,7 @@ body{
     font-size:24px;
 }
 .year-plan-list .sub{
-    margin-bottom: 120px;
+    height : 150px;
 }
 .year-plan-list li a:hover{
     margin-top: -5px;
@@ -597,6 +598,15 @@ body{
     border-color:#bbb;
     box-shadow: 1px 1px 5px #ccc;
     margin-bottom: 35px;
+}
+.year-report-list .year{
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-size:16px;
+}
+.year-report-list .sub{
+    font-size:18px;
+    font-weight:bold;
 }
 .year-plan-list li:hover a{
     text-decoration: none;

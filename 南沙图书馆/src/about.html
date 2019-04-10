@@ -70,7 +70,63 @@
 							</div>
 						</div>
 						<div class="content-container">
-							
+							<div class="about-img-view">
+								<div class="views" id="views">
+									<div class="item">
+										<img src="./assets/images/chrome.png" alt="">
+									</div>
+									<div class="item">
+										<img src="./assets/images/ie-9.png" alt="">
+									</div>
+									<div class="item">
+										<img src="./assets/images/opera.png" alt="">
+									</div>
+								</div>
+								<div class="thumbs" id="thumbs">
+									<a href="javascript:;">
+										<img src="./assets/images/chrome.png" alt="">
+									</a>
+									<a href="javascript:;">
+										<img src="./assets/images/ie-9.png" alt="">
+									</a>
+									<a href="javascript:;">
+										<img src="./assets/images/opera.png" alt="">
+									</a>
+								</div>
+							</div>
+							<script>
+								$(document).ready(function(){
+									if ($("#views .item").length > 0){
+										var globalIndex = 0;
+										$("#views .item").hide()
+										$("#views .item").eq(0).show()
+										$("#thumbs a").on("click",function(){
+											if( $("#views .item").eq(globalIndex).css("opacity") == 1 && $(this).index() != globalIndex  ){
+												globalIndex = $(this).index()
+												$("#views .item").hide()
+												$("#views .item").eq(globalIndex).fadeIn(300)
+											}
+											
+										})
+									}
+						
+									
+								})
+							</script>
+							<div class="editor">
+								<p>
+								　　<strong class="font-20">南沙区图书馆</strong>　位于南沙区丰泽东路，毗邻南沙区文化馆。建筑面积6200平方米、楼高4层，有阅览座位近500座。其中一楼设有广州少年儿童图书馆南沙分馆，阅览座位150余座。目前，馆藏文献资源近22万册（件），各类报刊近700种，涵盖了包括自然科学和社会科学等各学科知识领域,为读者提供馆内阅览和外借服务。为方便读者利用图书馆,每周开放72小时,并设有自习室、阅览室、无障碍设施、残障人士阅览室等，为各类读者群体提供便利服务。
+								</p>
+								<p>
+								　　南沙区图书馆是一所综合性的公共图书馆，2010年1月评定为国家一级图书馆。主要为社会各界人士提供文献借阅及信息咨询等服务，同时管理全区公共图书馆事业，调查、研究、开发和利用图书文献资源，推动公共图书馆事业标准化、网络化、现代化建设，促进公共图书馆事业的发展。 
+								</p>
+								<p>
+								　　为了推动读者广泛应用图书馆设施、鼓励读者养成终身阅读的习惯，南沙区图书馆不仅向读者提供舒适的阅读环境，而且还面向社会公众开展丰富多彩的培训、讲座、展览等文化活动。同时，积极组织参加调研、馆际交流、地域合作及图书馆学会学术活动，并对区内基层图书室提供技术指导与帮助服务，协助镇、街推进“农家书屋”、“绿色网园”、文化信息资源共享工程等项目的建设，共同推动本地区图书馆事业的发展。
+								</p>
+								<p>
+								　　为发挥馆藏资源的最大效能，逐步构建以流动图书服务网点为平台的读书网络体系，南沙区图书馆于2011年开通了与广州地区各公共馆之间的通借通还服务，读者可在提供服务的任意馆自由借还图书；同时，在企业、社区设立多个馆外固定流通服务点，2012年10月南沙区24小时自助图书馆也正式启用。南沙区图书馆通过多样的服务模式突破了传统图书馆的地域与时间的限制，让图书馆服务的触角延伸到镇、街道、基层单位、企业、社区等区域，让有限的馆藏资源流动起来，更便捷地为读者提供全方位的服务。
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
