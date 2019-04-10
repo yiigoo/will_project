@@ -236,6 +236,9 @@ a:focus{
 }
 
 /*** 字体自适应 ***/
+.font-16{
+    font-size: 16px;
+}
 .font-18 {
     font-size:18px;
 }
@@ -277,6 +280,19 @@ li,ul{
 .browser-list img{
     margin-bottom: 10px;
 } 
+
+/***图标***/
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -2px;
+}
+.icon-node{
+    width : 18px;
+	height : 18px;
+	background: url('../images/icon/icon-node.svg') left top no-repeat;
+}
 
 
 body{
@@ -428,7 +444,7 @@ body{
     margin: 0 5px;
 }
 .content-container{
-    padding : 20px 0;
+    padding : 20px 0 40px;
 }
 
 .news-list a{
@@ -587,7 +603,8 @@ body{
 }
 .history-list li{
     position: relative;
-    min-height: 150px;
+    min-height: 120px;
+    padding-bottom: 30px;
 }
 .history-list li .info{
     width: 50%;
@@ -596,7 +613,7 @@ body{
 .history-list li .wrap{
     padding-right: 27px;
 }
-.history-list li .line{
+.history-list .line{
     width:2px;
     background-color: #134683;
     position: absolute;
@@ -604,19 +621,53 @@ body{
     margin-left: -1px;
     bottom :0;
     top : 0 ;
+    z-index : 1;
 }
 .history-list li .pic{
     position: absolute;
     left : 50%;
     top : 0;
 }
+.history-list li .arrow{
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    background-color: #ddd;
+    position: absolute;
+    left : 23px;
+    z-index: 1;
+    top : 5px;
+}
 .history-list li .pic img{
-    margin-left: 27px;
+    margin-left: 25px;
     max-width: 300px;
     max-height: 140px;
+    border: 1px solid #ddd;
+    padding : 2px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
 }
 .history-list li .text{
     color: #999;
+}
+.history-list li .icon-node{
+    margin-left: -9px;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    top : 1px;
+}
+.history-list .year {
+    font-size:24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.history-list .month {
+    padding-bottom: 18px;
+}
+.history-list .month .t {
+    font-size:16px;
 }
 .history-list li:nth-child(even) .info{
     margin-left: 50%;
@@ -631,5 +682,38 @@ body{
     left : auto;
 }
 .history-list li:nth-child(even) .pic img{
-    margin-right: 27px;
+    margin-right: 25px;
+}
+.history-list li:nth-child(even) .arrow{
+    left : auto;
+    right :  23px;
+}
+
+.history-list .now{
+    position: relative;
+    text-align: center;
+    padding-bottom: 45px;
+    font-size: 16px;
+}
+.history-list .now .icon-node-empty{
+    bottom : 23px;
+}
+.history-list .now .line{
+    top : auto;
+    height: 30px;
+    bottom :0;
+}
+.history-list .icon-node-empty{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    left : 50%;
+    margin-left: -8px;
+    z-index : 2;
+    background-color: #fff;
+}
+.history-list .end{
+    position: relative;
 }
