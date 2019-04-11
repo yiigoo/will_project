@@ -767,3 +767,19 @@ body{
     background-color: #F3F3F3;
     text-align: center;
 }
+
+.news-pager{
+    border-top : 1px solid #ddd;
+    padding-top: 10px;
+}
+.news-pager .item{
+    width: 45%;
+}
+.news-pager .text-info{
+    padding-bottom :5px;
+}
+.detail-title{
+    background-color: #F1F1F1;
+    border: 1px solid #ddd;
+    padding : 15px 20px 10px;
+}
