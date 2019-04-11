@@ -783,3 +783,33 @@ body{
     border: 1px solid #ddd;
     padding : 15px 20px 10px;
 }
+
+.talk-list .dir{
+    padding: 0 20px 0 10px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 16px;
+    background-color: #CC0807;
+    color: #fff;
+}
+.talk-list .dir .arrow{
+    /* width:0; 
+    height:0; 
+    border-top:12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #CC0807;
+    display: inline-block; */
+}
+.tooltip .arrow{
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #022651;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
