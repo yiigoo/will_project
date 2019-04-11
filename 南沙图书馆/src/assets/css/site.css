@@ -371,7 +371,7 @@ body{
     z-index : 1;
     margin-bottom: 20px;
 }
-.aside .nav a{
+.aside .nav li>a{
     display: block;
     height: 50px;
     color: #fff;
@@ -381,11 +381,11 @@ body{
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
-.aside .nav a:hover{
+.aside .nav li>a:hover{
     background-color: #113E75;
     text-decoration: none;
 }
-.aside .nav .active a{
+.aside .nav li.active>a{
     background-color: #0967D9;
     cursor: default;
 }
