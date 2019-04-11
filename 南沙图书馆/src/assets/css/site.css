@@ -801,7 +801,7 @@ body{
     border-left: 12px solid #CC0807;
     display: inline-block; */
 }
-.tooltip .arrow{
+.tooltip2 .arrow{
     top: 0;
     left: 50%;
     margin-left: -5px;
