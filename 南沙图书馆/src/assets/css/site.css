@@ -100,6 +100,9 @@ a:focus{
 .mr30{
     margin-right: 30px;
 }
+.mr50{
+    margin-right: 50px;
+}
 
 .mt5{
     margin-top: 5px;
@@ -311,6 +314,14 @@ li,ul{
     height:34px;
     background: url('../images/icon/icon-mark.svg') left top no-repeat;
 }
+.icon-pic-arrow-top,.icon-pic-arrow-down{
+    width:220px;
+    height:30px;
+    background: url('../images/icon/icon-pic-arrow-top.svg') left top no-repeat;
+}
+.icon-pic-arrow-down{
+    background: url('../images/icon/icon-pic-arrow-down.svg') left top no-repeat;
+}
 
 
 
@@ -489,6 +500,9 @@ body{
 }
 .news-list a:hover .t{
     color:#1069D5;
+}
+.pagination{
+    margin-top: 0 !important;
 }
 .pagination>li>a, .pagination>li>span{
     margin-right: 8px;
@@ -984,13 +998,33 @@ body{
     max-height: 340px;
 }
 .talk-list .dir{
-    padding: 0 20px 0 10px;
-    display: inline-block;
     height: 26px;
     line-height: 26px;
-    font-size: 16px;
+    font-size: 0;
+    vertical-align: middle;
+}
+.talk-list .dir span{
+    vertical-align: middle;
+    padding: 0 15px 0 10px;
+    display: inline-block;
     background-color: #CC0807;
     color: #fff;
+    font-size: 14px;
+}
+.talk-list .dir .arrow{
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #CC0807;
+}
+.talk-list .dir.dir-past span{
+    background-color: #bbb;
+}
+.talk-list .dir.dir-past .arrow{
+    border-left: 10px solid #bbb;
 }
 .talk-list .item{
     line-height: 20px;
@@ -1031,18 +1065,6 @@ body{
     border-left: 12px solid #CC0807;
     display: inline-block; */
 }
-.tooltip2 .arrow{
-    top: 0;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 0 5px 5px;
-    border-bottom-color: #022651;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-}
 .media-views {
     height: 320px;
 }
@@ -1054,12 +1076,13 @@ body{
     width: 710px;
     height: 320px;
     position: relative;
+    overflow: hidden;
 }
 .media-views .view .t{
     position: absolute;
     background: rgba(0,0,0,.5);
     left: 0;
-    bottom : 0;
+    bottom : -60px;
     right: 0;
     height: 60px;
     line-height: 60px;
@@ -1068,6 +1091,12 @@ body{
     overflow: hidden;
     font-size: 16px;
     padding : 0 25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.media-views .view:hover .t{
+    bottom : 0px;
 }
 .media-views .view .icon-media{
     left: 50%;
@@ -1075,6 +1104,10 @@ body{
     margin: -31px 0 0 -31px;
     z-index : 1;
     position: absolute;
+    display: none;
+}
+.media-views .view:hover .icon-media{
+    display: block;
 }
 .media-views .thumbs{
     float: right;
@@ -1176,7 +1209,6 @@ body{
 }
 .consult-tips .icon-mark{
     float: left;
-    background-color: #000;
     margin-left: -76px;
     margin-top: -10px;
 }
@@ -1292,4 +1324,130 @@ body{
     line-height: 40px !important;
     border-radius: 0 !important;
     border: 1px solid #ddd !important;
+    min-width: 120px;
+}
+.btn.btn-primary{
+    background-color: #1069D5 !important;
+    font-size: 16px !important;
+}
+.btn.btn-min{
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 14px !important;
+    min-width: auto;
+}
+.input-group .btn{
+    min-width: 80px;
+    color: #1069D5;
+    background-color: #ddd;
+}
+
+.table-editor thead{
+    background-color: #eee !important;
+}
+.table-editor td,.table-editor th{
+    border:1px solid #eee !important;
+    padding : 10px 15px !important;
+}
+
+.site-tabs-content .panel{
+    display: none;
+}
+.site-tabs-content .block{
+    display: block;
+}
+.consult-form .label{
+    font-weight: bold;
+}
+.form-control{
+    border: 1px solid #ddd !important;
+    padding: 7px 12px !important;
+    height: 40px;
+    border-radius: 0px !important;
+}
+.form-control-code{
+    width: 180px;
+    display: inline-block;
+}
+::-webkit-input-placeholder{
+    color: #ccc !important;
+}
+
+.donate{
+    margin-bottom: -40px;
+}
+.donate-left{
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+    padding-bottom: 40px;
+}
+.donate-right{
+    margin-left: -1px;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+.donate-list li{
+    padding-bottom: 10px;
+    border-bottom : 1px solid #ddd;
+}
+.donate-list li .font-16{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.donate-list li:first-child .font-16{
+    margin-top: 2px;
+}
+.user-question-list .t{
+    font-size: 16px;
+    padding : 9px 15px;
+    background-color: #f5f5f5;
+}
+.user-question-list .text{
+    padding : 15px 40px;
+}
+.user-question-list label{
+    font-weight: normal;
+}
+.user-question-list .w700{
+    width: 700px;
+}
+.tooltips{
+    position: relative;
+    display: inline-block;
+}
+.tooltips .control{
+    line-height: 30px;
+}
+.tooltips i{
+    font-style: normal;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1069D5;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #1069D5;
+    position: relative;
+}
+.tooltips .wrap{
+    background: #022651;
+    padding : 10px 15px;
+    width: 300px;
+    color:#fff;
+    position: absolute;
+    left: 0;
+}
+.tooltips .arrow{
+    width:0;
+    height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:6px solid black;
+    position: absolute;
+    top : 0;
+    margin-top: -5px;
+    left: 40px;
 }

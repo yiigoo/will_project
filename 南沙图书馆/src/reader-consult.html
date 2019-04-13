@@ -97,7 +97,7 @@
 						</div>
 						<div class="content-container">
 							<!-- 读者咨询 -->
-							<div class="site-tabs">
+							<div class="site-tabs mb20">
 								<ul class="clearfix">
 									<li class="active"><a href="JavaScript:;">常见问题</a></li>
 									<li><a href="JavaScript:;">现场咨询</a></li>
@@ -168,9 +168,9 @@
 										对于一般性问题，我们致力于2至3个工作日内给予答复，对于较深入的问题，我们将在5个工作日内给予答复。 <br />
 										我们承诺严格遵守知识产权相关规定，尊重并保护用户隐私权。
 									</div>
-									<form class="feedback-form form mt30">
+									<form class="consult-form form mt30">
 										<div class="item-label">
-											<div class="label font-20">
+											<div class="label font-16">
 												咨询类型
 											</div>
 											<div class="control mt5">
@@ -178,63 +178,57 @@
 												<label><input type="radio" class="type" name="type" checked> &nbsp; 其他</label>
 											</div>
 										</div>
-										<div class="item-label mt20">
-											<div class="label font-20">
+										<div class="item-label mt30">
+											<div class="label font-16">
 												标题
 											</div>
 											<div class="row mt5">
 												<div class="col-md-6">
-													<input type="text" placeholder="请输入问题标题" class="form-control input-lg" />
+													<input type="text" placeholder="请输入问题标题" class="form-control" />
 												</div>
 											</div>
 										</div>
-										<div class="item-label mt20">
-											<div class="label font-20">
+										<div class="item-label mt30">
+											<div class="label font-16">
 												问题描述
 											</div>
 											<div class="control mt5">
-												<textarea rows="5" placeholder="请描述您的问题" class="form-control input-lg"></textarea>
+												<textarea rows="5" placeholder="请描述您的问题" class="form-control"></textarea>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="item-label mt20">
-													<div class="label font-20">
+												<div class="item-label mt30">
+													<div class="label font-16">
 														您的邮箱
 													</div>
-													<div class="row">
-														<div class="col-md-6">
-															<input type="text" placeholder="请如实填写，否则无法收到答案" class="form-control input-lg" />
-														</div>
+													<div class="mt5">
+														<input type="text" placeholder="请如实填写，否则无法收到答案" class="form-control" />
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
-												<div class="item-label mt20">
-													<div class="label font-20">
+											<div class="col-md-6">
+												<div class="item-label mt30">
+													<div class="label font-16">
 														验证码
 													</div>
-													<div class="row mt5">
-														<div class="col-md-3">
-															<input type="text" placeholder="" class="form-control input-lg" />
-														</div>
-														<div class="col-md-3">
-															<img src="images/code.jpg" class="code" alt="" />
-														</div>
+													<div class="mt5">
+														<input type="text" placeholder="" class="form-control form-control-code" />
+														<img src="./assets/images/code.png" height="40" class="ml10 code" />
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="item-label mt30">
 											<div class="control">
-												<button type="submit" class="btn btn-primary btn-lg">提交</button>
+												<button type="submit" class="btn btn-primary">提交</button>
 											</div>
 										</div>
 									</form>
 								</div>
 
 								<!-- 读者留言 -->
-								<div id="tab4" class="panel">
+								<div id="tab4" class="panel block">
 									<div class="consult-tips">
 										<i class="icon icon-mark"></i>
 										您可以就图书馆馆藏服务、资源利用、信息检索等方面的问题向我们提问，超出上述范围的问题恕不回答。 <br />
@@ -242,10 +236,23 @@
 										对于一般性问题，我们致力于2至3个工作日内给予答复，对于较深入的问题，我们将在5个工作日内给予答复。 <br />
 										我们承诺严格遵守知识产权相关规定，尊重并保护用户隐私权。
 									</div>
-									<div class="consult-list-bar">
-										<a href="#" class="btn btn-primary">
-											我要留言
-										</a>
+									<div class="consult-list-bar mt20 mb20">
+										<div class="row">
+											<div class="col-md-7">
+												<a href="#" class="btn btn-primary">
+													我要留言
+												</a>
+											</div>
+											<div class="col-md-5">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="留言检索">
+													<span class="input-group-btn">
+														<button class="btn btn-default" type="button">搜索</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										
 									</div>
 									<div class="consult-list">
 										<table class="table table-consult table-hover">
