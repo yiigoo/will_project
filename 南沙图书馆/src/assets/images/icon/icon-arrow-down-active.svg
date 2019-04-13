@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>收起</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.2.0读者服务-读者咨询" transform="translate(-1594.000000, -431.000000)" fill="#1069D5" fill-rule="nonzero">
+            <g id="Group-3-Copy" transform="translate(561.000000, 410.000000)">
+                <g id="收起" transform="translate(1042.000000, 30.000000) rotate(-180.000000) translate(-1042.000000, -30.000000) translate(1033.000000, 21.000000)">
+                    <path d="M9,17.5 C4.30557963,17.5 0.5,13.6944204 0.5,9 C0.5,4.30557963 4.30557963,0.5 9,0.5 C13.6944204,0.5 17.5,4.30557963 17.5,9 C17.5,13.6944204 13.6944204,17.5 9,17.5 Z M9,16.5 C13.1421356,16.5 16.5,13.1421356 16.5,9 C16.5,4.85786438 13.1421356,1.5 9,1.5 C4.85786438,1.5 1.5,4.85786438 1.5,9 C1.5,13.1421356 4.85786438,16.5 9,16.5 Z" id="Oval"></path>
+                    <polygon id="Path" transform="translate(9.250000, 8.250000) rotate(-315.000000) translate(-9.250000, -8.250000) " points="10.5 9.5 10.5 6 11.5 6 11.5 10.5 7 10.5 7 9.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
