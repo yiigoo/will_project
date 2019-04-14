@@ -75,28 +75,72 @@
 								</div>
 								<div class="detail-content pdb20">
 									<div class="net-img-views">
-										<div class="views">
-											<div class="view">
-												<img src="./assets/images/p12.png" alt="" />
+										<div class="swiper-container views">
+											<div class="swiper-wrapper">
+												<div class="view swiper-slide">
+													<img src="./assets/images/p12.png" alt="" />
+												</div>
+												<div class="view swiper-slide">
+													<img src="./assets/images/p12.png" alt="" />
+												</div>
+												<div class="view swiper-slide">
+													<img src="./assets/images/p12.png" alt="" />
+												</div>
+												<div class="view swiper-slide">
+													<img src="./assets/images/p12.png" alt="" />
+												</div>
 											</div>
 										</div>
-										<div class="thumbs">
-											<div class="thumb">
-												<img src="./assets/images/p13.png" alt="" />
-											</div>
-											<div class="thumb">
-												<img src="./assets/images/p13.png" alt="" />
-											</div>
-											<div class="thumb">
-												<img src="./assets/images/p13.png" alt="" />
+										<div class="swiper-container thumbs">
+											<div class="swiper-wrapper">
+												<div class="thumb swiper-slide">
+													<img src="./assets/images/p13.png" alt="" />
+												</div>
+												<div class="thumb swiper-slide">
+													<img src="./assets/images/p13.png" alt="" />
+												</div>
+												<div class="thumb swiper-slide">
+													<img src="./assets/images/p13.png" alt="" />
+												</div>
+												<div class="thumb swiper-slide">
+													<img src="./assets/images/p13.png" alt="" />
+												</div>
 											</div>
 										</div>
-										<div class="views-nav">
-											<i class="icon icon-pic-arrow-top"></i>
-											<i class="icon icon-pic-arrow-down"></i>
-										</div>
+										<div class="icon-pic-arrow-down swiper-button-white"></div>
+										<div class="icon-pic-arrow-up swiper-button-white"></div>
 									</div>
-									<div class="editor">
+									<!-- Initialize Swiper -->
+									<link rel="stylesheet" href="./assets/css/swiper.min.css" />
+									<script src="./assets/js/swiper.min.js"></script>
+									<script>
+										var thumbs = new Swiper('.thumbs', {
+											spaceBetween: 10,
+											slidesPerView: 3,
+											loop: true,
+											freeMode: true,
+											loopedSlides: 5, //looped slides should be the same
+											watchSlidesVisibility: true,
+											watchSlidesProgress: true,
+											direction: 'vertical'
+										});
+										var views = new Swiper('.views', {
+											spaceBetween: 8,
+											loop:true,
+											loopedSlides: 5, //looped slides should be the same
+											navigation: {
+												nextEl: '.icon-pic-arrow-down',
+												prevEl: '.icon-pic-arrow-up',
+											},
+											direction: 'vertical' ,
+											thumbs: {
+												swiper: thumbs,
+											},
+										});
+									</script>
+
+
+									<div class="editor mt30">
 										<p>　　本报讯 今日（4月20日）下午，在第十七个“世界读书日”来临之际，位于广州市南沙区金蕉大道的南沙区图书馆举办了“悦读人生•幸福南沙”——“ 4•23”世界读书日系列活动暨广州少年儿童图书馆南沙分馆开放活动。来自南沙区金隆小学的约100多名少儿读者参加了该次活动，成为该馆的第一批小读者。 </p>
 										<p>　　据了解，广州少年儿童图书馆南沙分馆，建筑面积1500平方米，藏书1.5万册，少儿报刊近100种，少儿阅览座位100座，其中幼儿阅览座位60座，设有连通式阅览区、低幼儿阅览区、亲子阅读区。从去年11月份对一楼进行功能室改造，现在已全部完成，借“4•23”世界读书日到来之际，一楼少儿馆及三楼电子阅览室从今日起，正式向读者开放。其中设置的电子阅览室有两间，每间面积为60平方米，共有阅览座席为50个，互联网接入带宽为10M，向读者免费提供服务。 </p>
 										<p>　　图书馆成立后，南沙区内六个镇街的儿童都可前来借阅图书，使交通不便地区的少年儿童能与城区小朋友一起，享受公共文化服务，并可参加不定期举办的读书活动，丰富视野，提高文化素质。 在图书馆开展的读书活动上，记者看到，通过开展的一系列如“好书齐分享，你我共拥有”换赠图书、“书海茫茫，分享喜‘阅’”图书荐购、“检索达人，你在哪？”图书检索、“经典古诗，由你传承”古诗接龙等互动活动，小读者们在这里不但了解和认识了一些有意义的新书，还结识了不少读者朋友。一个个捧着崭新的图书，津津有味地读起来。</p>
@@ -141,6 +185,5 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

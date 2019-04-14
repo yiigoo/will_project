@@ -71,16 +71,51 @@
 						<div class="content-container">
 							<!-- 多媒体 -->
 							<div class="media-views">
-								<div class="views">
+								<div class="views" id="views">
 									<div class="view">
 										<a href="#">
 											<img src="./assets/images/p7.png" alt="" />
 											<i class="icon icon-media"></i>
-											<div class="t">独唱《E-mail飞出山沟沟》</div>
+											<div class="t">独唱《E-mail飞出山沟沟》1</div>
+										</a>
+									</div>
+									<div class="view">
+										<a href="#">
+											<img src="./assets/images/p7.png" alt="" />
+											<i class="icon icon-media"></i>
+											<div class="t">独唱《E-mail飞出山沟沟》2</div>
+										</a>
+									</div>
+									<div class="view">
+										<a href="#">
+											<img src="./assets/images/p7.png" alt="" />
+											<i class="icon icon-media"></i>
+											<div class="t">独唱《E-mail飞出山沟沟》3</div>
+										</a>
+									</div>
+									<div class="view">
+										<a href="#">
+											<img src="./assets/images/p7.png" alt="" />
+											<i class="icon icon-media"></i>
+											<div class="t">独唱《E-mail飞出山沟沟》4</div>
+										</a>
+									</div>
+									<div class="view">
+										<a href="#">
+											<img src="./assets/images/p7.png" alt="" />
+											<i class="icon icon-media"></i>
+											<div class="t">独唱《E-mail飞出山沟沟》5</div>
+										</a>
+									</div>
+									<div class="view">
+										<a href="#">
+											<img src="./assets/images/p7.png" alt="" />
+											<i class="icon icon-media"></i>
+											<div class="t">独唱《E-mail飞出山沟沟》6</div>
 										</a>
 									</div>
 								</div>
-								<div class="thumbs">
+								<div class="thumbs" id="thumbs">
 									<a href="javascript:;" class="img active">
 										<img src="./assets/images/p5.png" alt="">
 										<div class="shadow"></div>
@@ -107,6 +142,29 @@
 									</a>
 								</div>
 							</div>
+							<!-- 图片预览js -->
+							<script>
+								$(document).ready(function(){
+									if ($("#views .view").length > 0){
+										var globalIndex = 0;
+										$("#thumbs a").eq(0).addClass("active")
+										$("#views .view").hide()
+										$("#views .view").eq(0).show()
+										$("#thumbs a").on("click",function(){
+											if( $("#views .view").eq(globalIndex).css("opacity") == 1 && $(this).index() != globalIndex  ){
+												$("#thumbs a").removeClass("active")
+												$(this).addClass("active")
+												globalIndex = $(this).index()
+												$("#views .view").hide()
+												$("#views .view").eq(globalIndex).fadeIn(300)
+												$("#views .view").eq(globalIndex)
+											}
+										})
+									}
+								})
+							</script>
+
+
 							<div class="mb15 mt30 font-16">
 								<strong>最新推荐</strong>
 							</div>
@@ -180,6 +238,5 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

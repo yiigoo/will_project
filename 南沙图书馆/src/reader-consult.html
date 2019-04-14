@@ -111,10 +111,10 @@
 								<div id="tab1" class="panel">
 									<div class="question-list">
 										<ul>
-											<li class="active">
+											<li>
 												<a href="javascript:;" class="t">
 													<div class="pull-right">
-														<i class="icon icon-arrow-down icon-arrow-down-active"></i>
+														<i class="icon icon-arrow-down"></i>
 													</div>
 													怎样续借图书及怎样在网上续借图书？能续借几次？
 												</a>
@@ -147,6 +147,29 @@
 										</ul>
 									</div>
 								</div>
+								<!-- 常见问题js -->
+								<script>
+									$(document).ready(function(){
+										// 初始化默认打开第一条数据
+										var firstTitle = $(".question-list li").eq(0).find(".t")
+										$(".question-list li").eq(0).addClass("active")
+										firstTitle.next().slideDown()
+
+										//点击默认只展示一条
+										$(".question-list .t").on("click",function(){
+											var li = $(this).parent()
+											if(li.hasClass("active")){
+												li.removeClass("active")
+												$(this).next().slideUp()
+											}else{
+												$(".question-list li").removeClass("active");
+												$(".question-list .answer").hide();
+												li.addClass("active")
+												$(this).next().slideDown()
+											}
+										})
+									})
+								</script>
 
 								<!-- 现场咨询 -->
 								<div id="tab2" class="panel">
@@ -228,7 +251,7 @@
 								</div>
 
 								<!-- 读者留言 -->
-								<div id="tab4" class="panel block">
+								<div id="tab4" class="panel">
 									<div class="consult-tips">
 										<i class="icon icon-mark"></i>
 										您可以就图书馆馆藏服务、资源利用、信息检索等方面的问题向我们提问，超出上述范围的问题恕不回答。 <br />
