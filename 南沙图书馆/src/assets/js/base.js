@@ -27,5 +27,18 @@ $(document).ready(function(){
                 next.find(".panel").hide().eq($(this).index()).show()
              })
         }
+
+        // 左侧导航二级显示
+        $('.aside li>a').on("click",function(){
+            var next = $(this).next()
+            if( next.length ){
+                debugger
+                if(next.eq(0).css("display") == 'none'){
+                    next.eq(0).slideDown()
+                }else{
+                    next.eq(0).slideUp()
+                }
+            }
+        })
     })
 })
