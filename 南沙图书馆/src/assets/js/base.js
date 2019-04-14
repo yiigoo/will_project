@@ -42,3 +42,23 @@ $(document).ready(function(){
         })
     })
 })
+$.modalTips = function( options ){
+    var _options = $.extend( { content : '' , width : 320 , btnText : '我知道了' } , options )
+    var id = new Date().getTime().toString(12)
+    var div = $(
+        '<div id="modal-' + id + '" class="global-modal">' +
+            '<div class="modal-tips" style="width : '+ _options.width +'px"> ' +
+                '<div class="wrap"> ' + _options.content + '</div>' + 
+                '<a href="javasript:;" class="button" id="global-modal-closed-' + id + '">' + _options.btnText + '</a>' +
+            '</div>' +
+            '<div class="shadow"></div>' +
+        '</div>'
+        )
+    $("body").append(div)
+    $("#global-modal-closed-"  + id).on("click",function(){
+        $("#modal-" + id).fadeOut(300)
+        setTimeout( function(){
+            $("#modal-" + id).remove()
+        },300)
+    })
+}
