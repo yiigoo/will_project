@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0.3首页-4屏" transform="translate(-420.000000, -640.000000)">
+            <g id="1" transform="translate(420.000000, 640.000000)">
+                <circle id="Oval" fill="#000000" opacity="0.200000003" cx="25" cy="25" r="25"></circle>
+                <g id="Group-4" transform="translate(8.000000, 4.000000)">
+                    <path d="M5.23783784,0 L28.5405405,0 L28.5405405,34.5454545 L0,34.5454545 L0,5.23783784 C-3.54263127e-16,2.34505988 2.34505988,-3.56783729e-16 5.23783784,-8.8817842e-16 Z" id="Rectangle" fill="#FFFFFF"></path>
+                    <path d="M32,36.2727273 L32,38 L4.32432432,38 L4.32432432,36.2727273 L30.2702703,36.2727273 L30.2702703,6.04545455 L32,6.04545455 L32,36.2727273 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    <rect id="Rectangle" fill="#1069D5" x="4.32432432" y="6.90909091" width="20.7567568" height="4.31818182"></rect>
+                    <rect id="Rectangle-Copy-8" fill="#1069D5" x="4.32432432" y="15.5454545" width="12.972973" height="2.59090909"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
