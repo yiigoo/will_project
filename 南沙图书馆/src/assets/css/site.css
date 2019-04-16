@@ -491,6 +491,22 @@ li:nth-child(1) .icon-ranking-tag{
 li:nth-child(2) .icon-ranking-tag{
     background: url('../images/icon/icon-ranking-tag-2.svg') center center no-repeat;
 }
+.icon-hot{
+    width: 20px;
+    height: 24px;
+    background: url('../images/icon/icon-hot.svg') center center no-repeat;
+}
+.icon-ranking{
+    width: 24px;
+    height: 22px;
+    background: url('../images/icon/icon-ranking.svg') center center no-repeat;
+}
+.icon-book{
+    width: 21px;
+    height: 24px;
+    background: url('../images/icon/icon-book.svg') center center no-repeat;
+}
+
 
 body{
     background-color: #F1F1F1;
@@ -1761,7 +1777,7 @@ body{
     top: 50%;
 }
 .full-page-item{
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     top: 0;
     bottom: 0;
