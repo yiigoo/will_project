@@ -291,6 +291,18 @@ li,ul{
     margin-right: 8px;
     margin-top: -2px;
 }
+.icon-adress{
+    width : 12px;
+	height : 16px;
+	background: url('../images/icon/icon-address.svg') left top no-repeat;
+}
+.icon-pie{
+    margin-right: 0;
+    width : 48px;
+	height : 48px;
+    background: url('../images/icon/icon-pie.svg') left top no-repeat;
+    margin-top: -100px;
+}
 .icon-node{
     width : 18px;
 	height : 18px;
@@ -460,6 +472,24 @@ li,ul{
     width:16px;
     height:16px;
     background: url('../images/icon/icon-notice.svg') left top no-repeat;
+}
+.icon-ranking-tag{
+    width: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    font-size: 8px;
+    text-align: center;
+    font-style: normal;
+    height: 16px;
+    color: #fff;
+    -webkit-text-size-adjust:none;
+    background: url('../images/icon/icon-ranking-tag-3.svg') center center no-repeat;
+}
+li:nth-child(1) .icon-ranking-tag{
+    background: url('../images/icon/icon-ranking-tag-1.svg') center center no-repeat;
+}
+li:nth-child(2) .icon-ranking-tag{
+    background: url('../images/icon/icon-ranking-tag-2.svg') center center no-repeat;
 }
 
 body{
