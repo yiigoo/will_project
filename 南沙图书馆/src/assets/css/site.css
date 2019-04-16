@@ -7,6 +7,9 @@ a:active{
 a:focus{
     text-decoration: none;
 }
+span:active,span:focus{
+    outline: none;
+}
 .text-muted {
     color: #777777;
   }
@@ -510,6 +513,14 @@ li:nth-child(2) .icon-ranking-tag{
 
 body{
     background-color: #F1F1F1;
+}
+.index-container{
+    position: fixed;
+    z-index: 100;
+    left:0;
+    right: 0;
+    height: 90px;
+    background-color: #fff;
 }
 .header{
     background-color: #fff;
@@ -1745,7 +1756,6 @@ body{
     transform: translate(-50%,-50%);
     color: #fff;
     z-index: 10;
-    
 }
 .modal-tips .wrap{
     padding : 20px;
@@ -1770,14 +1780,15 @@ body{
 .modal-tips .button:hover{
     text-decoration: none;
 }
-.full-page-item .wrap{
+.full-page-item .wrapper{
     width: 1140px;
     margin: 0 auto;
     position: relative;
     top: 50%;
+    min-height: 640px;
 }
 .full-page-item{
-    /* position: fixed; */
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
@@ -1798,8 +1809,20 @@ body{
 .full-5{
     background: url('../images/full/full-5.jpg') center center no-repeat;
 }
-.full-1 .wrap{
+.full-1 .wrapper{
     margin-top: -140px;
+}
+.full-2 .wrapper{
+    margin-top: -290px;
+}
+.full-3 .wrapper{
+    margin-top: -290px;
+}
+.full-4 .wrapper{
+    margin-top: -320px;
+}
+.full-5 .wrapper{
+    margin-top: -250px;
 }
 .full-page-item .wrap-page-1{
     width: 802px;
@@ -1820,10 +1843,60 @@ body{
     bottom : 30px;
     color: #fff;
 }
+.full-page-nav{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    width: 10px;
+    z-index: 101;
+}
+.full-page-nav span{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    
+    border-radius: 50%;
+    margin-bottom: 3px;
+    background:rgba(255,255,255,0.3);
+    border:1px solid #fff;
+}
+.full-page-nav span.active{
+    background:#fff;
+}
+.home-search{
+    top: 0;
+}
 
-
+/*动画*/
+.page-tanstion .page-item-absolute{
+    opacity: 0;
+}
+.page-tanstion .home-search{
+    top: -70px;
+}
+.page-tanstion .home-navigation{
+    top: 220px;
+}
+.page-tanstion .home-calendar{
+    left: -70px;
+}
+.page-tanstion .home-notice-thumbs{
+    right: -70px;
+}
+.page-tanstion .home-video{
+    top: 440px;
+}
+.home-search,.home-navigation,.home-calendar,.home-notice-thumbs,.home-video{
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    opacity: 1;
+}
 
 .home-ele-guide{
+    width: 100%;
+    left: 0; 
+    top: 460px;
     margin-left: -20px;
 }
 .home-ele-guide li {
@@ -1856,6 +1929,9 @@ body{
 }
 .home-ele-rows{
     height: 125px;
+    width: 100%;
+    left: 0; 
+    top: 305px;
 }
 .home-ele-rows{
     margin-left: -22px;
@@ -1912,6 +1988,9 @@ body{
     background:rgba(9,103,217,.95);
     border-radius:4px;
     color: #fff;
+    width: 100%;
+    left: 0; 
+    top:0;
 }
 .home-ele-address .distribute{
     width: 642px;
@@ -1962,6 +2041,9 @@ body{
     padding-left: 732px;
     background-color: #fff;
     border-radius: 4px;
+    width: 100%;
+    top:0;
+    left: 0;
 }
 .home-about .img{
     float: left;
@@ -1983,6 +2065,9 @@ body{
 .home-about-guide {
     background-color: #fff;
     border-radius: 4px;
+    width: 100%;
+    top:363px;
+    left: 0;
 }
 .home-about-guide li {
     float: left;
@@ -2024,6 +2109,7 @@ body{
     border-radius: 4px;
     width: 560px;
     height: 360px;
+    left: 0;
 }
 .home-theme .img{
     width: 560px;
@@ -2057,6 +2143,7 @@ body{
     border-radius: 4px;
     width: 560px;
     height: 360px;
+    right: 0;
 }
 .home-book-ranking .item{
     width: 50%;
@@ -2101,6 +2188,8 @@ body{
     background:#fff;
     border-radius:4px;
     padding-left: 45px;
+    left: 0;
+    top: 380px;
 }
 .home-book-new .book-title{
     background-color: #0967D9;
@@ -2112,10 +2201,11 @@ body{
     text-align: center;
     margin-left: -45px;
     float: left;
+    border-radius: 4px 0 0 4px;
 }
 .home-book-new .list li{
     padding-right: 10px;
-    width: 33.33%;
+    width: 255px;
     float: left;
     padding-left: 120px;
 }
@@ -2132,7 +2222,9 @@ body{
     font-size: 12px;
 }
 .home-book-new .list {
+    padding-left: 20px;
     padding-top: 22px;
+    width: 780px;
 }
 .home-book-new .list li img{
     max-width: 110px;
@@ -2147,6 +2239,8 @@ body{
     background:rgba(255,255,255,1);
     border-radius:4px;
     padding : 15px 20px;
+    right: 0;
+    top: 380px;
 }
 .home-document li{
     overflow:hidden;
@@ -2165,6 +2259,8 @@ body{
 }
 .home-video {
     height: 195px;
+    width: 100%;
+    top: 380px;
 }
 .home-video .left{
     border-right:1px solid #ddd;
@@ -2186,7 +2282,6 @@ body{
     height: 108px;
     line-height: 108px;
     float: left;
-    margin: 0 8px;
     text-align: center;
 }
 .home-video .item img{
@@ -2196,10 +2291,11 @@ body{
 }
 .home-video .left .list{
     padding-top: 18px;
-    padding-left: 15px;
+    padding-left: 20px;
     margin: 0 15px;
     height: 108px;
     position: relative;
+    width: 650px;
 }
 .home-video .left .icon-swiper-arrow-left , .home-video .left .icon-swiper-arrow-right{
     position: absolute;
@@ -2208,7 +2304,7 @@ body{
 }
 .home-video .left .icon-swiper-arrow-right{
     left : auto;
-    right : 0;
+    right : -27px;
 }
 .home-video .right .list{
     padding: 18px 0 0 8px;
@@ -2216,6 +2312,7 @@ body{
 }
 .home-video .right .item{
     position: relative;
+    margin: 0 8px;
 }
 .home-video .right .item .icon{
     position: absolute;
@@ -2229,6 +2326,7 @@ body{
     height:360px;
     background: #fff;
     border-radius:4px;
+    right: 0;
 }
 .home-notice-thumbs .item{
     float: left;
@@ -2255,7 +2353,7 @@ body{
     height: 54px;
     line-height: 18px;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .home-notice-thumbs .list{
     padding: 16px 0 0 7px;
@@ -2279,6 +2377,7 @@ body{
     height:360px;
     background:#fff;
     border-radius:4px;
+    left: 0;
 }
 .home-calendar .calendar-title{
     border-radius:4px 4px 0 0;
@@ -2292,7 +2391,7 @@ body{
     font-size: 24px;
 }
 .calendar-list {
-    padding: 15px 0 0 12px;
+    padding: 8px 0 0 12px;
     font-size: 12px;
 }
 .calendar-list .item{
@@ -2359,6 +2458,9 @@ body{
     padding: 10px;
     background:rgba(255,255,255,.4);
     border-radius:0px 4px 0px 0px;
+}
+.home-search-bar .tabs-content .panel{
+    display: none;
 }
 .home-search-bar .tabs a{
     min-width:131px;

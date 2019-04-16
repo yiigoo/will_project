@@ -36,35 +36,70 @@
 		</div>
 			  
 		<div class="home-pager">
-			<div class="full-page-item full-1 hide">
-				<div class="wrap wrap-page-1">
-					<div class="page-item-absolute home-search">
+			<div class="full-page-nav">
+				<span class="active"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="full-page-item full-1 page-tanstion hide">
+				<div class="wrapper wrap-page-1">
+					<div class="page-item-absolute home-search" id="home-search">
 						<div class="home-search-bar">
 							<div class="tabs">
 								<a href="javascript:;" class="active">馆藏检索</a>
 								<a href="javascript:;">站内检索</a>
 							</div>
 							<div class="tabs-content clearfix">
-								<div class="item">
-									<select name="" class="dir-select" data-width="110px">
-										<option value="">书目检索</option>
-										<option value="">分类1-2</option>
-										<option value="">分类1-3</option>
-									</select>
+
+								<div class="panel">
+									<div class="item">
+										<select name="" class="dir-select" data-width="110px">
+											<option value="">书目检索</option>
+											<option value="">分类1-2</option>
+											<option value="">分类1-3</option>
+										</select>
+									</div>
+									<div class="item">
+										<select name="" class="dir-select" data-width="110px">
+											<option value="">分类</option>
+											<option value="">分类2-2</option>
+											<option value="">分类2-3</option>
+										</select>
+									</div>
+									<div class="item">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="请输入书名或作者">
+											<span class="input-group-btn">
+												<button class="btn btn-default" type="button">检索</button>
+											</span>
+										</div>
+									</div>
 								</div>
-								<div class="item">
-									<select name="" class="dir-select" data-width="110px">
-										<option value="">分类</option>
-										<option value="">分类2-2</option>
-										<option value="">分类2-3</option>
-									</select>
-								</div>
-								<div class="item">
-									<div class="input-group">
-										<input type="text" class="form-control" placeholder="请输入书名或作者">
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="button">检索</button>
-										</span>
+
+								<div class="panel">
+									<div class="item">
+										<select name="" class="dir-select" data-width="110px">
+											<option value="">书目检索2</option>
+											<option value="">分类1-2</option>
+											<option value="">分类1-3</option>
+										</select>
+									</div>
+									<div class="item">
+										<select name="" class="dir-select" data-width="110px">
+											<option value="">分类2</option>
+											<option value="">分类2-2</option>
+											<option value="">分类2-3</option>
+										</select>
+									</div>
+									<div class="item">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="请输入书名或作者">
+											<span class="input-group-btn">
+												<button class="btn btn-default" type="button">检索</button>
+											</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -88,10 +123,21 @@
 						</a>
 					</div>
 				</div>
+				<script>
+					$(document).ready(function(){
+						$("#home-search .tabs-content .panel").eq(0).show()
+						$("#home-search .tabs a").on("click",function(){
+							var index = $(this).index()
+							$("#home-search .tabs-content .panel").hide().eq(index).show()
+							$("#home-search .tabs a").removeClass("active").eq(index).addClass("active")
+						})
+						$(".full-1,.full-2").removeClass("page-tanstion")
+					})
+				</script>
 			</div>
-			<div class="full-page-item full-2 hide">
-				<div class="wrap">
-					<div class="home-calendar">
+			<div class="full-page-item full-2 page-tanstion">
+				<div class="wrapper">
+					<div class="home-calendar page-item-absolute">
 						<div class="calendar-title">
 							<strong>10</strong> 月活动安排
 						</div>
@@ -232,7 +278,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-notice-thumbs">
+					<div class="home-notice-thumbs page-item-absolute">
 						<div class="box-title">
 							<div class="pull-right">
 								<i class="icon icon-more">+</i> 更多
@@ -287,7 +333,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-video">
+					<div class="home-video page-item-absolute">
 						<div class="clearfix">
 							<div class="left">
 								<div class="box-title">
@@ -299,23 +345,50 @@
 								<div class="list">
 									<i class="icon icon-swiper-arrow-left"></i>
 									<i class="icon icon-swiper-arrow-right"></i>
-
-									<div class="item">
-										<a href="#">
-											<img src="./assets/images/p15.png" alt="" />
-										</a>
-									</div>
-									<div class="item">
-										<a href="#">
-											<img src="./assets/images/p15.png" alt="" />
-										</a>
-									</div>
-									<div class="item">
-										<a href="#">
-											<img src="./assets/images/p15.png" alt="" />
-										</a>
+									<div class="swiper-container swiper-container-page-2">
+										<div class="swiper-wrapper">
+											<div class="item swiper-slide">
+												<a href="#">
+													<img src="./assets/images/p15.png" alt="" />
+												</a>
+											</div>
+											<div class="item swiper-slide">
+												<a href="#">
+													<img src="./assets/images/p15.png" alt="" />
+												</a>
+											</div>
+											<div class="item swiper-slide">
+												<a href="#">
+													<img src="./assets/images/p15.png" alt="" />
+												</a>
+											</div>
+											<div class="item swiper-slide">
+												<a href="#">
+													<img src="./assets/images/p15.png" alt="" />
+												</a>
+											</div>
+											<div class="item swiper-slide">
+												<a href="#">
+													<img src="./assets/images/p15.png" alt="" />
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
+								<script>
+									$(document).ready(function(){
+										new Swiper('.swiper-container-page-2', {
+											slidesPerView: 3,
+											spaceBetween: 16,
+											autoplay: true ,
+											loop: true ,
+											navigation: {
+												nextEl: '.icon-swiper-arrow-right',
+												prevEl: '.icon-swiper-arrow-left',
+											},
+										});
+									})
+								</script>
 							</div>
 							<div class="right">
 								<div class="box-title">
@@ -343,9 +416,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="full-page-item full-3">
-				<div class="wrap">
-					<div class="home-theme">
+			<div class="full-page-item full-3  hide">
+				<div class="wrapper">
+					<div class="home-theme page-item-absolute">
 						<div class="box-title">
 							<i class="icon icon-hot"></i> 主题阅读
 						</div>
@@ -358,7 +431,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="home-book-ranking">
+					<div class="home-book-ranking page-item-absolute">
 						<div class="item">
 							<div class="box-title">
 								<i class="icon icon-ranking"></i> 图书借阅排行
@@ -468,40 +541,76 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-book-new">
+					<div class="home-book-new page-item-absolute">
 						<div class="book-title">
 							新书推荐
 						</div>
 						<div class="list">
-							<ul class="clearfix">
-								<li> 
-									<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
-									<a href="#" class="t">带着文化游名城</a>
-									<div class="text mt10">
-										作者：刘飞滨 <br />
-										出版社：当代世界出版
-									</div>
-								</li>
-								<li> 
-									<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
-									<a href="#" class="t">带着文化游名城</a>
-									<div class="text mt10">
-										作者：刘飞滨 <br />
-										出版社：当代世界出版
-									</div>
-								</li>
-								<li> 
-									<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
-									<a href="#" class="t">带着文化游名城</a>
-									<div class="text mt10">
-										作者：刘飞滨 <br />
-										出版社：当代世界出版
-									</div>
-								</li>
-							</ul>
+							<div class="swiper-container swiper-container-page-3">
+								<ul class="clearfix swiper-wrapper">
+									<li class="swiper-slide"> 
+										<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
+										<a href="#" class="t">带着文化游名城</a>
+										<div class="text mt10">
+											作者：刘飞滨 <br />
+											出版社：当代世界出版
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
+										<a href="#" class="t">带着文化游名城</a>
+										<div class="text mt10">
+											作者：刘飞滨 <br />
+											出版社：当代世界出版
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
+										<a href="#" class="t">带着文化游名城</a>
+										<div class="text mt10">
+											作者：刘飞滨 <br />
+											出版社：当代世界出版
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
+										<a href="#" class="t">带着文化游名城</a>
+										<div class="text mt10">
+											作者：刘飞滨 <br />
+											出版社：当代世界出版
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<a href="#" class="img"><img src="./assets/images/book.png" alt=""></a>
+										<a href="#" class="t">带着文化游名城</a>
+										<div class="text mt10">
+											作者：刘飞滨 <br />
+											出版社：当代世界出版
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-container-horizontal">
+								<div class="swiper-pagination swiper-pagination-page-3"></div>
+							</div>
+							
 						</div>
+						<script>
+							$(document).ready(function(){
+								new Swiper('.swiper-container-page-3', {
+									slidesPerView: 3,
+									spaceBetween: 10,
+									autoplay: true ,
+									loop: true ,
+									pagination: {
+										el: '.swiper-pagination-page-3',
+										clickable: true,
+									},
+								});
+							})
+						</script>
 					</div>
-					<div class="home-document">
+					<div class="home-document page-item-absolute">
 						<div class="document-title font-16 mb10">本地文献推荐</div>
 						<div class="list">
 							<ul>
@@ -516,8 +625,8 @@
 				</div>
 			</div>
 			<div class="full-page-item full-4 hide">
-				<div class="wrap">
-					<div class="home-ele-address">
+				<div class="wrapper">
+					<div class="home-ele-address page-item-absolute">
 						<div class="img pull-right">
 							<img src="./assets/images/img-ele-map.png" alt="" />
 						</div>
@@ -540,7 +649,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-ele-rows">
+					<div class="home-ele-rows page-item-absolute">
 						<div class="md">
 							<div class="wrap">
 								<div class="item">
@@ -595,7 +704,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home-ele-guide">
+					<div class="home-ele-guide page-item-absolute">
 						<ul class="clearfix">
 							<li>
 								<a href="#">
@@ -641,9 +750,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="full-page-item full-4 hide">
-				<div class="wrap">
-					<div class="home-about">
+			<div class="full-page-item full-5 hide">
+				<div class="wrapper">
+					<div class="home-about page-item-absolute">
 						<div class="left img">
 							<img src="./assets/images/home-about.png" alt="" />
 						</div>
@@ -657,7 +766,7 @@
 							<a href="about.html" class="more">了解更多</a>
 						</div>
 					</div>
-					<div class="home-about-guide">
+					<div class="home-about-guide page-item-absolute">
 						<ul class="clearfix">
 							<li>
 								<a href="#">
@@ -728,7 +837,9 @@
 	</div>
 	<script src="./assets/js/bootstrap.min.js"></script>
 	<script src="./assets/js/bootstrap-select.min.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
 	<link rel="stylesheet" href="./assets/css/bootstrap-select.css">
+	<link rel="stylesheet" href="./assets/css/swiper.min.css">
 	<script>
 		$(document).ready(function(){
 			$('.dir-select').selectpicker();
