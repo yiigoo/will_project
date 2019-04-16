@@ -43,7 +43,7 @@
 				<span></span>
 				<span></span>
 			</div>
-			<div class="full-page-item full-1 page-tanstion hide">
+			<div class="full-page-item full-1 page-tanstion">
 				<div class="wrapper wrap-page-1">
 					<div class="page-item-absolute home-search" id="home-search">
 						<div class="home-search-bar">
@@ -131,11 +131,18 @@
 							$("#home-search .tabs-content .panel").hide().eq(index).show()
 							$("#home-search .tabs a").removeClass("active").eq(index).addClass("active")
 						})
-						$(".full-1,.full-2").removeClass("page-tanstion")
+						$(".full-1").removeClass("page-tanstion")
+						setTimeout(function(){
+							$(".full-1").addClass("hide")
+							$(".full-2").removeClass("hide")
+							setTimeout(function(){
+								$(".full-2").removeClass("page-tanstion")
+							},100)
+						},5000)
 					})
 				</script>
 			</div>
-			<div class="full-page-item full-2 page-tanstion">
+			<div class="full-page-item full-2 page-tanstion hide">
 				<div class="wrapper">
 					<div class="home-calendar page-item-absolute">
 						<div class="calendar-title">
