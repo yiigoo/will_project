@@ -1793,6 +1793,19 @@ body{
     top: 0;
     bottom: 0;
     right: 0;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    z-index: 1;
+}
+.full-page-item.is-before {
+    z-index: 0;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+}
+.full-page-item.is-after {
+    z-index: 0;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
 }
 .full-1{
     background: url('../images/full/full-1.jpg') center center no-repeat;
@@ -1830,6 +1843,10 @@ body{
 .page-item-absolute{
     position: absolute;
     width: 100%;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    opacity: 1;
 }
 .home-navigation{
     top: 154px;
@@ -1842,6 +1859,7 @@ body{
     text-align: center;
     bottom : 30px;
     color: #fff;
+    z-index: 10;
 }
 .full-page-nav{
     position: fixed;
@@ -1859,9 +1877,11 @@ body{
     margin-bottom: 3px;
     background:rgba(255,255,255,0.3);
     border:1px solid #fff;
+    cursor: pointer;
 }
 .full-page-nav span.active{
     background:#fff;
+    cursor: default;
 }
 .home-search{
     top: 0;
@@ -1886,17 +1906,40 @@ body{
 .page-tanstion .home-video{
     top: 440px;
 }
-.home-search,.home-navigation,.home-calendar,.home-notice-thumbs,.home-video{
-    -webkit-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
-    transition: all 0.7s ease 0s;
-    opacity: 1;
+.page-tanstion .home-theme{
+    left: -60px;
 }
+.page-tanstion .home-book-ranking{
+    right: 60px;
+}
+.page-tanstion .home-book-new{
+    left: 60px;
+}
+.page-tanstion .home-document{
+    right: -60px;
+}  
+.page-tanstion .home-ele-address{
+    left: 60px;
+} 
+.page-tanstion .home-ele-rows{
+    left: -60px;
+} 
+.page-tanstion .home-ele-guide{
+    left: 60px;
+} 
+.page-tanstion .home-about{
+    left: 60px;
+} 
+.page-tanstion .home-about-guide{
+    left: -60px;
+} 
 
 .home-ele-guide{
     width: 100%;
     left: 0; 
     top: 460px;
+}
+.home-ele-guide ul{
     margin-left: -20px;
 }
 .home-ele-guide li {
@@ -1932,10 +1975,11 @@ body{
     width: 100%;
     left: 0; 
     top: 305px;
-}
-.home-ele-rows{
-    margin-left: -22px;
     color: #fff;
+}
+.home-ele-rows .md-list{
+    margin-left: -22px;
+    
 }
 .home-ele-rows .md{
     padding-left: 22px;

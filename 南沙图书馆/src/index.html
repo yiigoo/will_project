@@ -43,7 +43,7 @@
 				<span></span>
 				<span></span>
 			</div>
-			<div class="full-page-item full-1 page-tanstion">
+			<div class="full-page-item full-1 page-tanstion is-current">
 				<div class="wrapper wrap-page-1">
 					<div class="page-item-absolute home-search" id="home-search">
 						<div class="home-search-bar">
@@ -131,18 +131,10 @@
 							$("#home-search .tabs-content .panel").hide().eq(index).show()
 							$("#home-search .tabs a").removeClass("active").eq(index).addClass("active")
 						})
-						$(".full-1").removeClass("page-tanstion")
-						setTimeout(function(){
-							$(".full-1").addClass("hide")
-							$(".full-2").removeClass("hide")
-							setTimeout(function(){
-								$(".full-2").removeClass("page-tanstion")
-							},100)
-						},5000)
 					})
 				</script>
 			</div>
-			<div class="full-page-item full-2 page-tanstion hide">
+			<div class="full-page-item full-2 page-tanstion is-after">
 				<div class="wrapper">
 					<div class="home-calendar page-item-absolute">
 						<div class="calendar-title">
@@ -423,7 +415,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="full-page-item full-3  hide">
+			<div class="full-page-item full-3 page-tanstion is-after">
 				<div class="wrapper">
 					<div class="home-theme page-item-absolute">
 						<div class="box-title">
@@ -631,7 +623,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="full-page-item full-4 hide">
+			<div class="full-page-item full-4 page-tanstion is-after">
 				<div class="wrapper">
 					<div class="home-ele-address page-item-absolute">
 						<div class="img pull-right">
@@ -657,56 +649,58 @@
 						</div>
 					</div>
 					<div class="home-ele-rows page-item-absolute">
-						<div class="md">
-							<div class="wrap">
-								<div class="item">
-									<span class="pull-right">
-										<strong>35,545</strong> 册
-									</span>
-									<i class="icon icon-borrow"></i>
-									<span class="font-16">当日借书册数：</span>
-								</div>
-								<div class="item">
-									<span class="pull-right">
-										<strong>35,45</strong> 册
-									</span>
-									<i class="icon icon-back"></i>
-									<span class="font-16">当日还书册数：</span>
-								</div>
-							</div>
-						</div>
-						<div class="md">
-							<div class="wrap">
-								<div class="item">
-									<span class="pull-right">
-										<strong>35,545</strong> 人
-									</span>
-									<i class="icon icon-borrow"></i>
-									<span class="font-16">当日借书人次</span>：
-								</div>
-								<div class="item">
-									<span class="pull-right">
-										<strong>35,45</strong> 人
-									</span>
-									<i class="icon icon-back"></i>
-									<span class="font-16">当日还书人次</span>：
+						<div class="md-list">
+							<div class="md">
+								<div class="wrap">
+									<div class="item">
+										<span class="pull-right">
+											<strong>35,545</strong> 册
+										</span>
+										<i class="icon icon-borrow"></i>
+										<span class="font-16">当日借书册数：</span>
+									</div>
+									<div class="item">
+										<span class="pull-right">
+											<strong>35,45</strong> 册
+										</span>
+										<i class="icon icon-back"></i>
+										<span class="font-16">当日还书册数：</span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="md link">
-							<div class="wrap">
-								<div class="link-title mb5">
-									<strong class="font-18">友情链接:</strong>
+							<div class="md">
+								<div class="wrap">
+									<div class="item">
+										<span class="pull-right">
+											<strong>35,545</strong> 人
+										</span>
+										<i class="icon icon-borrow"></i>
+										<span class="font-16">当日借书人次</span>：
+									</div>
+									<div class="item">
+										<span class="pull-right">
+											<strong>35,45</strong> 人
+										</span>
+										<i class="icon icon-back"></i>
+										<span class="font-16">当日还书人次</span>：
+									</div>
 								</div>
-								<div class="list">
-									<ul class="clearfix">
-										<li><a href="#" title="链链接标题链接标题链接标题链接标题接标题"><i></i> 链链接标题链接标题链接标题链接标题接标题</a></li>
-										<li><a href="#"><i></i> 链接标题</a></li>
-										<li><a href="#"><i></i> 链接标题</a></li>
-										<li><a href="#"><i></i> 链接标题</a></li>
-										<li><a href="#"><i></i> 链接标题</a></li>
-										<li><a href="#"><i></i> 链接标题</a></li>
-									</ul>
+							</div>
+							<div class="md link">
+								<div class="wrap">
+									<div class="link-title mb5">
+										<strong class="font-18">友情链接:</strong>
+									</div>
+									<div class="list">
+										<ul class="clearfix">
+											<li><a href="#" title="链链接标题链接标题链接标题链接标题接标题"><i></i> 链链接标题链接标题链接标题链接标题接标题</a></li>
+											<li><a href="#"><i></i> 链接标题</a></li>
+											<li><a href="#"><i></i> 链接标题</a></li>
+											<li><a href="#"><i></i> 链接标题</a></li>
+											<li><a href="#"><i></i> 链接标题</a></li>
+											<li><a href="#"><i></i> 链接标题</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -757,7 +751,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="full-page-item full-5 hide">
+			<div class="full-page-item full-5 page-tanstion is-after">
 				<div class="wrapper">
 					<div class="home-about page-item-absolute">
 						<div class="left img">
@@ -809,7 +803,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="global-scroll">
+			<div class="global-scroll" id="global-scroll-arrow">
 				<a href="javascript:;" class="target">
 					<i class="icon icon-round-arrow"></i>
 				</a>
@@ -845,12 +839,85 @@
 	<script src="./assets/js/bootstrap.min.js"></script>
 	<script src="./assets/js/bootstrap-select.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/jquery.mousewheel.min.js"></script>
+	
 	<link rel="stylesheet" href="./assets/css/bootstrap-select.css">
 	<link rel="stylesheet" href="./assets/css/swiper.min.css">
 	<script>
 		$(document).ready(function(){
 			$('.dir-select').selectpicker();
+
+			$(function(){
+				var pageSize = $(".full-page-item").length
+				var currentIndex = 0
+				var isScroll = false
+				function reset(){
+					isScroll = true
+					setTimeout(function(){
+						isScroll = false
+					},900)
+					if ( currentIndex >= pageSize ){
+						currentIndex = 0;
+					}
+					$(".full-page-item").removeClass("is-current").removeClass("is-before").removeClass("is-after").addClass("page-tanstion")
+					$(".full-page-item").addClass("page-tanstion")
+					for (let index = 0; index < pageSize; index++) {
+						if( index < currentIndex){
+							$(".full-page-item").eq(index).addClass("is-before")
+						}else if ( index == currentIndex ){
+							$(".full-page-item").eq(index).addClass("is-current")
+						}else{
+							$(".full-page-item").eq(index).addClass("is-after")
+						}
+					}
+					$(".full-page-nav span").removeClass("active").eq(currentIndex).addClass("active")
+					setTimeout(function(){
+						$(".full-page-item").eq(currentIndex).removeClass("page-tanstion")
+						
+					} ,400)
+				}
+				$(".is-current").removeClass("page-tanstion")
+
+				$("#global-scroll-arrow").on("click", function(){
+					if ( !isScroll ){
+						currentIndex ++;
+						reset(currentIndex)
+					}
+				})
+				$(".full-page-nav span").on("click", function(){
+					if ( $(this).hasClass("active") ){
+						return false ;
+					}
+					if ( !isScroll ){
+						currentIndex = $(this).index()
+						reset(currentIndex)
+						
+					}
+				})
+				$(window).on('mousewheel', function(event, delta) {  
+					debugger
+					if ( !isScroll ){
+						if ( delta > 0 ){ // 向上滚动
+							if ( currentIndex > 0 ){
+								currentIndex -- ;
+								reset(currentIndex)
+							}
+						}else{ // 向下滚动
+							if ( currentIndex < pageSize - 1 ){
+								currentIndex ++ ;
+								reset(currentIndex)
+							}
+						}
+					}
+					
+					return false;  
+				});
+			})
 		})
+
+		
+
+		
 	</script>
 </body>
 </html>
