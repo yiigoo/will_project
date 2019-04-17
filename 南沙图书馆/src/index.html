@@ -813,6 +813,18 @@
 		</div>
 	</div>
 
+	<div class="footer index-footer">
+		<div class="pull-right">
+			网站访问数：6987,456
+		</div>
+		<a href="about.html">关于南图</a>&nbsp; |&nbsp; 
+		<a href="contact.html">联系我们</a>&nbsp; |&nbsp;
+		<a href="sitemap.html">网站地图</a>
+		<span class="gap-1"></span>
+		馆长信箱：123456798@163.com <span class="gap-2"></span>
+		版权所有 南沙图书馆 Copyright &#169 2010-2018 All Rights Reserved 粤ICP备00000000号
+	</div>
+
 	<!-- 通用左侧导航 -->
 	<div class="global-side-nav">
 		<ul>
@@ -848,10 +860,18 @@
 			$('.dir-select').selectpicker();
 
 			$(function(){
+				$(".index-footer").hide()
 				var pageSize = $(".full-page-item").length
 				var currentIndex = 0
 				var isScroll = false
 				function reset(){
+					if ( currentIndex == pageSize - 1 ){
+						$(".index-footer").fadeIn()
+						$(".global-scroll").fadeOut()
+					}else{
+						$(".index-footer").fadeOut()
+						$(".global-scroll").fadeIn()
+					}
 					isScroll = true
 					setTimeout(function(){
 						isScroll = false
@@ -894,8 +914,7 @@
 						
 					}
 				})
-				$(window).on('mousewheel', function(event, delta) {  
-					debugger
+				$(".home-pager").on('mousewheel', function(event, delta) {
 					if ( !isScroll ){
 						if ( delta > 0 ){ // 向上滚动
 							if ( currentIndex > 0 ){
@@ -915,6 +934,7 @@
 					
 					return false;  
 				});
+				window.addEventListener('touchmove', func, { passive: false })
 			})
 		})
 
