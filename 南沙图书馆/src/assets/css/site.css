@@ -509,6 +509,30 @@ li:nth-child(2) .icon-ranking-tag{
     height: 24px;
     background: url('../images/icon/icon-book.svg') center center no-repeat;
 }
+.icon-side-login{
+    margin-right: 0;
+    width: 26px;
+    height: 26px;
+    background: url('../images/icon/icon-side-login.svg') center center no-repeat;
+}
+.icon-side-wechat{
+    margin-right: 0;
+    width: 26px;
+    height: 26px;
+    background: url('../images/icon/icon-side-wechat.svg') center center no-repeat;
+}
+.icon-side-weibo{
+    margin-right: 0;
+    width: 26px;
+    height: 26px;
+    background: url('../images/icon/icon-side-weibo.svg') center center no-repeat;
+}
+.icon-side-service{
+    margin-right: 0;
+    width: 26px;
+    height: 26px;
+    background: url('../images/icon/icon-side-service.svg') center center no-repeat;
+}
 
 
 body{
@@ -564,6 +588,39 @@ body{
     margin: 0 auto;
     width: 1336px;
 }
+
+.global-side-nav{
+    position: fixed;
+    transform: translate(0 , -50%);
+    width: 50px;
+    left: 16px;
+    top: 50%;
+    z-index: 101;
+}
+.global-side-nav a{
+    margin-bottom: 14px;
+    padding-top: 5px;
+    display: block;
+    width:50px;
+    height:50px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 1px 2px 0px rgba(0,0,0,0.2);
+    border-radius:4px;
+    text-align: center;
+    font-size: 12px;
+    -webkit-transition: background-color 0.5s ease 0s;
+    -o-transition: background-color 0.5s ease 0s;
+    transition: background-color 0.5s ease 0s;
+}
+.global-side-nav a i{
+    display: block;
+    margin: 0 auto 0;
+}
+.global-side-nav a:hover{
+    text-decoration: none;
+    background-color: #f1f1f1;
+}
+
 
 .page-banner{
     position: relative;

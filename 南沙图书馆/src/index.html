@@ -803,9 +803,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="global-scroll" id="global-scroll-arrow">
+			<div class="global-scroll">
 				<a href="javascript:;" class="target">
-					<i class="icon icon-round-arrow"></i>
+					<i class="icon icon-round-arrow" id="global-scroll-arrow"></i>
 				</a>
 				<div class="tips mt10">向下滚动查看更多</div>
 			</div>
@@ -818,19 +818,19 @@
 		<ul>
 			<li>
 				<a href="#">
-					<i class="icon-side-login"></i>
+					<i class="icon icon-side-login"></i>
 					登录
 				</a>
 				<a href="#">
-					<i class="icon-side-login"></i>
+					<i class="icon icon-side-wechat"></i>
 					微信
 				</a>
 				<a href="#">
-					<i class="icon-side-login"></i>
+					<i class="icon icon-side-weibo"></i>
 					微博
 				</a>
 				<a href="#">
-					<i class="icon-side-service"></i>
+					<i class="icon icon-side-service"></i>
 					联系
 				</a>
 			</li>
@@ -905,6 +905,9 @@
 						}else{ // 向下滚动
 							if ( currentIndex < pageSize - 1 ){
 								currentIndex ++ ;
+								reset(currentIndex)
+							}else{
+								currentIndex = 0;
 								reset(currentIndex)
 							}
 						}
