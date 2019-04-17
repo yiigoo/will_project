@@ -2219,7 +2219,6 @@ body{
     line-height: 50px;
     box-shadow:0px 1px 0px 0px #ddd;
 }
-
 .home-theme{
     background-color: #fff;
     border-radius: 4px;
@@ -2249,7 +2248,6 @@ body{
     padding: 0 20px;
     color: #fff;
     text-align: left;
-    
 }
 .home-theme .img:hover .theme-title{
     color: #fff;

@@ -280,7 +280,7 @@
 					<div class="home-notice-thumbs page-item-absolute">
 						<div class="box-title">
 							<div class="pull-right">
-								<i class="icon icon-more">+</i> 更多
+								<a href="#"> <i class="icon icon-more">+</i> 更多 </a>
 							</div>
 							<i class="icon icon-notice-title"></i> 最新活动公告
 						</div>
@@ -337,7 +337,7 @@
 							<div class="left">
 								<div class="box-title">
 									<div class="pull-right">
-										<i class="icon icon-more">+</i> 更多
+										<a href="#"> <i class="icon icon-more">+</i> 更多 </a>
 									</div>
 									<i class="icon icon-pic"></i> 剪影展示
 								</div>
@@ -374,25 +374,11 @@
 										</div>
 									</div>
 								</div>
-								<script>
-									$(document).ready(function(){
-										new Swiper('.swiper-container-page-2', {
-											slidesPerView: 3,
-											spaceBetween: 16,
-											autoplay: true ,
-											loop: true ,
-											navigation: {
-												nextEl: '.icon-swiper-arrow-right',
-												prevEl: '.icon-swiper-arrow-left',
-											},
-										});
-									})
-								</script>
 							</div>
 							<div class="right">
 								<div class="box-title">
 									<div class="pull-right">
-										<i class="icon icon-more">+</i> 更多
+										<a href="#"> <i class="icon icon-more">+</i> 更多 </a>
 									</div>
 									<i class="icon icon-play-title"></i> 视频播放
 								</div>
@@ -594,20 +580,6 @@
 							</div>
 							
 						</div>
-						<script>
-							$(document).ready(function(){
-								new Swiper('.swiper-container-page-3', {
-									slidesPerView: 3,
-									spaceBetween: 10,
-									autoplay: true ,
-									loop: true ,
-									pagination: {
-										el: '.swiper-pagination-page-3',
-										clickable: true,
-									},
-								});
-							})
-						</script>
 					</div>
 					<div class="home-document page-item-absolute">
 						<div class="document-title font-16 mb10">本地文献推荐</div>
@@ -848,99 +820,15 @@
 			</li>
 		</ul>
 	</div>
+
+	<!-- 首页也引用js and css -->
 	<script src="./assets/js/bootstrap.min.js"></script>
 	<script src="./assets/js/bootstrap-select.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
 	<script src="./assets/js/jquery.mousewheel.min.js"></script>
-	
 	<link rel="stylesheet" href="./assets/css/bootstrap-select.css">
 	<link rel="stylesheet" href="./assets/css/swiper.min.css">
-	<script>
-		$(document).ready(function(){
-			$('.dir-select').selectpicker();
-
-			$(function(){
-				$(".index-footer").hide()
-				var pageSize = $(".full-page-item").length
-				var currentIndex = 0
-				var isScroll = false
-				function reset(){
-					if ( currentIndex == pageSize - 1 ){
-						$(".index-footer").fadeIn()
-						$(".global-scroll").fadeOut()
-					}else{
-						$(".index-footer").fadeOut()
-						$(".global-scroll").fadeIn()
-					}
-					isScroll = true
-					setTimeout(function(){
-						isScroll = false
-					},900)
-					if ( currentIndex >= pageSize ){
-						currentIndex = 0;
-					}
-					$(".full-page-item").removeClass("is-current").removeClass("is-before").removeClass("is-after").addClass("page-tanstion")
-					$(".full-page-item").addClass("page-tanstion")
-					for (let index = 0; index < pageSize; index++) {
-						if( index < currentIndex){
-							$(".full-page-item").eq(index).addClass("is-before")
-						}else if ( index == currentIndex ){
-							$(".full-page-item").eq(index).addClass("is-current")
-						}else{
-							$(".full-page-item").eq(index).addClass("is-after")
-						}
-					}
-					$(".full-page-nav span").removeClass("active").eq(currentIndex).addClass("active")
-					setTimeout(function(){
-						$(".full-page-item").eq(currentIndex).removeClass("page-tanstion")
-						
-					} ,400)
-				}
-				$(".is-current").removeClass("page-tanstion")
-
-				$("#global-scroll-arrow").on("click", function(){
-					if ( !isScroll ){
-						currentIndex ++;
-						reset(currentIndex)
-					}
-				})
-				$(".full-page-nav span").on("click", function(){
-					if ( $(this).hasClass("active") ){
-						return false ;
-					}
-					if ( !isScroll ){
-						currentIndex = $(this).index()
-						reset(currentIndex)
-						
-					}
-				})
-				$(".home-pager").on('mousewheel', function(event, delta) {
-					if ( !isScroll ){
-						if ( delta > 0 ){ // 向上滚动
-							if ( currentIndex > 0 ){
-								currentIndex -- ;
-								reset(currentIndex)
-							}
-						}else{ // 向下滚动
-							if ( currentIndex < pageSize - 1 ){
-								currentIndex ++ ;
-								reset(currentIndex)
-							}else{
-								currentIndex = 0;
-								reset(currentIndex)
-							}
-						}
-					}
-					
-					return false;  
-				});
-				window.addEventListener('touchmove', func, { passive: false })
-			})
-		})
-
-		
-
-		
-	</script>
+	<script src="./assets/js/index.js"></script>
+	<!-- 首页也引用js and css -->
 </body>
 </html>
